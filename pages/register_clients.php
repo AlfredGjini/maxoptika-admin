@@ -25,31 +25,31 @@
                 <div class="form-group">
                   <label for="username" class="col-sm-2 control-label">Username</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="username" placeholder="Username...">
+                    <input type="text" class="form-control" name="username" placeholder="Username..." required aria-required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="password" class="col-sm-2 control-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" name="password" placeholder="Password...">
+                    <input type="password" class="form-control" name="password" placeholder="Password..." required aria-required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="emer" class="col-sm-2 control-label">Emer</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="emer" placeholder="Emer...">
+                    <input type="text" class="form-control" name="emer" placeholder="Emer..." required aria-required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="mbiemer" class="col-sm-2 control-label">Mbiemer</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="mbiemer" placeholder="Mbiemer...">
+                    <input type="text" class="form-control" name="mbiemer" placeholder="Mbiemer..." required aria-required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="mosha" class="col-sm-2 control-label">Mosha</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="mosha" placeholder="Mosha...">
+                    <input type="text" class="form-control" name="mosha" placeholder="Mosha..." required aria-required="true">
                   </div>
                 </div>
 
@@ -58,10 +58,10 @@
                   <div class="col-sm-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="gjinia" value="m"> Mashkull
+                        <input type="radio" name="gjinia" value="m" required aria-required="true"> Mashkull
                       </label>
                       <label>
-                        <input type="radio" name="gjinia" value="f"> Femer 
+                        <input type="radio" name="gjinia" value="f" required aria-required="true"> Femer 
                       </label>
                     </div>
                   </div>
@@ -69,19 +69,19 @@
                 <div class="form-group">
                   <label for="vendlindja" class="col-sm-2 control-label">Vendlindja</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="vendlindja" placeholder="Vendlindja...">
+                    <input type="text" class="form-control" name="vendlindja" placeholder="Vendlindja..." required aria-required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="celular" class="col-sm-2 control-label">Celular</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="celular" placeholder="Celular...">
+                    <input type="text" class="form-control" name="celular" placeholder="Celular..." required aria-required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="email" class="col-sm-2 control-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" name="email" placeholder="Email...">
+                    <input type="email" class="form-control" name="email" placeholder="Email..." required aria-required="true">
                   </div>
                 </div>
               </div>
