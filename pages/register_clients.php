@@ -113,7 +113,6 @@
 
       /* Stop form from submitting normally */
       event.preventDefault();
-      // Get all the form values
       var values = $(this).serialize();
 
        $.ajax({
@@ -123,13 +122,11 @@
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  console.log(response); 
-                 swal({
+                 swal(
                   '',
                   'Perdoruesi u regjistrua me sukses',
                   'success'
-                }).then(function () {
-                  location.reload(true);
-                });               
+                )               
 
               },
               error: function(jqXHR, textStatus, errorThrown) {
