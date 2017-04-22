@@ -127,7 +127,7 @@
                   'Perdoruesi u regjistrua me sukses',
                   'success'
                 )
-                $('#register_clients').trigger("reset");               
+                //$('#register_clients').trigger("reset");               
 
               },
               error: function(jqXHR, textStatus, errorThrown) {
