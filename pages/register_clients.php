@@ -113,35 +113,36 @@
 
       /* Stop form from submitting normally */
       event.preventDefault();
-      var validator = $( "#register_clients" ).validate();
-
-      if(validator){
-      /* Get from elements values */
       var values = $(this).serialize();
-
-       $.ajax({
-              url: "functions.php?action=register_clients",
-              type: "post",
-              data: values ,
-              success: function (response) {
-                 // you will get response from your php page (what you echo or print) 
-                 console.log(response); 
-                 swal(
-                  '',
-                  'Perdoruesi u regjistrua me sukses',
-                  'success'
-                )               
-
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
+      var validator = $( "#register_clients" ).validate({
+        submitHandler: function(form) {
+          // do other things for a valid form
+          form.submit();
 
 
-          });
+           $.ajax({
+                  url: "functions.php?action=register_clients",
+                  type: "post",
+                  data: values ,
+                  success: function (response) {
+                     // you will get response from your php page (what you echo or print) 
+                     console.log(response); 
+                     swal(
+                      '',
+                      'Perdoruesi u regjistrua me sukses',
+                      'success'
+                    )               
 
-        }else {
-          console.log("error");
+                  },
+                  error: function(jqXHR, textStatus, errorThrown) {
+                     console.log(textStatus, errorThrown);
+                  }
+
+
+              });
         }
+      });
+
+
        });
   </script>
