@@ -34,6 +34,9 @@
   <script src="plugins/fastclick/fastclick.js"></script>
   <!-- Sweet Alert -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.0/sweetalert2.min.js"></script>
+  <!-- jQuery Validator -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+  
 
   <!-- Main Javascript Functions-->
   <script src="assets/js/jsfunctions.js"></script>

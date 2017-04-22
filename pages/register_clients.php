@@ -113,6 +113,9 @@
 
       /* Stop form from submitting normally */
       event.preventDefault();
+      var validator = $( "#register_clients" ).validate();
+
+      if(validator){
       /* Get from elements values */
       var values = $(this).serialize();
 
@@ -136,5 +139,9 @@
 
 
           });
+
+        }else {
+          console.log("error");
+        }
        });
   </script>
