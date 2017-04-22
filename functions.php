@@ -19,6 +19,8 @@ switch ($action) {
 	break;
 	
 	case 'register_clients':
+		$emailExist  = DB::getInstance()->get('clients',[['email','=',$data['email']]])->firstResult();
+		if($emailExist){
 		if($data['username'] && $data['password'] && $data['emer']){
 		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'password'=>$data['password']]);
 		if($register_user){
@@ -32,7 +34,12 @@ switch ($action) {
 		}
 		}
 		else{
-			echo "te dhena boshe";
+			$responserc="te dhena boshe";
+			echo json_encode($responserc);
+		}
+		}else{
+			$responserc="Ekziston";
+			echo json_encode($responserc);
 		}
 	break;
 
