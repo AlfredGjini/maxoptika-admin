@@ -8,7 +8,7 @@ ini_set('display_errors', 'On');
     //     echo 'there has been an error connecting';
     // } 
 
-
+echo "test para";
 $dbuser = 'dekixmpqcprkpu';  
 $dbpass = 'MNbCC56WQ1ZaNRqX8GHmTBaUv-';  
 $host = 'ec2-23-21-55-25.compute-1.amazonaws.com';  
