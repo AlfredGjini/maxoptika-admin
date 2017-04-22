@@ -20,6 +20,8 @@ switch ($action) {
 	
 	case 'register_clients':
 		$emailExist  = DB::getInstance()->get('clients',[['email','=',$data['email']]])->firstResult();
+		echo "u be ";
+		echo $emailExist;
 		if($emailExist){
 		if($data['username'] && $data['password'] && $data['emer']){
 		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'password'=>$data['password']]);
