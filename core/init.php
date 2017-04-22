@@ -9,10 +9,10 @@ $GLOBALS['config'] = array(
 		// 'password' => 'MNbCC56WQ1ZaNRqX8GHmTBaUv-',
 		// 'db' => 'd3fn4lugik4eop',
 		// 'port' => '5432'
-		'host' => '107.180.69.1788',
-		'username' => 'primpyma_adm',
-		'password' => 'D3@2016!',
-		'db' => 'primpyma_test'
+		'host' => 'ec2-23-21-55-25.compute-1.amazonaws.com',
+		'username' => 'dekixmpqcprkpu',
+		'password' => 'MNbCC56WQ1ZaNRqX8GHmTBaUv-',
+		'db' => 'd3fn4lugik4eop'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
