@@ -9,13 +9,14 @@ class DB{
 
 	private function __construct(){
 		try{
-			$this->_pdo = new \PDO('pgsql:host=' .Config::get('mysql/host').';port='.Config::get('mysql/port').';dbname='.Config::get('mysql/db'),Config::get('mysql/username'),Config::get('mysql/password'));
+			$this->_pdo = new PDO('pgsql:host=' .Config::get('mysql/host').';port='.Config::get('mysql/port').';dbname='.Config::get('mysql/db'),Config::get('mysql/username'),Config::get('mysql/password'));
 			$this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			//echo "Connected";
 		}catch(PDOException $e){
 			$e->getMessage();
 			echo "Something went wrong!";
-			 print_r($e->getTrace());
+			 //print_r($e->getTrace());
+			 print_r($e->getMessage());
 		}
 	}
 

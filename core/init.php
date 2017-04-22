@@ -12,7 +12,8 @@ $GLOBALS['config'] = array(
 		'host' => 'ec2-23-21-55-25.compute-1.amazonaws.com',
 		'username' => 'dekixmpqcprkpu',
 		'password' => 'MNbCC56WQ1ZaNRqX8GHmTBaUv-',
-		'db' => 'd3fn4lugik4eop'
+		'db' => 'd3fn4lugik4eop',
+		'port' => '5432'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
