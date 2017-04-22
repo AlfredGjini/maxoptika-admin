@@ -39,8 +39,11 @@ switch ($action) {
 	case 'delUser':
 		$params = Input::get('param');
 		$clientsData  = DB::getInstance()->get('clients',[['id','=',$params['id']]])->firstResult();
+		echo $clientsData." 1 ";
 		$deleteClient = DB::getInstance()->delete('clients',[['id','=',$params['id']]]);
+		echo $deleteClient." 2 ";
 		$deleteUser = DB::getInstance()->delete('users',[['id','=',$clientsData->user_id]]);
+		echo $deleteUser." 3 ";
 		if($deleteClient && $deleteUser){
 			echo "ok fshirja";
 		}
