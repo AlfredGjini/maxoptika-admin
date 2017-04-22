@@ -122,7 +122,12 @@
               data: values ,
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
-                 console.log(response);                
+                 console.log(response); 
+                 swal(
+                  '',
+                  'Perdoruesi u regjistrua me sukses',
+                  'success'
+                )               
 
               },
               error: function(jqXHR, textStatus, errorThrown) {
