@@ -137,9 +137,11 @@
     $("#manage_clients").DataTable({
         "ajax" : "http://localhost/maxcp/functions.php?action=manage_clients",
         "destroy":true,
-        responsive: true,
+        "responsive": true,
         "initComplete": function(settings, json) {
           modClick();
+          console.log(json);
+          console.log(settings);
         }
     });
   </script>
