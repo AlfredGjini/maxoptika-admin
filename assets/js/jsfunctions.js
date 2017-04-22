@@ -48,13 +48,13 @@ function modClick(){
 		var userId = $(this).attr('id');
 		//alert(userId);
 		swal({
-		  title: 'Are you sure?',
-		  text: "You won't be able to revert this!",
+		  title: 'Deshironi te fshini perdoruesin?',
+		  text: "Kujdes! Ky veprim nuk mund te kthehet mbrapsht.",
 		  type: 'warning',
 		  showCancelButton: true,
 		  confirmButtonColor: '#3085d6',
 		  cancelButtonColor: '#d33',
-		  confirmButtonText: 'Yes, delete it!'
+		  confirmButtonText: 'Po, fshije!'
 		}).then(function () {
 		  
 		  var data = {
@@ -86,7 +86,7 @@ function ajaxCall(param,page,action){
 			else if(action == 'delUser'){
 				swal({
 				  title: 'Deleted!',
-				  text: "Your file has been deleted.",
+				  text: "Perdoruesi u fshi me sukses.",
 				  type: 'success',
 				}).then(function () {
 				  location.reload(true);
