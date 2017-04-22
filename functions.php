@@ -26,7 +26,8 @@ switch ($action) {
 			echo "Klienti u regjistrua me sukses";
 			$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
 			if($register_client){
-				echo "Klienti u ruajt me sukses!";
+				$responserc="Klienti u ruajt me sukses!";
+				echo json_encode($responserc);
 			}
 		}
 		}

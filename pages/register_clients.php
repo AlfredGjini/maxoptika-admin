@@ -20,7 +20,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="functions.php?action=register_clients" method="post" class="form-horizontal">
+            <form id="register_clients" action="functions.php?action=register_clients" method="post" class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
                   <label for="username" class="col-sm-2 control-label">Username</label>
@@ -104,3 +104,31 @@
     </section>
     <!-- /.content -->
   </div>
+
+
+  <script type="text/javascript">
+
+      $("#register_clients").submit(function(event) {
+
+
+      /* Stop form from submitting normally */
+      event.preventDefault();
+      /* Get from elements values */
+      var values = $(this).serialize();
+
+       $.ajax({
+              url: "functions.php?action=register_clients",
+              type: "post",
+              data: values ,
+              success: function (response) {
+                 // you will get response from your php page (what you echo or print)                 
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+       });
+  </script>
