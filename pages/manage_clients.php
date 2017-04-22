@@ -135,7 +135,7 @@
   </div-->
   <script type="text/javascript">
     $("#manage_clients").DataTable({
-        "ajax" : "http://localhost/maxcp/functions.php?action=manage_clients",
+        "ajax" : "functions.php?action=manage_clients",
         "destroy":true,
         "responsive": true,
         "initComplete": function(settings, json) {
