@@ -12,7 +12,7 @@ switch ($action) {
 		$i = 0;
 		foreach ($dataResult as $tableRows) {
 			$userDataResult = DB::getInstance()->get('users',[['id','=',$tableRows->user_id]])->firstResult();
-			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->username,$userDataResult->password,$tableRows->emer,$tableRows->mbiemer,$tableRows->mosha,$tableRows->gjinia,$tableRows->vendlindja,$tableRows->celular,$tableRows->email,"<a id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;<a id='$tableRows->id' name='del' href='#'>Fshij</a>"];
+			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->username,$userDataResult->password,$tableRows->emer,$tableRows->mbiemer,$tableRows->mosha,$tableRows->gjinia,$tableRows->vendlindja,$tableRows->celular,$tableRows->email,"<a class=\"btn btn-warning\" id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger\" id='$tableRows->id' name='del' href='#'>Fshij</a>"];
 			$i++;
 		}
 		echo json_encode($dataForDT);	
@@ -54,6 +54,9 @@ switch ($action) {
 		$updateClients = DB::getInstance()->update("clients",$params["id"],['emer'=>$params["emer"],'mbiemer'=>$params["mbiemer"],'mosha'=>$params["mosha"],'gjinia'=>$params["gjinia"],'vendlindja'=>$params["vendlindja"],'celular'=>$params["celular"],'email'=>$params["email"]]);
 		if($updateClients && $updateUsers){
 			$success = "ok";
+			echo json_encode($success);
+		}else{
+			$success = "not ok";
 			echo json_encode($success);
 		}
 		
