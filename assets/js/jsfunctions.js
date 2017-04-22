@@ -46,11 +46,23 @@ function modClick(){
 
 	$("[name=del]").click(function(){
 		var userId = $(this).attr('id');
-		alert(userId);
-		var data = {
+		//alert(userId);
+		swal({
+		  title: 'Are you sure?',
+		  text: "You won't be able to revert this!",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonColor: '#3085d6',
+		  cancelButtonColor: '#d33',
+		  confirmButtonText: 'Yes, delete it!'
+		}).then(function () {
+		  
+		  var data = {
 			"id" : userId
-		};
-		ajaxCall(data,page,'delUser');
+			};
+		  ajaxCall(data,page,'delUser');
+		})
+		
 	});
 	
 };
@@ -72,8 +84,15 @@ function ajaxCall(param,page,action){
 				
 			}
 			else if(action == 'delUser'){
-				alert(res);
-				location.reload(true);
+				swal({
+				  title: 'Deleted!',
+				  text: "Your file has been deleted.",
+				  type: 'success',
+				}).then(function () {
+				  location.reload(true);
+				})
+				//alert(res);
+				
 			}
 			
 		}   // A function to be called if request succeeds
