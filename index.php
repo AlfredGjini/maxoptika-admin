@@ -14,10 +14,16 @@ $dbpass = 'MNbCC56WQ1ZaNRqX8GHmTBaUv-';
 $host = 'ec2-23-21-55-25.compute-1.amazonaws.com';  
 $dbname='d3fn4lugik4eop';  
 $dbh = new PDO("pgsql:host=$host;dbname=$dbname;sslmode=require", $dbuser, $dbpass);
-}catch (PDOException $e){  
- echo "Error!: " . $e->getMessage() . "<br/>";  
- die();  
- }
+try{
+ 
+	// display a message if connected to the PostgreSQL successfully
+	if($dbh){
+		echo "Connected to the <strong>$db</strong> database successfully!";
+	}
+}catch (PDOException $e){
+	// report error message
+	echo $e->getMessage();
+}
 echo "hello world";
 
 
