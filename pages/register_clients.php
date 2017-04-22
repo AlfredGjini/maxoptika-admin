@@ -122,11 +122,13 @@
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  console.log(response); 
-                 swal(
+                 swal({
                   '',
                   'Perdoruesi u regjistrua me sukses',
                   'success'
-                )               
+                }).then(function () {
+                    location.reload(true);
+                  })               
 
               },
               error: function(jqXHR, textStatus, errorThrown) {
