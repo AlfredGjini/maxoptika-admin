@@ -17,5 +17,5 @@ $dbh = new PDO("pgsql:host=$host;dbname=$dbname;sslmode=require", $dbuser, $dbpa
 echo "hello world";
 
 
-    //phpinfo();
+    phpinfo();
 ?>
