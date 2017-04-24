@@ -4,7 +4,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="assets/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="assets/img/admin-logo.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Admin</p>
@@ -25,8 +25,8 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
-          <a href="#">
+        <li class="dashboard treeview">
+          <a href="home.php">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -34,7 +34,7 @@
           </a>
         </li>
         
-        <li class="treeview">
+        <li class="manage_clients treeview register_clients">
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Kliente</span>
@@ -43,8 +43,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="?page=register_clients"><i class="fa fa-circle-o"></i> Regjistro Klient</a></li>
-            <li><a href="?page=manage_clients"><i class="fa fa-circle-o"></i> Menaxho Kliente</a></li>
+            <li class="register_clients"><a href="?page=register_clients"><i class="fa fa-circle-o"></i> Regjistro Klient</a></li>
+            <li class="manage_clients"><a href="?page=manage_clients"><i class="fa fa-circle-o"></i> Menaxho Kliente</a></li>
           </ul>
         </li>
         
@@ -57,11 +57,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Shto Produkt</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Menaxho Produktet</a></li>
+            <li><a href="?page=add_product"><i class="fa fa-circle-o"></i> Shto Produkt</a></li>
+            <li><a href="?page=manage_products"><i class="fa fa-circle-o"></i> Menaxho Produktet</a></li>
            </ul>
         </li>
-        <li class="treeview">
+        <li class="manage_clinic_card create_clinic_card treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
             <span>Kartela Klinike</span>
@@ -70,12 +70,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Ploteso Kartele</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Menaxho Kartelat</a></li>
+            <li class="create_clinic_card"><a href="?page=create_clinic_card"><i class="fa fa-circle-o"></i> Ploteso Kartele</a></li>
+            <li class="manage_clinic_card"><a href="?page=manage_clinic_card"><i class="fa fa-circle-o"></i> Menaxho Kartelat</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
+        <li class="treeview manage_reservations">
+          <a href="?page=manage_reservations">
             <i class="fa fa-edit"></i> <span>Prenotimet</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
