@@ -27,7 +27,7 @@ switch ($action) {
 		if($data['username'] && $data['password'] && $data['emer']){
 		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'emailval'=>$data['email'],'password'=>$data['password']]);
 		if($register_user){
-			$userDataResult = DB::getInstance()->get('users',[['username','=',$data['username']],['and','password','=',$data['password']]])->firstResult();
+			$userDataResult = DB::getInstance()->get('users',[['username','=',$data['username']],[['emailval','=',$data['email']],['and','password','=',$data['password']]])->firstResult();
 			//echo "Klienti u regjistrua me sukses";
 			$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
 			if($register_client){
