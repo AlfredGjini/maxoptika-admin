@@ -25,7 +25,7 @@ switch ($action) {
 		//var_dump($emailExist);
 		if($emailExist==0){
 		if($data['username'] && $data['password'] && $data['emer']){
-		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'password'=>$data['password']]);
+		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'emailval'=>$data['email'],'password'=>$data['password']]);
 		if($register_user){
 			$userDataResult = DB::getInstance()->get('users',[['username','=',$data['username']],['and','password','=',$data['password']]])->firstResult();
 			//echo "Klienti u regjistrua me sukses";
