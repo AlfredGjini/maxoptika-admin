@@ -92,7 +92,7 @@ switch ($action) {
 		$i = 0;
 		foreach ($dataResult as $tableRows) {
 			$userDataResult = DB::getInstance()->get('clients',[['user_id','=',$tableRows->id_klienti]])->firstResult();
-			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer+" "+$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='del' href='#'>Fshij</a>"];
+			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='del' href='#'>Fshij</a>"];
 			$i++;
 		}
 		echo json_encode($dataForDT);	
