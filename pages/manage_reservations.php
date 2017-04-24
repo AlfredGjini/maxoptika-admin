@@ -60,7 +60,7 @@
   </div-->
   <script type="text/javascript">
     $("#manage_reservations").DataTable({
-        "ajax" : "http://localhost/maxcp/functions.php?action=manage_reservations",
+        "ajax" : "functions.php?action=manage_reservations",
         "destroy":true,
         responsive: true,
         "initComplete": function(settings, json) {
