@@ -122,21 +122,24 @@
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  console.log(response);
-                 // Response: 1 - Success
-                if(response==1){ 
+                 var pergjigja=JSON.parse(response);
+                 console.log(pergjigja);
+                 
+                if(pergjigja==1){ 
+                  // Response: 1 - Success
                    swal(
                     '',
                     'Perdoruesi u regjistrua me sukses',
                     'success'
                   )
-                }else if (response == 2){
+                }else if (pergjigja == 2){
                   // Response: 2 - Empty Fields
                   swal(
                     '',
                     'Ju lutem plotesoni te gjitha fushat',
                     'warning'
                   )
-                 }else if (response == 3){
+                 }else if (pergjigja == 3){
                   // Response: 2 - Empty Fields
                   swal(
                     '',
