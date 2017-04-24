@@ -31,17 +31,17 @@ switch ($action) {
 			echo "Klienti u regjistrua me sukses";
 			$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
 			if($register_client){
-				$responserc="Klienti u ruajt me sukses!";
+				$responserc=1;
 				echo json_encode($responserc);
 			}
 		}
 		}
 		else{
-			$responserc="te dhena boshe";
+			$responserc=2;
 			echo json_encode($responserc);
 		}
 		}else{
-			$responserc="Ekziston";
+			$responserc=3;
 			echo json_encode($responserc);
 		}
 	break;
