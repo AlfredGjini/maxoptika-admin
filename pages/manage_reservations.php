@@ -62,9 +62,11 @@
     $("#manage_reservations").DataTable({
         "ajax" : "functions.php?action=manage_reservations",
         "destroy":true,
-        responsive: true,
+        "responsive": true,
         "initComplete": function(settings, json) {
           modClick();
+          console.log(json);
+          console.log(settings);
         }
     });
   </script>
