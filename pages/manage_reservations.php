@@ -58,6 +58,46 @@
   <!--div id="dialogSuccess" title="Sukses">
     <p>Hyrjet u kryen me sukses! Shtyp Ok per te vazhduar</p>
   </div-->
+  <div id="dialogModifiko" style="display:none" title="Modifiko Rezervimin">
+    <form page='manage_clients' class="form-horizontal">
+      <div class="box-body">
+        <div class="form-group">
+          <label for="username" class="col-sm-2 control-label">Klienti</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="username" placeholder="Klienti...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="col-sm-2 control-label">Data</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="data" placeholder="Data...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="emer" class="col-sm-2 control-label">Ora</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="ora" placeholder="Ora...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mbiemer" class="col-sm-2 control-label">Dyqani</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="dyqani" placeholder="Dyqani...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mosha" class="col-sm-2 control-label">Shenime</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="shenime" placeholder="Shenime...">
+          </div>
+        </div>
+        <input type="hidden" name="id" value=""/>
+        <input type="hidden" name="id_klienti" value=""/>
+      </div>
+      <!-- /.box-body -->
+    </form>
+  </div>
+
   <script type="text/javascript">
     $("#manage_reservations").DataTable({
         "ajax" : "functions.php?action=manage_reservations",
