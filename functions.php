@@ -23,7 +23,7 @@ switch ($action) {
 		$emailExist  = DB::getInstance()->get('clients',[['email','=',$data['email']]])->firstResult();
 		echo "u be ";
 		var_dump($emailExist);
-		if($emailExist!=0){
+		if($emailExist==0){
 		if($data['username'] && $data['password'] && $data['emer']){
 		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'password'=>$data['password']]);
 		if($register_user){
