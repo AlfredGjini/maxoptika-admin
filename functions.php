@@ -21,14 +21,14 @@ switch ($action) {
 	
 	case 'register_clients':
 		$emailExist  = DB::getInstance()->get('clients',[['email','=',$data['email']]])->firstResult();
-		echo "u be ";
-		var_dump($emailExist);
+		//echo "u be ";
+		//var_dump($emailExist);
 		if($emailExist==0){
 		if($data['username'] && $data['password'] && $data['emer']){
 		$register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'password'=>$data['password']]);
 		if($register_user){
 			$userDataResult = DB::getInstance()->get('users',[['username','=',$data['username']],['and','password','=',$data['password']]])->firstResult();
-			echo "Klienti u regjistrua me sukses";
+			//echo "Klienti u regjistrua me sukses";
 			$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
 			if($register_client){
 				$responserc="1";
