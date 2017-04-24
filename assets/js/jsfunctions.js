@@ -25,10 +25,10 @@ function modClick(){
 			    });
 	          	console.log(page);
 	          	if(page=="manage_reservations"){
-	          		console.log(page);
+	          		//console.log(page);
 	          		ajaxCall(data,page,'updateReservations');
 	          	}else if (page=="manage_clients"){
-	          		console.log(page);
+	          		//console.log(page);
 	          		ajaxCall(data,page,'update');
 	          	}
 	          	
@@ -116,6 +116,9 @@ function ajaxCall(param,page,action){
 				res = JSON.parse(res);
 				setFieldVals(res,param);
 			}else if(action == 'update'){
+				location.reload(true);
+				
+			}else if(action == 'updateReservations'){
 				location.reload(true);
 				
 			}
