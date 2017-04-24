@@ -32,17 +32,20 @@ switch ($action) {
 			$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
 			if($register_client){
 				$responserc="1";
-				echo json_encode($responserc);
+				//echo json_encode($responserc);
+				echo $responserc;
 			}
 		}
 		}
 		else{
 			$responserc="2";
-			echo json_encode($responserc);
+			//echo json_encode($responserc);
+			echo $responserc;
 		}
 		}else{
 			$responserc="3";
-			echo json_encode($responserc);
+			//echo json_encode($responserc);
+			echo $responserc;
 		}
 	break;
 
