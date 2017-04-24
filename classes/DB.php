@@ -163,7 +163,12 @@ class DB{
 	}
 
 	public function firstResult(){
-		return $this->results()[0];
+		if($this->results()[0]==null){
+			return 0;
+		}else{
+			return $this->results()[0];
+		}
+		
 	}
 
 	public function error(){
