@@ -88,7 +88,8 @@
         <div class="form-group">
           <label for="mosha" class="col-sm-2 control-label">Shenime</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="shenime" placeholder="Shenime...">
+            <textarea name="shenime" class="form-control" placeholder="Shenime..."></textarea>
+            <!-- <input type="text" class="form-control" name="shenime" placeholder="Shenime..."> -->
           </div>
         </div>
         <input type="hidden" name="id" value=""/>
