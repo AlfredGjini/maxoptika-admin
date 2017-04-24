@@ -23,7 +23,7 @@ function modClick(){
 	          	jQuery.each( fields, function( i, field ) {
 			      data[field.name] = field.value;
 			    });
-	          	
+	          	console.log(page);
 	          	ajaxCall(data,page,'update');
 
 			},
@@ -163,7 +163,7 @@ function setFieldVals(data,param){
 
 function setFieldValsReservations(data,param){
 	var id = param.id;
-	$("[name=klienti]").val(data.emer+data.mbiemer);
+	$("[name=klienti]").val(data.emer+" "+data.mbiemer);
 	$("[name=data]").val(data.data);
 	$("[name=ora]").val(data.ora);
 	$("[name=dyqani]").val(data.dyqani);
