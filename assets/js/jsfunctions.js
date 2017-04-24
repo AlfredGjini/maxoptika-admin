@@ -70,7 +70,7 @@ function modClick(){
 		var data = {
 			"id" : userId
 		};
-		ajaxCall(data,page,'getData');
+		ajaxCall(data,page,'getDataReservation');
 	});
 
 	$("[name=delReservation]").click(function(){
@@ -132,6 +132,9 @@ function ajaxCall(param,page,action){
 				})
 				//alert(res);
 				
+			}else if(action == 'getDataReservation'){
+				res = JSON.parse(res);
+				setFieldValsReservations(res,param);
 			}
 			
 		}   // A function to be called if request succeeds
@@ -154,6 +157,19 @@ function setFieldVals(data,param){
 	$("[name=email]").val(data.email);
 	$("[name=id]").val(id);
 	$("[name=user_id]").val(data.user_id);
+	
+	$("#dialogModifiko").dialog("open");
+}
+
+function setFieldValsReservations(data,param){
+	var id = param.id;
+	$("[name=klienti]").val(data.emer+data.mbiemer);
+	$("[name=data]").val(data.data);
+	$("[name=ora]").val(data.ora);
+	$("[name=dyqani]").val(data.dyqani);
+	$("[name=shenime]").val(data.shenime);
+	$("[name=id]").val(id);
+	$("[name=id_klienti]").val(data.id_klienti);
 	
 	$("#dialogModifiko").dialog("open");
 }

@@ -100,13 +100,21 @@ switch ($action) {
 
 	case 'delReservation':
 		$params = Input::get('param');
-		//$clientsData  = DB::getInstance()->get('clients',[['id','=',$params['id']]])->firstResult();
 		$deleteReservation = DB::getInstance()->delete('reservations',[['id','=',$params['id']]]);
-		//$deleteUser = DB::getInstance()->delete('users',[['id','=',$clientsData->user_id]]);
 		if($deleteReservation){
 			echo "ok fshirja";
 		}
 		
+	break;
+
+	case 'getDataReservation':
+		$params = Input::get('param');
+		$res = array();
+		$reservationsData  = DB::getInstance()->get('reservations',[['id','=',$params['id']]])->firstResult();
+		$clientsData  = DB::getInstance()->get('clients',[['user_id','=',$reservationsData->id_klienti]])->firstResult();
+		$obj_merged = (object) array_merge((array) $reservationsData, (array) $clientsData);
+		//$clientsData .= $userData;
+		echo json_encode($obj_merged);
 	break;
 	default:	
 		# code...
