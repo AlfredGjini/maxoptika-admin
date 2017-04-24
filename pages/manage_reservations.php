@@ -59,7 +59,7 @@
     <p>Hyrjet u kryen me sukses! Shtyp Ok per te vazhduar</p>
   </div-->
   <div id="dialogModifiko" style="display:none" title="Modifiko Rezervimin">
-    <form page='manage_clients' class="form-horizontal">
+    <form page='manage_reservations' class="form-horizontal">
       <div class="box-body">
         <div class="form-group">
           <label for="username" class="col-sm-2 control-label">Klienti</label>

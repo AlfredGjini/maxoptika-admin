@@ -24,7 +24,14 @@ function modClick(){
 			      data[field.name] = field.value;
 			    });
 	          	console.log(page);
-	          	ajaxCall(data,page,'update');
+	          	if(page=="manage_reservations"){
+	          		console.log(page);
+	          		ajaxCall(data,page,'updateReservations');
+	          	}else if (page=="manage_clients"){
+	          		console.log(page);
+	          		ajaxCall(data,page,'update');
+	          	}
+	          	
 
 			},
 	        "Cancel": function() {
