@@ -119,7 +119,7 @@ switch ($action) {
 
 	case 'updateReservations':
 		$params = Input::get('param');
-		$updateReservations = DB::getInstance()->update("reservations",$params["id"],['dyqani'=>$params["dyqani"],['shenime'=>$params["shenime"]]);
+		//$updateReservations = DB::getInstance()->update("reservations",$params["id"],['dyqani'=>$params["dyqani"],['shenime'=>$params["shenime"]]);
 		$updateReservations="a";
 		echo $params["id"];
 		
