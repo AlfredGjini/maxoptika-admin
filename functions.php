@@ -119,17 +119,18 @@ switch ($action) {
 
 	case 'updateReservations':
 		$params = Input::get('param');
-		//$updateReservations = DB::getInstance()->update("reservations",$params["id"],['dyqani'=>$params["dyqani"],['shenime'=>$params["shenime"]]);
+		$updateReservations = DB::getInstance()->update("reservations",$params["id"],['dyqani'=>$params["dyqani"],['shenime'=>$params["shenime"]]);
 		$updateReservations="a";
+		echo $params["id"];
 		
 		//$updateClients = DB::getInstance()->update("clients",$params["id"],['emer'=>$params["emer"],'mbiemer'=>$params["mbiemer"],'mosha'=>$params["mosha"],'gjinia'=>$params["gjinia"],'vendlindja'=>$params["vendlindja"],'celular'=>$params["celular"],'email'=>$params["email"]]);
-		if($updateReservations){
-			$success = "ok";
-			echo json_encode($success);
-		}else{
-			$success = "not ok";
-			echo json_encode($success);
-		}
+		// if($updateReservations){
+		// 	$success = "ok";
+		// 	echo json_encode($success);
+		// }else{
+		// 	$success = "not ok";
+		// 	echo json_encode($success);
+		// }
 		
 	break;
 
