@@ -163,10 +163,15 @@ class DB{
 	}
 
 	public function firstResult(){
-		if($this->results()[0]==null){
-			return 0;
-		}else{
+		// if($this->results()[0]==null){
+		// 	return 0;
+		// }else{
+		// 	return $this->results()[0];
+		// }
+		if($this->_count > 0){
 			return $this->results()[0];
+		}else{
+			return 0;
 		}
 		
 	}
