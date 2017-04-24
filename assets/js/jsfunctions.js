@@ -64,6 +64,35 @@ function modClick(){
 		})
 		
 	});
+
+	$("[name=modReservation]").click(function(){
+		var userId = $(this).attr('id');
+		var data = {
+			"id" : userId
+		};
+		ajaxCall(data,page,'getData');
+	});
+
+	$("[name=delReservation]").click(function(){
+		var userId = $(this).attr('id');
+		//alert(userId);
+		swal({
+		  title: 'Deshironi te fshini rezervimin?',
+		  text: "Kujdes! Ky veprim nuk mund te kthehet mbrapsht.",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonColor: '#3085d6',
+		  cancelButtonColor: '#d33',
+		  confirmButtonText: 'Po, fshije!'
+		}).then(function () {
+		  
+		  var data = {
+			"id" : userId
+			};
+		  ajaxCall(data,page,'delReservation');
+		})
+		
+	});
 	
 };
 
@@ -87,6 +116,16 @@ function ajaxCall(param,page,action){
 				swal({
 				  title: 'Deleted!',
 				  text: "Perdoruesi u fshi me sukses.",
+				  type: 'success',
+				}).then(function () {
+				  location.reload(true);
+				})
+				//alert(res);
+				
+			}else if(action == 'delReservation'){
+				swal({
+				  title: 'Deleted!',
+				  text: "Rezervimi u fshi me sukses.",
 				  type: 'success',
 				}).then(function () {
 				  location.reload(true);

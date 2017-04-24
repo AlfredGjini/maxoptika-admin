@@ -92,10 +92,21 @@ switch ($action) {
 		$i = 0;
 		foreach ($dataResult as $tableRows) {
 			$userDataResult = DB::getInstance()->get('clients',[['user_id','=',$tableRows->id_klienti]])->firstResult();
-			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='del' href='#'>Fshij</a>"];
+			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='modReservation' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='delReservation' href='#'>Fshij</a>"];
 			$i++;
 		}
 		echo json_encode($dataForDT);	
+	break;
+
+	case 'delReservation':
+		$params = Input::get('param');
+		//$clientsData  = DB::getInstance()->get('clients',[['id','=',$params['id']]])->firstResult();
+		$deleteReservation = DB::getInstance()->delete('reservations',[['id','=',$params['id']]]);
+		//$deleteUser = DB::getInstance()->delete('users',[['id','=',$clientsData->user_id]]);
+		if($deleteReservation){
+			echo "ok fshirja";
+		}
+		
 	break;
 	default:	
 		# code...
