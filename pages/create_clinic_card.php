@@ -223,6 +223,7 @@
 	  	$('.clinic-card-container').hide();
 	  }else{
 	  	console.log("2");
+	  	console.log(this.value);
 	  	$('.clinic-card-container').show();
 	  }
 	})
