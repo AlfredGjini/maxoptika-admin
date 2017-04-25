@@ -14,6 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/sq.js"></script>
   <!-- Knob-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+  <!-- iCheck-->
+  <script src="plugins/iCheck/icheck.min.js"></script>
   
   
   <!-- Morris.js charts -->
