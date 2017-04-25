@@ -169,12 +169,13 @@
   </div>
 
   <script type="text/javascript">
+    var today = moment().format('MMM D, YYYY');
   	$('#datetimepicker1').daterangepicker({
 	    "singleDatePicker": true,
 	    "timePicker": true,
 	    "showCustomRangeLabel": false,
 	    "startDate": "04/19/2017",
-	    "minDate": "04/19/2017"
+	    "minDate": today
 	}, function(start, end, label) {
 	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 	});
