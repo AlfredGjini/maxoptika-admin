@@ -171,7 +171,7 @@
   <script type="text/javascript">
     var today = moment();
     console.log(today);
-  	$('#datetimepicker1').daterangepicker({
+  	$('#datetimepicker12').daterangepicker({
 	    "singleDatePicker": true,
 	    "timePicker": true,
 	    "showCustomRangeLabel": false,
@@ -210,6 +210,19 @@
 	}, function(start, end, label) {
 	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 	});
-	$('#datazgjedhur').val(today);
+	//$('#datazgjedhur').val(today);
+
+
+$(function() {
+    $('input[name="date"]').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    }, 
+    function(start, end, label) {
+        var years = moment().diff(start, 'years');
+        alert("You are " + years + " years old.");
+    });
+});
+
 
   </script>
