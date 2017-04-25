@@ -219,6 +219,7 @@
         "showDropdowns": true,
         "opens": "left",
 	    "minDate": today,
+	    "timePicker": true
     }, 
     function(start, end, label) {
         var years = moment().diff(start, 'years');
