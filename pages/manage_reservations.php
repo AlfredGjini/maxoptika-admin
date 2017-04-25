@@ -98,10 +98,10 @@
           <label for="mosha" class="col-sm-2 control-label">Aprovo</label>
           <div class="col-sm-10">
             <label class="radio-inline">
-              <input type="radio" id="po" name="aprovo">Po
+              <input type="radio" id="po" value="po" name="aprovo">Po
             </label>
             <label class="radio-inline">
-              <input type="radio" id="jo" name="aprovo">Jo
+              <input type="radio" id="jo" value="jo" name="aprovo">Jo
             </label>
           </div> 
         </div>
