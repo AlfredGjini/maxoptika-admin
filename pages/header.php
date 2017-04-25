@@ -8,6 +8,11 @@
   </script>
   <!-- Bootstrap 3.3.6 -->
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Moment -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <!-- Moment Locale Albanian-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/sq.js"></script>
+  
   <!-- Morris.js charts -->
   <script src="plugins/daterangepicker/daterangepicker.js"></script>
   <!-- datepicker -->
