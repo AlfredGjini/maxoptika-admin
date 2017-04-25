@@ -169,7 +169,7 @@
   </div>
 
   <script type="text/javascript">
-  	$('.clinic-card-container').daterangepicker({
+  	$('#datetimepicker1').daterangepicker({
 	    "singleDatePicker": true,
 	    "timePicker": true,
 	    "showCustomRangeLabel": false,
