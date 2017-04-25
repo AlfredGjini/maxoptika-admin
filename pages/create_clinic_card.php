@@ -141,7 +141,7 @@
 							</div>
 							
 							<div class="col-sm-12">
-								<textarea rows="3" name="shenime"></textarea>
+								<textarea rows="3" style="width: 100%;" name="shenime"></textarea>
 							</div>
 			              	
 						</div>
@@ -167,3 +167,15 @@
     </section>
     <!-- /.content -->
   </div>
+
+  <script type="text/javascript">
+  	$('.clinic-card-container').daterangepicker({
+	    "singleDatePicker": true,
+	    "timePicker": true,
+	    "showCustomRangeLabel": false,
+	    "startDate": "04/19/2017",
+	    "minDate": "04/19/2017"
+	}, function(start, end, label) {
+	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+	});
+  </script>
