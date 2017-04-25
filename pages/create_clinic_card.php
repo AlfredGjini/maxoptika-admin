@@ -169,7 +169,7 @@
   </div>
 
   <script type="text/javascript">
-    var today = moment();
+    var today = moment().format('LLL');
     console.log(today);
   	$('#datetimepicker12').daterangepicker({
 	    "singleDatePicker": true,
@@ -223,6 +223,7 @@
     }, 
     function(start, end, label) {
         var years = moment().diff(start, 'years');
+        
         //alert("You are " + years + " years old.");
         $('#datazgjedhur').val(start);
     });
