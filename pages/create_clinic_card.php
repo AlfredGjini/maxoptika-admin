@@ -213,7 +213,7 @@
 	//$('#datazgjedhur').val(today);
 
 
-$(function() {
+
     $('#datetimepicker1').daterangepicker({
         "singleDatePicker": true,
         "showDropdowns": true
@@ -222,7 +222,7 @@ $(function() {
         var years = moment().diff(start, 'years');
         alert("You are " + years + " years old.");
     });
-});
+
 
 
   </script>
