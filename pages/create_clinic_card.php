@@ -175,6 +175,7 @@
 	    "timePicker": true,
 	    "showCustomRangeLabel": false,
 	    "startDate": "04/19/2017",
+	    "opens": "left",
 	    "minDate": today,
 	    "locale": {
         "format": "MM/DD/YYYY",
