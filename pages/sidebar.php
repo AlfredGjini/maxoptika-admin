@@ -56,10 +56,10 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
+          <!-- <ul class="treeview-menu">
             <li><a href="?page=add_product"><i class="fa fa-circle-o"></i> Shto Produkt</a></li>
             <li><a href="?page=manage_products"><i class="fa fa-circle-o"></i> Menaxho Produktet</a></li>
-           </ul>
+           </ul> -->
         </li>
         <li class="manage_clinic_card create_clinic_card treeview">
           <a href="#">
