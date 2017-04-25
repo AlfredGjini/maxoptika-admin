@@ -23,8 +23,8 @@ function modClick(){
 	          	jQuery.each( fields, function( i, field ) {
 			      data[field.name] = field.value;
 			    });
-	          	console.log(page);
-	          	console.log(data["aprovo"]);
+	          	//console.log(page);
+	          	//console.log(data["aprovo"]);
 	          	if(page=="manage_reservations"){
 	          		//console.log(page);
 	          		ajaxCall(data,page,'updateReservations');

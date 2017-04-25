@@ -92,8 +92,13 @@ switch ($action) {
 		$i = 0;
 		foreach ($dataResult as $tableRows) {
 			$userDataResult = DB::getInstance()->get('clients',[['user_id','=',$tableRows->id_klienti]])->firstResult();
-			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,$tableRows->aprovuar,"<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='modReservation' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='delReservation' href='#'>Fshij</a>"];
+			if($tableRows->aprovuar=="jo"){
+			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<button type=\"button\" class=\"btn btn-danger\">JO</button>","<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='modReservation' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='delReservation' href='#'>Fshij</a>"];
+		}else {
+			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<button type=\"button\" class=\"btn btn-success\">PO</button>","<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='modReservation' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='delReservation' href='#'>Fshij</a>"];
+		}
 			$i++;
+		}
 		}
 		echo json_encode($dataForDT);	
 	break;
@@ -119,7 +124,7 @@ switch ($action) {
 
 	case 'updateReservations':
 		$params = Input::get('param');
-		$updateReservations = DB::getInstance()->update("reservations",$params["id"],['dyqani'=>$params["dyqani"],'shenime'=>$params["shenime"],'data'=>$params["data"],'ora'=>$params["ora"]]);
+		$updateReservations = DB::getInstance()->update("reservations",$params["id"],['dyqani'=>$params["dyqani"],'shenime'=>$params["shenime"],'data'=>$params["data"],'aprovuar'=>$params["aprovo"],'ora'=>$params["ora"]]);
 		echo $params["ora"]." ".$params["data"];
 		
 		//$updateClients = DB::getInstance()->update("clients",$params["id"],['emer'=>$params["emer"],'mbiemer'=>$params["mbiemer"],'mosha'=>$params["mosha"],'gjinia'=>$params["gjinia"],'vendlindja'=>$params["vendlindja"],'celular'=>$params["celular"],'email'=>$params["email"]]);
