@@ -219,9 +219,11 @@
 
 	$('#clientsSelect').on('change', function() {
 		console.log("called");
-	  if(this.value=="bosh"){
+	  if(this.val()=="bosh"){
+	  	console.log("1");
 	  	$('#clientsSelect').hide();
 	  }else{
+	  	console.log("2");
 	  	$('#clientsSelect').show();
 	  }
 	})
