@@ -41,7 +41,7 @@
 		                    <h4>Data e vizites :</h4>
 	                    	<div class="form-group">
 			                    <div class='input-group date' id='datetimepicker1'>
-				                    <input id="datazgjedhur" name="date" type='text' class="form-control" value="10/24/1984" />
+				                    <input id="datazgjedhur" name="date" type='text' class="form-control" value="" />
 				                    <span class="input-group-addon">
 				                        <span class="glyphicon glyphicon-calendar"></span>
 				                    </span>
@@ -170,49 +170,9 @@
 
   <script type="text/javascript">
     var today = moment();
-    console.log(today);
-  	$('#datetimepicker12').daterangepicker({
-	    "singleDatePicker": true,
-	    "timePicker": true,
-	    "showCustomRangeLabel": false,
-	    "startDate": "04/19/2017",
-	    "opens": "left",
-	    "minDate": today,
-	    "locale": {
-        "format": "MM/DD/YYYY",
-        "separator": " - ",
-        "weekLabel": "W",
-        "daysOfWeek": [
-            "Su",
-            "Mo",
-            "Tu",
-            "We",
-            "Th",
-            "Fr",
-            "Sa"
-        ],
-        "monthNames": [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-        ],
-        "firstDay": 1
-    },
-	}, function(start, end, label) {
-	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
-	});
-	//$('#datazgjedhur').val(today);
-
-
+    today=moment(today).format('LLL');
+    $('#datazgjedhur').val(today);
+    //console.log(today);
 
     $('#datetimepicker1').daterangepicker({
         "singleDatePicker": true,
@@ -227,7 +187,7 @@
     function(start, end, label) {
         var years = moment().diff(start, 'years');
         start=moment(start).format('LLL');
-        console.log(start);
+        //console.log(start);
         //alert("You are " + years + " years old.");
         $('#datazgjedhur').val(start);
     });
