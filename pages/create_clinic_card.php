@@ -218,7 +218,7 @@
 
 	$('#clientsSelect').on('change', function() {
 		console.log("called");
-	  if(this.val()=="bosh"){
+	  if(this.value=="bosh"){
 	  	console.log("1");
 	  	$('.clinic-card-container').hide();
 	  }else{
