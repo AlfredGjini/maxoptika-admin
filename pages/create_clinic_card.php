@@ -164,11 +164,12 @@
 						</div>
 				
               		</div>
+              		<div class="box-footer" >
+	                	<button type="submit" class="btn btn-info pull-right">Register</button>
+	              </div>
 				</div>
               <!-- /.box-body -->
-              <div class="box-footer" >
-                <button type="submit" class="btn btn-info pull-right">Register</button>
-              </div>
+              
               <!-- /.box-footer -->
             </form>
           </div>
@@ -217,6 +218,7 @@
 	  });
 
 	$('#clientsSelect').on('change', function() {
+		console.log("called");
 	  if(this.value=="bosh"){
 	  	$('#clientsSelect').hide();
 	  }else{
