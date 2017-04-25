@@ -32,8 +32,8 @@
 								$res = '';
 								$dataForDT = ["data"=>[]];
 								$i = 0;
-								echo '<select name="clients" id="clients">';
-								echo "<option value=''>....</option>";
+								echo '<select name="clients" id="clientsSelect">';
+								echo "<option value='bosh'>....</option>";
 								foreach ($dataResult as $tableRows) {
 									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
 									
@@ -45,7 +45,7 @@
                   </div>
                 </div>
 				<!-- hidden -->
-				<div class='clinic-card-container '>
+				<div class='clinic-card-container hidden'>
 					<div class="form-group">
 	                  <div class="col-sm-2"></div>
 	                  <div class="col-sm-8">
@@ -215,6 +215,14 @@
 	    checkboxClass: 'icheckbox_flat',
 	    radioClass: 'iradio_flat'
 	  });
+
+	$('#clientsSelect').on('change', function() {
+	  if(this.value=="bosh"){
+	  	$('#clientsSelect').hide();
+	  }else{
+	  	$('#clientsSelect').show();
+	  }
+	})
 
 
 

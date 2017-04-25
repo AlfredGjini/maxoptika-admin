@@ -27,7 +27,7 @@
 								$res = '';
 								$dataForDT = ["data"=>[]];
 								$i = 0;
-								echo '<select name="clients" id="clients">';
+								echo '<select name="clients" id="clientsSelect">';
 								echo "<option value=''>....</option>";
 								foreach ($dataResult as $tableRows) {
 									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
