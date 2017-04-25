@@ -169,7 +169,7 @@
   </div>
 
   <script type="text/javascript">
-    var today = moment().format('MMM D, YYYY');
+    var today = moment();
     console.log(today);
   	$('#datetimepicker1').daterangepicker({
 	    "singleDatePicker": true,
