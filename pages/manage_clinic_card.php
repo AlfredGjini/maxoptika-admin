@@ -34,11 +34,10 @@
 									
 								}
 	                    	?>
-	                    	<option value='13'>Alfred Gjini (a.gjini@live.com)</option>
 	                    </select>
                     </center>
 
-						<div class="clinic-card-container hidden">
+						<div class="clinic-card-container" style="display: none;">
 							<table id="manage_clinic_card" class="table table-bordered table-striped">
 				                <thead>
 				                <tr>
