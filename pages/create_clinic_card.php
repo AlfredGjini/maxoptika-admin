@@ -32,8 +32,8 @@
                     </center>
                   </div>
                 </div>
-				
-				<div class='clinic-card-container hidden'>
+				<!-- hidden -->
+				<div class='clinic-card-container '>
 					<div class="form-group">
 	                  <div class="col-sm-2"></div>
 	                  <div class="col-sm-8">

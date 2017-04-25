@@ -57,9 +57,10 @@
 
  <!-- mundesuar nga krisel tola 
 * Kjo eshte pjesa e dialogut ne momentin qe klikohet butoni shiko
+style="display:none"
  -->
 
-<div id="dialogShiko" style="display:none" title="Shiko Kartelen Klinike">
+<div id="dialogShiko"  title="Shiko Kartelen Klinike">
 	<form action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
 	  <div class="box-body">
 		<div class='clinic-card-container hidden'>
