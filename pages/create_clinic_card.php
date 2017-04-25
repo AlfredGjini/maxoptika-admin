@@ -169,8 +169,8 @@
   </div>
 
   <script type="text/javascript">
-    var today = moment("MM-DD-YYYY");
-    console.log(today);
+    var today = moment();
+    //console.log(today);
   	$('#datetimepicker1').daterangepicker({
 	    "singleDatePicker": true,
 	    "timePicker": true,
@@ -210,6 +210,6 @@
 	}, function(start, end, label) {
 	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 	});
-	//$('#datetimepicker1').daterangepicker({ startDate: today});
+	$('#datetimepicker1').val(today);
 
   </script>
