@@ -175,8 +175,38 @@
 	    "timePicker": true,
 	    "showCustomRangeLabel": false,
 	    "startDate": "04/19/2017",
-	    "minDate": today
+	    "minDate": today,
+	    "locale": {
+        "format": "MM/DD/YYYY",
+        "separator": " - ",
+        "weekLabel": "W",
+        "daysOfWeek": [
+            "Su",
+            "Mo",
+            "Tu",
+            "We",
+            "Th",
+            "Fr",
+            "Sa"
+        ],
+        "monthNames": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ],
+        "firstDay": 1
+    },
 	}, function(start, end, label) {
 	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 	});
+
   </script>
