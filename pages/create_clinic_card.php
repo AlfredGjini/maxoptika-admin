@@ -39,7 +39,6 @@
 									
 								}
 	                    	?>
-	                    	<option value='13'>Alfred Gjini (a.gjini@live.com)</option>
 	                    </select>
                     </center>
                   </div>
@@ -221,10 +220,10 @@
 		console.log("called");
 	  if(this.val()=="bosh"){
 	  	console.log("1");
-	  	$('#clientsSelect').hide();
+	  	$('.clinic-card-container').hide();
 	  }else{
 	  	console.log("2");
-	  	$('#clientsSelect').show();
+	  	$('.clinic-card-container').show();
 	  }
 	})
 
