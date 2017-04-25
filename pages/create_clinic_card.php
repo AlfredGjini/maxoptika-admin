@@ -41,7 +41,7 @@
 		                    <h4>Data e vizites :</h4>
 	                    	<div class="form-group">
 			                    <div class='input-group date' id='datetimepicker1'>
-				                    <input name="date" type='text' class="form-control" />
+				                    <input id="datazgjedhur" name="date" type='text' class="form-control" />
 				                    <span class="input-group-addon">
 				                        <span class="glyphicon glyphicon-calendar"></span>
 				                    </span>
@@ -170,7 +170,7 @@
 
   <script type="text/javascript">
     var today = moment();
-    //console.log(today);
+    console.log(today);
   	$('#datetimepicker1').daterangepicker({
 	    "singleDatePicker": true,
 	    "timePicker": true,
@@ -210,6 +210,6 @@
 	}, function(start, end, label) {
 	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 	});
-	$('#datetimepicker1').val(today);
+	$('#datazgjedhur').val(today);
 
   </script>
