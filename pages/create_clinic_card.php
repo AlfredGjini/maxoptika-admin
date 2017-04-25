@@ -133,6 +133,19 @@
 			                    <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" /></div>
 			                  </div>
 			                </div>
+			                <!-- checkbox -->
+				              <div class="form-group">
+				                <label>
+				                  <input type="checkbox" class="flat-red" checked>
+				                </label>
+				                <label>
+				                  <input type="checkbox" class="flat-red">
+				                </label>
+				                <label>
+				                  <input type="checkbox" class="flat-red" disabled>
+				                  Flat green skin checkbox
+				                </label>
+				              </div>
 						</div>
 
 						<div class="col-sm-6">
