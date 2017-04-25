@@ -214,7 +214,7 @@
 
 
 $(function() {
-    $('input[name="date"]').daterangepicker({
+    $('#datetimepicker1').daterangepicker({
         singleDatePicker: true,
         showDropdowns: true
     }, 
