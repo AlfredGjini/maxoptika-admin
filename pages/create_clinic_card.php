@@ -35,7 +35,7 @@
 								echo '<select name="clients" id="clients">';
 								echo "<option value=''>....</option>";
 								foreach ($dataResult as $tableRows) {
-									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( .'.$tableRows->email.' )</option>';
+									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
 									
 								}
 	                    	?>
