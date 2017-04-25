@@ -28,6 +28,18 @@
 	                    <h4>Zgjidh Klientin :</h4>
 	                    <select name='clients' id='clients'>
 	                    	<option value=''>....</option>
+	                    	<?php
+	                    		
+								$dataResult = DB::getInstance()->getAll('clients')->results();
+								$res = '';
+								$dataForDT = ["data"=>[]];
+								$i = 0;
+								echo '<select name="select">';
+								foreach ($dataResult as $tableRows) {
+									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer. '</option>';
+									
+								}
+	                    	?>
 	                    	<option value='13'>Alfred Gjini (a.gjini@live.com)</option>
 	                    </select>
                     </center>
