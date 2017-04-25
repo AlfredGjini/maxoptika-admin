@@ -28,6 +28,7 @@
                   <th>Ora</th>
                   <th>Dyqani</th>
                   <th>Shenime</th>
+                  <th>Aprovuar</th>
                   <th>Veprimi</th>
                 </tr>
                 </thead>
@@ -91,6 +92,18 @@
             <textarea name="shenime" class="form-control" placeholder="Shenime..."></textarea>
             <!-- <input type="text" class="form-control" name="shenime" placeholder="Shenime..."> -->
           </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mosha" class="col-sm-2 control-label">Shenime</label>
+          <div class="col-sm-10">
+            <label class="radio-inline">
+              <input type="radio" name="optradio">Po
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio">Jo
+            </label>
+          </div> 
         </div>
         <input type="hidden" name="id" value=""/>
         <input type="hidden" name="id_klienti" value=""/>
