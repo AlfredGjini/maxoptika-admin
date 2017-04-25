@@ -28,6 +28,7 @@
 	                    <h4>Zgjidh Klientin :</h4>
 	                    <select name='clients' id='clients'>
 	                    	<option value=''>....</option>
+	                    	<option value='13'>Alfred Gjini (a.gjini@live.com)</option>
 	                    </select>
                     </center>
                   </div>
