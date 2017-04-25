@@ -98,7 +98,7 @@ switch ($action) {
 			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<button type=\"button\" class=\"btn btn-success\">PO</button>","<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='modReservation' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='delReservation' href='#'>Fshij</a>"];
 		}
 			$i++;
-		}
+		
 		}
 		echo json_encode($dataForDT);	
 	break;
