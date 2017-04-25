@@ -226,7 +226,8 @@
     }, 
     function(start, end, label) {
         var years = moment().diff(start, 'years');
-
+        start=moment(start).format('LLL');
+        console.log(start);
         //alert("You are " + years + " years old.");
         $('#datazgjedhur').val(start);
     });
