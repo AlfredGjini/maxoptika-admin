@@ -170,8 +170,7 @@
 
   <script type="text/javascript">
     var today = moment();
-    today=moment(today).format('LLL');
-    $('#datazgjedhur').val(today);
+    
     //console.log(today);
 
     $('#datetimepicker1').daterangepicker({
@@ -191,6 +190,8 @@
         //alert("You are " + years + " years old.");
         $('#datazgjedhur').val(start);
     });
+    today=moment(today).format('LLL');
+    $('#datazgjedhur').val(today);
 
 
 
