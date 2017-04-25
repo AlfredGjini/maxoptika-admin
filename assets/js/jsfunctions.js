@@ -179,6 +179,7 @@ function setFieldValsReservations(data,param){
 	$("[name=ora]").val(data.ora);
 	$("[name=dyqani]").val(data.dyqani);
 	$("[name=shenime]").val(data.shenime);
+	$('#' + data.aprovuar).prop('checked',true);
 	$("[name=id]").val(id);
 	$("[name=id_klienti]").val(data.id_klienti);
 	
