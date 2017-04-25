@@ -26,17 +26,16 @@
                   <div class="col-sm-12">
                     <center>
 	                    <h4>Zgjidh Klientin :</h4>
-	                    <select name='clients' id='clients'>
-	                    	<option value=''>....</option>
 	                    	<?php
 	                    		
 								$dataResult = DB::getInstance()->getAll('clients')->results();
 								$res = '';
 								$dataForDT = ["data"=>[]];
 								$i = 0;
-								echo '<select name="select">';
+								echo '<select name="clients" id="clients">';
+								echo "<option value=''>....</option>";
 								foreach ($dataResult as $tableRows) {
-									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer. '</option>';
+									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( .'.$tableRows->email.' )</option>';
 									
 								}
 	                    	?>
