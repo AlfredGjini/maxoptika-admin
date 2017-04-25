@@ -41,7 +41,7 @@
 		                    <h4>Data e vizites :</h4>
 	                    	<div class="form-group">
 			                    <div class='input-group date' id='datetimepicker1'>
-				                    <input id="datazgjedhur" name="date" type='text' class="form-control" value="" />
+				                    <input id="datazgjedhur" name="date" type='text' class="form-control" value="10/24/1984" />
 				                    <span class="input-group-addon">
 				                        <span class="glyphicon glyphicon-calendar"></span>
 				                    </span>
@@ -216,7 +216,9 @@
 
     $('#datetimepicker1').daterangepicker({
         "singleDatePicker": true,
-        "showDropdowns": true
+        "showDropdowns": true,
+        "opens": "left",
+	    "minDate": today,
     }, 
     function(start, end, label) {
         var years = moment().diff(start, 'years');
