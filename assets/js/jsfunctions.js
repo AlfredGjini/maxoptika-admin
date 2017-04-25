@@ -24,7 +24,7 @@ function modClick(){
 			      data[field.name] = field.value;
 			    });
 	          	console.log(page);
-	          	console.log(data[aprovo]);
+	          	console.log(data["aprovo"]);
 	          	if(page=="manage_reservations"){
 	          		//console.log(page);
 	          		ajaxCall(data,page,'updateReservations');
