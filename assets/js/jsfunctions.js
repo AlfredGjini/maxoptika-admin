@@ -119,8 +119,8 @@ function ajaxCall(param,page,action){
 				location.reload(true);
 				
 			}else if(action == 'updateReservations'){
-				//location.reload(true);
-				console.log(res);
+				location.reload(true);
+				//console.log(res);
 				
 			}
 			else if(action == 'delUser'){
