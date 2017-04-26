@@ -22,6 +22,7 @@
               <div class="box-body">
           		<div class="form-group">
                   <div class="col-sm-12">
+                  <div><img class="gifloader pull-left" style="display: none;" src="assets/img/loader.gif"></div>
                     <center>
 	                    <h4>Zgjidh Klientin :</h4>
 	                    	<?php
@@ -273,12 +274,14 @@
   <?php
   if (isset($_GET['id'])) { ?>
     <script type="text/javascript">
+    $('.gifloader').show();
 
            $.ajax({
               url: "functions.php?action=manage_clinic_card",
               type: "post",
               data: {id: <?php echo $_GET['id']; ?>} ,
               success: function (response) {
+              	$('.gifloader').hide();
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  //console.log(response);
