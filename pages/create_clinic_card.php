@@ -263,7 +263,7 @@
                     'warning'
                   )
                  }
-                //$('#register_clients').trigger("reset");               
+                $('#register_clients').trigger("reset");               
 
               },
               error: function(jqXHR, textStatus, errorThrown) {

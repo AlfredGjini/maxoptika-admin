@@ -1,3 +1,4 @@
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -6,18 +7,21 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Kartela Klinike</a></li>
-        <li class="active">Menaxho Kartelen Klinike</li>
+        <li class="active">Menaxh Kartelen Klinike</li>
       </ol>
     </section>
     <!-- Main content -->
     <section class="content">
       <div class="row">
         <div class="col-lg-12 col-xs-12">
-			<div class="box box-info">
-	            <div class="box-header with-border">
-	              <h3 class="box-title">Menaxho Kartelen Klinike</h3>
-		        </div>
-		         <!-- form start -->
+          
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Menaxh Kartelen Klinike</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+
             <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
               <div class="box-body">
           		<div class="form-group">
@@ -207,14 +211,38 @@
 
 
 	$('#clientsSelect').on('change', function() {
-		console.log("called");
 	  if(this.value=="bosh"){
-	  	console.log("1");
+	  	//console.log("1");
 	  	$('.clinic-card-container').hide();
 	  }else{
-	  	console.log("2");
 	  	console.log(this.value);
-	  	$('.clinic-card-container').show();
+
+	  	   $('.gifloader').show();
+
+           $.ajax({
+              url: "functions.php?action=manage_clinic_card",
+              type: "post",
+              data: {id: this.value} ,
+              success: function (response) {
+              	$('.gifloader').hide();
+              	$('.clinic-card-container').show(); 
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 //console.log(response);
+                 response = JSON.parse(response);
+                 console.log(response);
+                 setFieldValsClinicCard(response);
+                 
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
 	  }
 	})
 
@@ -290,28 +318,6 @@
                  console.log(response);
                  setFieldValsClinicCard(response);
                  
-                if(response=="1"){ 
-                  // Response: 1 - Success
-                   swal(
-                    '',
-                    'Kartela u krijua me sukses',
-                    'success'
-                  )
-                }else if (response == "2"){
-                  // Response: 2 - Empty Fields
-                  swal(
-                    '',
-                    'Ju lutem plotesoni te gjitha fushat',
-                    'warning'
-                  )
-                 }else if (response == "3"){
-                  // Response: 2 - Empty Fields
-                  swal(
-                    '',
-                    'Kartela per kete klient ekziston njehere',
-                    'warning'
-                  )
-                 }
                 //$('#register_clients').trigger("reset");               
 
               },
