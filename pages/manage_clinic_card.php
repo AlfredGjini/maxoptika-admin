@@ -316,7 +316,21 @@
                  //console.log(response);
                  response = JSON.parse(response);
                  console.log(response);
+                 if(response.exist==3){
+                 	swal({
+					  title: 'Are you sure?',
+					  text: "You won't be able to revert this!",
+					  type: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: 'Yes, delete it!'
+					}).then(function () {
+					  location.redirect="home.php?page=create_clinic_card&id="+response.exist;
+					})
+                 }else{
                  setFieldValsClinicCard(response);
+                 }
                  
                 //$('#register_clients').trigger("reset");               
 
