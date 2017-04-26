@@ -188,7 +188,7 @@ function setFieldValsReservations(data,param){
 	$("#dialogModifiko").dialog("open");
 }
 
-function setFieldValsClinicCard(data,param){
+function setFieldValsClinicCard(data){
 	// var id = param;
 	// $("[name=klienti]").val(data.emer+" "+data.mbiemer);
 	// $("[name=data]").val(data.data);
