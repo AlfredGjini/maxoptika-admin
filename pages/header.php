@@ -61,6 +61,9 @@
     .shtydjathtas{
       margin-right: 10px;
     }
+    .qender{
+      text-align: center;
+    }
 
   </style>
 

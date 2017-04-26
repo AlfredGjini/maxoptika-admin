@@ -1,4 +1,4 @@
-
+$( 'table tbody tr td:last-child').addClass( 'qender' );
 
 function modClick(){
 	var page = $("form").attr("page");
