@@ -256,7 +256,7 @@
       var values = $(this).serialize();
 
        $.ajax({
-              url: "functions.php?action=create_clinic_card",
+              url: "functions.php?action=update_clinic_card",
               type: "post",
               data: values ,
               success: function (response) {
@@ -268,7 +268,7 @@
                   // Response: 1 - Success
                    swal(
                     '',
-                    'Kartela u krijua me sukses',
+                    'Kartela u perditesua me sukses',
                     'success'
                   )
                 }else if (response == "2"){
