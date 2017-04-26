@@ -197,7 +197,7 @@
     }, 
     function(start, end, label) {
         var years = moment().diff(start, 'years');
-        start=moment(start).format('Y-M-D, h:m:s');
+        start=moment(start).format('Y-M-D, h:m:s'); 
         //console.log(start);
         //alert("You are " + years + " years old.");
         $('#datazgjedhur').val(start);
