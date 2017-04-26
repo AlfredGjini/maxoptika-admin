@@ -271,7 +271,53 @@
 
   </script>
   <?php
-  if (isset($_GET['id'])) {
+  if (isset($_GET['id'])) { ?>
+    <script type="text/javascript">
+
+           $.ajax({
+              url: "functions.php?action=manage_clinic_card",
+              type: "post",
+              data: <?php echo $_GET['id']; ?> ,
+              success: function (response) {
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 console.log(response);
+                 
+                if(response=="1"){ 
+                  // Response: 1 - Success
+                   swal(
+                    '',
+                    'Kartela u krijua me sukses',
+                    'success'
+                  )
+                }else if (response == "2"){
+                  // Response: 2 - Empty Fields
+                  swal(
+                    '',
+                    'Ju lutem plotesoni te gjitha fushat',
+                    'warning'
+                  )
+                 }else if (response == "3"){
+                  // Response: 2 - Empty Fields
+                  swal(
+                    '',
+                    'Kartela per kete klient ekziston njehere',
+                    'warning'
+                  )
+                 }
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
+    </script>
+
+  <?php
   	echo "yes it's set";
   }else {
   	echo "nope";
