@@ -158,7 +158,7 @@
 				
               		</div>
               		<div class="box-footer" >
-	                	<button type="submit" class="btn btn-info pull-right">Register</button>
+	                	<button type="submit" class="btn btn-info pull-right">Update</button>
 	              </div>
 				</div>
               <!-- /.box-body -->

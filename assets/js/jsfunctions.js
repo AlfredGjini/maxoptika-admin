@@ -189,18 +189,23 @@ function setFieldValsReservations(data,param){
 }
 
 function setFieldValsClinicCard(data){
-	// var id = param;
-	// $("[name=klienti]").val(data.emer+" "+data.mbiemer);
-	// $("[name=data]").val(data.data);
-	// $("[name=ora]").val(data.ora);
-	// $("[name=dyqani]").val(data.dyqani);
+	$("#clientsSelect").val(data.id_client);
+	$('#datazgjedhur').val(data.data_vizites);
+	$("[name=sdlsph]").val(data.djathte_larg_sph);
+	$("[name=sdlcyl]").val(data.djathte_larg_cyl);
+	$("[name=sdlaxe]").val(data.djathte_larg_axe);
+	$("[name=sdasph]").val(data.djathte_afer_sph);
+	$("[name=sdacyl]").val(data.djathte_afer_cyl);
+	$("[name=sdaaxe]").val(data.djathte_afer_axe);
+	$("[name=smlsph]").val(data.majte_larg_sph);
+	$("[name=smlcyl]").val(data.majte_larg_cyl);
+	$("[name=smlaxe]").val(data.majte_larg_axe);
+	$("[name=smasph]").val(data.majte_afer_sph);
+	$("[name=smacyl]").val(data.majte_afer_cyl);
+	$("[name=smaaxe]").val(data.majte_afer_axe);
+	$("[name=dpl]").val(data.distanca_pupilare_larg);
+	$("[name=dpa]").val(data.distanca_pupilare_afer);
 	$("[name=shenime]").val(data.shenime);
-	//console.log(data.aprovuar);
-	// $('#' + data.aprovuar).prop('checked',true);
-	// $("[name=id]").val(id);
-	// $("[name=id_klienti]").val(data.id_klienti);
-	
-	// $("#dialogModifiko").dialog("open");
 }
 
 
