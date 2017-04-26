@@ -144,11 +144,6 @@
 			                    <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" /></div>
 			                  </div>
 			                </div>
-			                <!-- checkbox -->
-				              <div class="form-group">
-				                <input type="radio" name="iCheck">
-								<input type="radio" name="iCheck" checked>
-				              </div>
 						</div>
 
 						<div class="col-sm-6">

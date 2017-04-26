@@ -140,33 +140,19 @@ switch ($action) {
 
 	case 'create_clinic_card':
 		var_dump($data);
-		// $emailExist  = DB::getInstance()->get('clients',[['email','=',$data['email']]])->firstResult();
-		// //echo "u be ";
-		// // var_dump($data);
-		// if($emailExist==0){
-		// if($data['username'] && $data['password'] && $data['emer']){
-		// $register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'emailval'=>$data['email'],'password'=>$data['password']]);
-		// if($register_user){ 
-		// 	$userDataResult = DB::getInstance()->get('users',[['emailval','=',$data['email']]])->firstResult();
-		// 	//echo "Klienti u regjistrua me sukses";
-		// 	$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
-		// 	if($register_client){
-		// 		$responserc="1";
-		// 		//echo json_encode($responserc);
-		// 		echo $responserc;
-		// 	}
-		// }
-		// }
-		// else{
-		// 	$responserc="2";
-		// 	//echo json_encode($responserc);
-		// 	echo $responserc;
-		// }
-		// }else{
-		// 	$responserc="3";
-		// 	//echo json_encode($responserc);
-		// 	echo $responserc;
-		// }
+		//echo "u be ";
+		// var_dump($data);
+		
+		//echo "Klienti u regjistrua me sukses";
+		$register_clinic_card = DB::getInstance()->insert('clinic_card',['id_client'=>$data['clients'],'data_vizites'=>"2017-04-26",'djathte_larg_sph'=>$data['sdlsph'],'djathte_larg_cyl'=>$data['sdlcyl'],'djathte_larg_axe'=>$data['sdlaxe'],'djathte_afer_sph'=>$data['sdasph'],'djathte_afer_cyl'=>$data['sdacyl'],'djathte_afer_axe'=>$data['sdaaxe'],'majte_larg_sph'=>$data['smlsph'],'majte_larg_cyl'=>$data['smlcyl'],'majte_larg_axe'=>$data['smlaxe'],'majte_afer_sph'=>$data['smasph'],'majte_afer_cyl'=>$data['smacyl'],'majte_afer_axe'=>$data['smaaxe'],'distanca_pupilare_larg'=>$data['dpl'],'distanca_pupilare_afer'=>$data['dpa'],'shenime'=>$data['shenime']]);
+		if($register_clinic_card){
+			$responserc="1";
+			//echo json_encode($responserc);
+			echo $responserc;
+		}
+
+
+
 	break;
 
 	default:	
