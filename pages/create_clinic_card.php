@@ -20,7 +20,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
+            <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
               <div class="box-body">
           		<div class="form-group">
                   <div class="col-sm-12">
@@ -230,6 +230,54 @@
 
 
 
+    $("#create_clinic_card").submit(function(event) {
+
+
+      /* Stop form from submitting normally */
+      event.preventDefault();
+      var values = $(this).serialize();
+
+       $.ajax({
+              url: "functions.php?action=create_clinic_card",
+              type: "post",
+              data: values ,
+              success: function (response) {
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 console.log(response);
+                 
+                if(response=="1"){ 
+                  // Response: 1 - Success
+                   swal(
+                    '',
+                    'Perdoruesi u regjistrua me sukses',
+                    'success'
+                  )
+                }else if (response == "2"){
+                  // Response: 2 - Empty Fields
+                  swal(
+                    '',
+                    'Ju lutem plotesoni te gjitha fushat',
+                    'warning'
+                  )
+                 }else if (response == "3"){
+                  // Response: 2 - Empty Fields
+                  swal(
+                    '',
+                    'Ky perdorues ekziston',
+                    'warning'
+                  )
+                 }
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+       });
 
 
   </script>

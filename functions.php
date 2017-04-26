@@ -138,6 +138,37 @@ switch ($action) {
 		
 	break;
 
+	case 'create_clinic_card':
+		var_dump($data);
+		// $emailExist  = DB::getInstance()->get('clients',[['email','=',$data['email']]])->firstResult();
+		// //echo "u be ";
+		// // var_dump($data);
+		// if($emailExist==0){
+		// if($data['username'] && $data['password'] && $data['emer']){
+		// $register_user = DB::getInstance()->insert('users',['name'=>$data['emer'],'username'=>$data['username'],'emailval'=>$data['email'],'password'=>$data['password']]);
+		// if($register_user){ 
+		// 	$userDataResult = DB::getInstance()->get('users',[['emailval','=',$data['email']]])->firstResult();
+		// 	//echo "Klienti u regjistrua me sukses";
+		// 	$register_client = DB::getInstance()->insert('clients',['emer'=>$data['emer'],'mbiemer'=>$data['mbiemer'],'mosha'=>$data['mosha'],'gjinia'=>$data['gjinia'],'vendlindja'=>$data['vendlindja'],'celular'=>$data['celular'],'email'=>$data['email'],'user_id'=>$userDataResult->id]);
+		// 	if($register_client){
+		// 		$responserc="1";
+		// 		//echo json_encode($responserc);
+		// 		echo $responserc;
+		// 	}
+		// }
+		// }
+		// else{
+		// 	$responserc="2";
+		// 	//echo json_encode($responserc);
+		// 	echo $responserc;
+		// }
+		// }else{
+		// 	$responserc="3";
+		// 	//echo json_encode($responserc);
+		// 	echo $responserc;
+		// }
+	break;
+
 	default:	
 		# code...
 		break;
