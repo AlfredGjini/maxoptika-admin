@@ -166,7 +166,10 @@ switch ($action) {
 		//var_dump($data);
 		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]])->firstResult();
 		if ($clinic_card_data==0) {
-			echo "1";
+			$result=array(
+			    "exist" => 3,
+			);
+			echo json_encode($result);
 		}else{
 		echo json_encode($clinic_card_data);
 		}
