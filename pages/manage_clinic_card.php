@@ -326,7 +326,7 @@
 					  cancelButtonColor: '#d33',
 					  confirmButtonText: 'Po!'
 					}).then(function () {
-					  window.location.href = "home.php?page=create_clinic_card&id="+response.exist;
+					  window.location.href = "home.php?page=create_clinic_card&id="+response.id;
 					})
                  }else{
                  setFieldValsClinicCard(response);

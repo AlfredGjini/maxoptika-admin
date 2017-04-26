@@ -168,6 +168,7 @@ switch ($action) {
 		if ($clinic_card_data==0) {
 			$result=array(
 			    "exist" => 3,
+			    "id" => $data['id']
 			);
 			echo json_encode($result);
 		}else{
