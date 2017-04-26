@@ -163,7 +163,13 @@ switch ($action) {
 	break;
 
 	case 'manage_clinic_card':
-		var_dump($data);
+		//var_dump($data);
+		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]])->firstResult();
+		if ($clinic_card_data==0) {
+			echo "1";
+		}else{
+		echo json_encode($clinic_card_data);
+		}
 		//echo "u be ";
 		// var_dump($data);
 		// $clinic_card_data_exist  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['clients']]])->firstResult();
