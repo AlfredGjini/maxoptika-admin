@@ -22,7 +22,7 @@
               <div class="box-body">
           		<div class="form-group">
                   <div class="col-sm-12">
-                  <div><img class="gifloader pull-left" style="display: none;" src="assets/img/loader.gif"></div>
+                  <div><img class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
                     <center>
 	                    <h4>Zgjidh Klientin :</h4>
 	                    	<?php
@@ -282,6 +282,7 @@
               data: {id: <?php echo $_GET['id']; ?>} ,
               success: function (response) {
               	$('.gifloader').hide();
+              	$('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  //console.log(response);
