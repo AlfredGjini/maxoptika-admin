@@ -245,7 +245,7 @@
                   // Response: 1 - Success
                    swal(
                     '',
-                    'Perdoruesi u regjistrua me sukses',
+                    'Kartela u krijua me sukses',
                     'success'
                   )
                 }else if (response == "2"){
@@ -259,7 +259,7 @@
                   // Response: 2 - Empty Fields
                   swal(
                     '',
-                    'Ky perdorues ekziston',
+                    'Kartela per kete klient ekziston njehere',
                     'warning'
                   )
                  }
