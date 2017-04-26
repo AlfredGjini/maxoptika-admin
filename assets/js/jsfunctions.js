@@ -188,5 +188,20 @@ function setFieldValsReservations(data,param){
 	$("#dialogModifiko").dialog("open");
 }
 
+function setFieldValsClinicCard(data,param){
+	// var id = param;
+	// $("[name=klienti]").val(data.emer+" "+data.mbiemer);
+	// $("[name=data]").val(data.data);
+	// $("[name=ora]").val(data.ora);
+	// $("[name=dyqani]").val(data.dyqani);
+	$("[name=shenime]").val(data.shenime);
+	//console.log(data.aprovuar);
+	// $('#' + data.aprovuar).prop('checked',true);
+	// $("[name=id]").val(id);
+	// $("[name=id_klienti]").val(data.id_klienti);
+	
+	// $("#dialogModifiko").dialog("open");
+}
+
 
 
