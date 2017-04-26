@@ -212,13 +212,13 @@
 	  });
 
 	$('#clientsSelect').on('change', function() {
-		console.log("called");
+		//console.log("called");
 	  if(this.value=="bosh"){
-	  	console.log("1");
+	  	//console.log("1");
 	  	$('.clinic-card-container').hide();
 	  }else{
-	  	console.log("2");
-	  	console.log(this.value);
+	  	//console.log("2");
+	  	//console.log(this.value);
 	  	$('.clinic-card-container').show();
 	  }
 	})
@@ -239,7 +239,7 @@
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 console.log(response);
+                 //console.log(response);
                  
                 if(response=="1"){ 
                   // Response: 1 - Success
@@ -276,3 +276,17 @@
 
 
   </script>
+
+    <?php
+  if (isset($_GET['id'])) { ?>
+    <script type="text/javascript">
+    	$('.clinic-card-container').show();
+    	$("#clientsSelect").val(<?php echo $_GET['id']; ?>);
+
+
+    </script>
+
+  <?php
+  	//echo "yes it's set";
+  }
+  ?>

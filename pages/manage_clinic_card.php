@@ -345,8 +345,6 @@
     </script>
 
   <?php
-  	echo "yes it's set";
-  }else {
-  	echo "nope";
+  	//echo "yes it's set";
   }
   ?>
