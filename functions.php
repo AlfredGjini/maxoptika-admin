@@ -13,7 +13,7 @@ switch ($action) {
 		$i = 0;
 		foreach ($dataResult as $tableRows) {
 			$userDataResult = DB::getInstance()->get('users',[['id','=',$tableRows->user_id]])->firstResult();
-			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->username,$userDataResult->password,$tableRows->emer,$tableRows->mbiemer,$tableRows->mosha,$tableRows->gjinia,$tableRows->vendlindja,$tableRows->celular,$tableRows->email,"<a class=\"btn btn-info pull-left\" id='$tableRows->id' name='mod' href='home.php?page=manage_clinic_card&id=$tableRows->id'>Kartela</a>&nbsp;&nbsp;<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='del' href='#'>Fshij</a>"];
+			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->username,$userDataResult->password,$tableRows->emer,$tableRows->mbiemer,$tableRows->mosha,$tableRows->gjinia,$tableRows->vendlindja,$tableRows->celular,$tableRows->email,"<a class=\"shtydjathtas btn btn-info\" id='$tableRows->id' name='mod' href='home.php?page=manage_clinic_card&id=$tableRows->id'>Kartela</a>&nbsp;&nbsp;<a class=\"shtydjathtas btn btn-warning\" id='$tableRows->id' name='mod' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger\" id='$tableRows->id' name='del' href='#'>Fshij</a>"];
 			$i++;
 		}
 		echo json_encode($dataForDT);	

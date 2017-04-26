@@ -57,7 +57,12 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!-- Sweet Alert -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.0/sweetalert2.min.css">
+  <style type="text/css">
+    .shtydjathtas{
+      margin-right: 10px;
+    }
 
+  </style>
 
   <header class="main-header">
     <!-- Logo -->
