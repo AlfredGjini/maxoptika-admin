@@ -190,19 +190,19 @@
         "showDropdowns": true,
         "opens": "left",
 	    "minDate": today,
-	    "timePicker": true,
+	    "timePicker": false,
 	    "locale": {
             "format": 'MM/DD/YYYY h:mm A'
         }
     }, 
     function(start, end, label) {
         var years = moment().diff(start, 'years');
-        start=moment(start).format('Y-M-D, h:m'); 
+        start=moment(start).format('Y-M-D'); 
         //console.log(start);
         //alert("You are " + years + " years old.");
         $('#datazgjedhur').val(start);
     });
-    today=moment(today).format('Y-M-D, h:m'); 
+    today=moment(today).format('Y-M-D'); 
     $('#datazgjedhur').val(today);
 
 
