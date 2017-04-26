@@ -318,15 +318,15 @@
                  console.log(response);
                  if(response.exist==3){
                  	swal({
-					  title: 'Are you sure?',
-					  text: "You won't be able to revert this!",
+					  title: 'Deshironi ta krijoni tani',
+					  text: "Kartela nuk ekziston per kete klient",
 					  type: 'warning',
 					  showCancelButton: true,
 					  confirmButtonColor: '#3085d6',
 					  cancelButtonColor: '#d33',
-					  confirmButtonText: 'Yes, delete it!'
+					  confirmButtonText: 'Po!'
 					}).then(function () {
-					  location.redirect="home.php?page=create_clinic_card&id="+response.exist;
+					  window.location.href = "home.php?page=create_clinic_card&id="+response.exist;
 					})
                  }else{
                  setFieldValsClinicCard(response);
