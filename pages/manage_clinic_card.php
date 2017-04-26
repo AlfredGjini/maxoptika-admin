@@ -277,7 +277,7 @@
            $.ajax({
               url: "functions.php?action=manage_clinic_card",
               type: "post",
-              data: <?php echo $_GET['id']; ?> ,
+              data: {id: <?php echo $_GET['id']; ?>} ,
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
