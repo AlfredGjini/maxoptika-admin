@@ -142,6 +142,7 @@
           modClick();
           console.log(json);
           console.log(settings);
+          $( 'table tbody tr td:last-child').addClass( 'qender' );
         }
     });
   </script>
