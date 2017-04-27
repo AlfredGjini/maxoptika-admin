@@ -101,7 +101,7 @@
 
   <script type="text/javascript">
 
-    var ip = 'https://46.252.37.186:3040';
+    var ip = 'http://46.252.37.186:3040';
     var username = "dea";
     var password  = "IMB.DEA";
     var encPass = "dIMB.DEA";
