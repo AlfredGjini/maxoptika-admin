@@ -201,6 +201,17 @@ switch ($action) {
 
 	break;
 
+
+	case 'getDashboardData':
+		//echo "jemi tek dashboard";
+		$numberOfClinicCards = DB::getInstance()->getAll('clinic_card')->count();
+		$numberOfClients = DB::getInstance()->getAll('clients')->count();
+		$numberOfReservations = DB::getInstance()->getAll('reservations')->count();
+		$dashboardData = ["clients"=>$numberOfClients,"clinic_cards"=>$numberOfClinicCards,"reservations"=>$numberOfReservations];
+		echo json_encode($dashboardData);
+	break;
+	
+
 	default:	
 		# code...
 		break;

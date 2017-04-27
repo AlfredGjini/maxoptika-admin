@@ -16,6 +16,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
   <!-- iCheck-->
   <script src="plugins/iCheck/icheck.min.js"></script>
+  <!-- Crypto JS -->
+  <script type="text/javascript" src="assets/libs/crypto-js/crypto-js.js"></script>
   
   
   <!-- Morris.js charts -->
