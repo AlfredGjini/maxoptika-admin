@@ -101,31 +101,74 @@
 
   <script type="text/javascript">
 
+    var ip = 'http://46.252.37.186:3040';
+    var username = "dea";
+    var password  = "IMB.DEA";
+    var encPass = "dIMB.DEA";
+    
+    // Make the needed encryption
+
+    encPass  = CryptoJS.enc.Utf16LE.parse(encPass);
+    //console.log(encPass);
+
+    var encrypted = CryptoJS.SHA256(encPass).toString(CryptoJS.enc.Hex);
+    //console.log(encrypted);
+
+  // Get dashboard data
   $.ajax({
-              url: "functions.php?action=getDashboardData",
-              type: "post",
-              success: function (response) {
+    url: "functions.php?action=getDashboardData",
+    type: "post",
+    success: function (response) {
+      response = JSON.parse(response);
+      //console.log(response);
+      updateDashboard(response);
 
-                 // you will get response from your php page (what you echo or print) 
-                 //console.log(typeof(response));
-                 //console.log(response);
-                 response = JSON.parse(response);
-                 console.log(response);
-                 updateDashboard(response);
-
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
-
-
-          });
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+      }
+  });
 
 
 
     
   jQuery('.perditeso').click( function(){
     console.log("thirreads");
+
+    $.ajax({
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+        },
+        url: ip + "/artikujpost",
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":200,"NRSEL":200,"PERDORUES":"dea"}]}),
+        dataType: 'json',
+        headers: {
+        'ndermarrjaserver': 'MAXOPTIKA'
+        },
+        success: function (res) {
+          alert('Shit');
+          console.log(res);
+            /*console.log("Connected Successfully");
+            console.log(res.entiteteTeReja.artRi.length);
+            console.log(typeof res.entiteteTeReja.artRi);
+            console.log(res.entiteteTeReja.artRi);
+            var newArr = res.entiteteTeReja.artRi.splice(0, 46546);
+            console.log("NEw Arr ===================");
+            console.log(newArr.length);
+            console.log(newArr);
+            console.log('old arrrrrrrrrrrrrrrr');
+            console.log(res.entiteteTeReja.artRi.length);
+            console.log(res.entiteteTeReja.artRi);*/
+            //ajaxCall(res,"cron_db_update","update_db_on_cron");
+        },
+        error: function (res) {
+            console.error('Something went wrong!');
+            console.log(res);
+        }   
+    });
+
 
   })
   </script>
