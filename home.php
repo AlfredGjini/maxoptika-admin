@@ -7,11 +7,11 @@ $user = new User();
 if($user->isLoggedIn()){
     //echo "logged in";
   //echo $this->_sessionName;
+  echo "bla";
+  echo $_SESSION['username'];
 }else{
     Redirect::to('index');
-    echo "bla";
-    echo $_SESSION['username'];
-
+    //echo "login page";
 }
 ?>
 <!DOCTYPE html>
