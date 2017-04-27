@@ -13,8 +13,7 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
+<!--         <div class="col-lg-3 col-xs-6">
           <div class="small-box bg-aqua">
             <div class="inner">
               <h3 class="numberOfProducts">150</h3>
@@ -26,7 +25,7 @@
             </div>
             <a href="?page=manage_products" class="small-box-footer">Menaxho Produktet <i class="fa fa-arrow-circle-right"></i></a>
           </div>
-        </div>
+        </div> -->
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -101,8 +100,12 @@
 
 
   <script type="text/javascript">
+
+
+
     
   jQuery('.perditeso').click( function(){
     console.log("thirreads");
+
   })
   </script>
