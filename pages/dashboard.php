@@ -60,7 +60,7 @@
         </div>
         <!-- ./col -->
         <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-3 col-xs-6 perditeso">
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
@@ -83,3 +83,9 @@
     </section>
     <!-- /.content -->
   </div>
+  <script type="text/javascript">
+    
+  jQuery('.perditeso').click( function(){
+    console.log("thirreads");
+  })
+  </script>
