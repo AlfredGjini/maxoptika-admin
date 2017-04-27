@@ -46,7 +46,7 @@ class User{
 		*/
 		if($user){
 			$field = (is_numeric($user)) ? 'id' : 'username';
-			$data = $this->_db->get('users',[[$field,'=',$user]]);
+			$data = $this->_db->get('superusers',[[$field,'=',$user]]);
 			if($data->count()){
 				$this->_data = $data->firstResult();
 				return true;
