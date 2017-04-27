@@ -60,7 +60,7 @@
         </div>
         <!-- ./col -->
         <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
-        <div class="col-lg-3 col-xs-6 perditeso" style>
+        <div class="col-lg-3 col-xs-6 perditeso" style="cursor:pointer;">
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
