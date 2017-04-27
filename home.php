@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 
 $user = new User();
 if($user->isLoggedIn()){
-  Redirect::to('home');
     echo "logged in";
 }else{
-    echo "not logged in"; 
+    Redirect::to('index');
+    echo "login page";
 }
 ?>
 <!DOCTYPE html>
