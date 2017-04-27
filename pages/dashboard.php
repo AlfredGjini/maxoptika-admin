@@ -64,11 +64,11 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>Perditeso te dhenat</h3>
+              <h2>Perditeso te dhenat</h2>
 
               <!-- <p>Unique Visitors</p> -->
             </div>
-            <div class="icon">
+            <div class="icon" style="font-size: 40px;top: 25px;">
               <i class="fa fa-database"></i>
             </div>
             <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
