@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $user = new User();
 if($user->isLoggedIn()){
     //echo "logged in";
-  echo $this->_sessionName;
+  //echo $this->_sessionName;
 }else{
     Redirect::to('index');
     //echo "login page";
