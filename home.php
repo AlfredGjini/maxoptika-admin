@@ -1,4 +1,15 @@
 <?php require_once 'core/init.php';
+
+error_reporting(E_ALL);
+//echo $_SERVER['SERVER_NAME'];
+
+$user = new User();
+if($user->isLoggedIn()){
+  Redirect::to('home');
+    echo "logged in";
+}else{
+    echo "not logged in"; 
+}
 ?>
 <!DOCTYPE html>
 <html>
