@@ -149,7 +149,7 @@
             <div class="inner">
               <h3 class="numberOfClinicCards"></h3>
 
-              <p>Kartela Klinike</p>
+              <p>Kartela Klinike</p>  
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
