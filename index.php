@@ -26,6 +26,7 @@ if(Input::exists()){
 			if($login){
 				Session::put('username',Input::get('username'));
 				Redirect::to('home');
+
 				
 			}else{
 				echo "Login failed";
