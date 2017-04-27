@@ -9,8 +9,9 @@ if($user->isLoggedIn()){
   //echo $this->_sessionName;
 }else{
     Redirect::to('index');
-    echo $_SESSION['username'];
     echo "bla";
+    echo $_SESSION['username'];
+
 }
 ?>
 <!DOCTYPE html>
