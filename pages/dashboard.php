@@ -60,18 +60,18 @@
         </div>
         <!-- ./col -->
         <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
-        <div class="col-lg-3 col-xs-6 perditeso">
+        <div class="col-lg-3 col-xs-6 perditeso" style>
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>65</h3>
+              <h3>Perditeso te dhenat</h3>
 
-              <p>Unique Visitors</p>
+              <!-- <p>Unique Visitors</p> -->
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="fa fa-database"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
           </div>
         </div>
         <!-- ./col -->
