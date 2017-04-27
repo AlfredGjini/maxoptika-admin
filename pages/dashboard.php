@@ -59,6 +59,7 @@
           </div>
         </div>
         <!-- ./col -->
+        <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-red">
@@ -74,6 +75,7 @@
           </div>
         </div>
         <!-- ./col -->
+        <?php } ?>
       </div>
       <!-- /.row -->
       <!-- Main row -->
