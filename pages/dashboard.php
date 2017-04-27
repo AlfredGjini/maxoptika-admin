@@ -101,6 +101,26 @@
 
   <script type="text/javascript">
 
+  $.ajax({
+              url: "functions.php?action=getDashboardData",
+              type: "post",
+              success: function (response) {
+
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 //console.log(response);
+                 response = JSON.parse(response);
+                 console.log(response);
+                 updateDashboard(response);
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
 
 
     

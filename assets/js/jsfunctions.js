@@ -208,5 +208,11 @@ function setFieldValsClinicCard(data){
 	$("[name=shenime]").val(data.shenime);
 }
 
+function updateDashboard(data){
+	$(".numberOfReservations").html(data.reservations);
+	$(".numberOfClients").html(data.clients);
+	$(".numberOfClinicCards").html(data.clinic_cards);
+}
+
 
 
