@@ -171,7 +171,7 @@
        $.ajax({
               url: "functions.php?action=update_db_on_cron",
               type: "post",
-              data: JSON.stringify(newArr) ,
+              data: {dhena:newArr },
               success: function (response) {
 
                  // you will get response from your php page (what you echo or print) 
