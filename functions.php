@@ -247,6 +247,7 @@ switch ($action) {
 		$params = Input::get('param');
 		$gjendjet =  $params['entiteteTeReja']['artRi'];
 		var_dump($gjendjet);
+		echo "kot update";
 		//$gjendje = $params['']
 		//$artikuj_no = count($artikujt);
 		//print_r($artikujt);
