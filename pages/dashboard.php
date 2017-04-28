@@ -171,7 +171,7 @@
 
 
        $.ajax({
-              url: "functions.php?action=update_db_on_cron",
+              url: "worker.php",
               type: "post",
               data: {dhena:newArr },
               success: function (response) {
