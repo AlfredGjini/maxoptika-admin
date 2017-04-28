@@ -34,8 +34,7 @@ function array_diff_assoc_recursive($array1, $array2)
           }
     }
     return !isset($difference) ? 0 : $difference;
-} 
-echo $action;
+}
 switch ($action) {
 
 	case 'manage_clients':
@@ -245,9 +244,9 @@ switch ($action) {
 
 
 	case 'update_db_on_cron':
-		$params = Input::get('param');
-		$gjendjet =  $params['entiteteTeReja']['artRi'];
-		var_dump($gjendjet);
+		//$params = Input::get('param');
+		//$gjendjet =  $params['entiteteTeReja']['artRi'];
+		//var_dump($gjendjet);
 		echo "kot update";
 		//$gjendje = $params['']
 		//$artikuj_no = count($artikujt);

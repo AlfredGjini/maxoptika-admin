@@ -161,7 +161,31 @@
             console.log('old arrrrrrrrrrrrrrrr');
             console.log(res.entiteteTeReja.artRi.length);
             console.log(res.entiteteTeReja.artRi);*/
-            ajaxCall(res,"cron_db_update","update_db_on_cron");
+            //ajaxCall(res,"cron_db_update","update_db_on_cron");
+
+
+
+       $.ajax({
+              url: "functions.php?action=update_db_on_cron",
+              type: "post",
+              data: res ,
+              success: function (response) {
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 console.log(response);              
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
+
+
+
+
         },
         error: function (res) {
             console.error('Something went wrong!');
