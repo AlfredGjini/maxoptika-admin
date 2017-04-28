@@ -5,6 +5,37 @@ require_once 'core/init.php';
 $action = Input::get('action');
 $data =  $_POST;
 
+function array_diff_assoc_recursive($array1, $array2)
+{
+    foreach($array1 as $key => $value)
+    {
+        if(is_array($value))
+        {
+              if(!isset($array2[$key]))
+              {
+                  $difference[$key] = $value;
+              }
+              elseif(!is_array($array2[$key]))
+              {
+                  $difference[$key] = $value;
+              }
+              else
+              {
+                  $new_diff = array_diff_assoc_recursive($value, $array2[$key]);
+                  if($new_diff != FALSE)
+                  {
+                        $difference[$key] = $new_diff;
+                  }
+              }
+          }
+          elseif(!isset($array2[$key]) || $array2[$key] != $value)
+          {
+              $difference[$key] = $value;
+          }
+    }
+    return !isset($difference) ? 0 : $difference;
+} 
+
 switch ($action) {
 	case 'manage_clients':
 		$dataResult = DB::getInstance()->getAll('clients')->results();
@@ -210,7 +241,7 @@ switch ($action) {
 		$dashboardData = ["clients"=>$numberOfClients,"clinic_cards"=>$numberOfClinicCards,"reservations"=>$numberOfReservations];
 		echo json_encode($dashboardData);
 	break;
-	
+
 
 	default:	
 		# code...
