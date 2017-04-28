@@ -35,9 +35,9 @@ function array_diff_assoc_recursive($array1, $array2)
     }
     return !isset($difference) ? 0 : $difference;
 } 
-
+echo $action;
 switch ($action) {
-	//echo $action;
+
 	case 'manage_clients':
 		$dataResult = DB::getInstance()->getAll('clients')->results();
 		$res = '';
