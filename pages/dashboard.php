@@ -149,7 +149,10 @@
         },
         success: function (res) {
           //alert('Shit');
-          console.log(res);
+          //console.log(res);
+          var newArr = res.entiteteTeReja.artRi;
+          console.log(newArr);
+
             /*console.log("Connected Successfully");
             console.log(res.entiteteTeReja.artRi.length);
             console.log(typeof res.entiteteTeReja.artRi);
@@ -168,8 +171,9 @@
        $.ajax({
               url: "functions.php?action=update_db_on_cron",
               type: "post",
-              data: res ,
+              data: newArr ,
               success: function (response) {
+
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  console.log(response);              
