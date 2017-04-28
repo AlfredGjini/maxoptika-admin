@@ -243,7 +243,7 @@ switch ($action) {
 	break;
 
 
-	case 'update_db_on_cron':
+	case 'cron_db_update':
 		$params = Input::get('param');
 		$gjendjet =  $params['entiteteTeReja']['artRi'];
 		var_dump($gjendjet);

@@ -113,6 +113,7 @@ function ajaxCall(param,page,action){
 			console.log(res);
 		},
 		success: function(res){
+			console.log(res);
 			if(action == 'getData'){
 				res = JSON.parse(res);
 				setFieldVals(res,param);
@@ -127,6 +128,7 @@ function ajaxCall(param,page,action){
 			else if(action == 'update_db_on_cron'){
 				//res  = JSON.parse(res);
 				console.log(res); 
+				console.log("gjera");
 			}
 			else if(action == 'delUser'){
 				swal({
