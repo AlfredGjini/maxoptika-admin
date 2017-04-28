@@ -1,6 +1,6 @@
 <?php 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 require_once 'core/init.php';
 $action = Input::get('action');
 $data =  $_POST;
@@ -37,6 +37,7 @@ function array_diff_assoc_recursive($array1, $array2)
 } 
 
 switch ($action) {
+	echo $action;
 	case 'manage_clients':
 		$dataResult = DB::getInstance()->getAll('clients')->results();
 		$res = '';
@@ -243,7 +244,7 @@ switch ($action) {
 	break;
 
 
-	case 'cron_db_update':
+	case 'update_db_on_cron':
 		$params = Input::get('param');
 		$gjendjet =  $params['entiteteTeReja']['artRi'];
 		var_dump($gjendjet);
