@@ -262,7 +262,7 @@ switch ($action) {
 			$artikull2=(array) $artikull;
 			var_dump($artikull2);
 
-			$product_exist = DB::getInstance()->get('products2',[['kodartikulli','=',$artikull['KODARTIKULLI']]])->firstResult();
+			$product_exist = DB::getInstance()->get('products2',[['kodartikulli','=',$artikull2['KODARTIKULLI']]])->firstResult();
 			
 			// if($product_exist!=0){
 
