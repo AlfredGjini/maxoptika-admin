@@ -247,7 +247,7 @@ switch ($action) {
 		$params = Input::get('dhena');
 		//$gjendjet =  $data;
 		//$params =json_decode($params);
-		var_dump($params['entiteteTeReja']['cmimeReja']);
+		var_dump($params['entiteteTeReja']['artRi']);
 		echo "kot update";
 		//$gjendje = $params['']
 		//$artikuj_no = count($artikujt);
