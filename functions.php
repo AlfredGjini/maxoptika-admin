@@ -246,9 +246,9 @@ switch ($action) {
 	case 'update_db_on_cron':
 		$params = Input::get('dhena');
 		//$gjendjet =  $data;
-		//$gjendjet =json_decode(json_encode($params), true);
-		$gjendjet=(array) json_decode($params);
-		var_dump($params);
+		$gjendjet =json_decode(json_encode($params), true);
+		//$gjendjet=(array) json_decode($params);
+		var_dump($gjendjet);
 		echo "kot update";
 		//$gjendje = $params['']
 		//$artikuj_no = count($artikujt);
