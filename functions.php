@@ -256,7 +256,7 @@ switch ($action) {
 		//print_r($artikujt) ; 
 		foreach ($gjendjet as $key => $artikull) {
 			// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
-			$product_exist = DB::getInstance()->get('products2',[['kodartikulli','=',$artikull['KODARTIKULLI']]])->firstResult();
+			$product_exist = DB::getInstance()->get('products2',[['kodartikulli','=',$artikull->KODARTIKULLI]])->firstResult();
 			
 			if($product_exist!=0){
 
