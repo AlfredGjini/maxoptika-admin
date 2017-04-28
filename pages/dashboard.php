@@ -148,7 +148,7 @@
         'ndermarrjaserver': 'MAXOPTIKA'
         },
         success: function (res) {
-          alert('Shit');
+          //alert('Shit');
           console.log(res);
             /*console.log("Connected Successfully");
             console.log(res.entiteteTeReja.artRi.length);
@@ -161,7 +161,7 @@
             console.log('old arrrrrrrrrrrrrrrr');
             console.log(res.entiteteTeReja.artRi.length);
             console.log(res.entiteteTeReja.artRi);*/
-            //ajaxCall(res,"cron_db_update","update_db_on_cron");
+            ajaxCall(res,"cron_db_update","update_db_on_cron");
         },
         error: function (res) {
             console.error('Something went wrong!');

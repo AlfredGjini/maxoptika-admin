@@ -124,6 +124,10 @@ function ajaxCall(param,page,action){
 				//console.log(res);
 				
 			}
+			else if(action == 'update_db_on_cron'){
+				//res  = JSON.parse(res);
+				console.log(res); 
+			}
 			else if(action == 'delUser'){
 				swal({
 				  title: 'Deleted!',
