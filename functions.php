@@ -245,7 +245,7 @@ switch ($action) {
 
 	case 'update_db_on_cron':
 		//$params = Input::get('param');
-		$gjendjet =  $data['entiteteTeReja']['artRi'];
+		$gjendjet =  $data;
 		var_dump($gjendjet);
 		echo "kot update";
 		//$gjendje = $params['']
