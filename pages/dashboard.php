@@ -152,7 +152,7 @@
           //console.log(res);
           var newArr = res.entiteteTeReja.artRi;
           //console.log(newArr);
-          res=JSON.stringify(res);
+          //res=JSON.stringify(res);
           //console.log(res);
 
             /*console.log("Connected Successfully");
