@@ -247,7 +247,7 @@ switch ($action) {
 		$params = Input::get('dhena');
 		//$gjendjet =  $data;
 		//$gjendjet =json_decode(json_encode($params), true);
-		$gjendjet=(array) $params;
+		$gjendjet=(array) json_decode($params);
 		var_dump($params);
 		echo "kot update";
 		//$gjendje = $params['']
