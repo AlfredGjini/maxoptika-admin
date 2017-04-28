@@ -151,7 +151,9 @@
           //alert('Shit');
           //console.log(res);
           var newArr = res.entiteteTeReja.artRi;
-          console.log(newArr);
+          //console.log(newArr);
+          res=JSON.stringify(res);
+          console.log(res);
 
             /*console.log("Connected Successfully");
             console.log(res.entiteteTeReja.artRi.length);
@@ -171,7 +173,7 @@
        $.ajax({
               url: "functions.php?action=update_db_on_cron",
               type: "post",
-              data: {dhena:newArr },
+              data: {dhena:res },
               success: function (response) {
 
                  // you will get response from your php page (what you echo or print) 
