@@ -92,9 +92,9 @@
               </div>
             </div>
 
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped active" role="progressbar"
-              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+            <div class="progress" style="display: none;">
+              <div class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar"
+              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
                 40%
               </div>
             </div>
@@ -195,6 +195,7 @@
     
   jQuery('.perditeso').click( function(){
     console.log("thirreads");
+    $('.progress').show();
 
     $.ajax({
         beforeSend: function (xhr) {
@@ -229,6 +230,9 @@
             newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
             console.log(newArr1);
             //newArr1=JSON.stringify(newArr1);
+            progress-bar
+            $('.progress-bar').css("width", "33%");
+            $('.progress-bar').text("33%");
 
             $.ajax({
                   beforeSend: function (xhr) {
@@ -251,6 +255,9 @@
                     var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
                     console.log(newArr2);
                     //newArr2=JSON.stringify(newArr2);
+                    $('.progress-bar').css("width", "66%");
+                    $('.progress-bar').text("66%");
+
                     
 
 
@@ -274,6 +281,10 @@
                           var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
+                          $('.progress-bar').css("width", "100%");
+                          $('.progress-bar').text("100%");
+                          $('.progress').show();
+
 
 
                         },
