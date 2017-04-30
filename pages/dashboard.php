@@ -91,8 +91,8 @@
         <!-- ./col -->
         <?php } ?>
       </div>
-      <div><img class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
-      <div>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></div>
+      <div><img class="gifloader pull-left" style="padding-top: 30px;width: 30px;" src="assets/img/loader.gif"> <div><h5>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></h5></div></div>
+
       <!-- /.row -->
       <!-- Main row -->
       
