@@ -142,7 +142,7 @@
         url: ip + "/artikujpost",
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":100,"NRSEL":100,"PERDORUES":"dea"}]}),
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":300,"NRSEL":300,"PERDORUES":"dea"}]}),
         dataType: 'json',
         headers: {
         'ndermarrjaserver': 'MAXOPTIKA'
