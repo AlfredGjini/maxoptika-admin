@@ -225,7 +225,6 @@
             newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
             console.log(newArr1);
             //newArr1=JSON.stringify(newArr1);
-            progress-bar
             $('.progress-bar').css("width", "33%");
             $('.progress-bar').text("33%");
 
