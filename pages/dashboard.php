@@ -199,38 +199,22 @@
           //console.log(newArr);
           //newArr=JSON.stringify(newArr);
           //console.log(newArr);
-
-            /*console.log("Connected Successfully");
-            console.log(res.entiteteTeReja.artRi.length);
-            console.log(typeof res.entiteteTeReja.artRi);
-            console.log(res.entiteteTeReja.artRi);
-            var newArr = res.entiteteTeReja.artRi.splice(0, 46546);
-            console.log("NEw Arr ===================");
-            console.log(newArr.length);
-            console.log(newArr);
-            console.log('old arrrrrrrrrrrrrrrr');
-            console.log(res.entiteteTeReja.artRi.length);
-            console.log(res.entiteteTeReja.artRi);*/
-            //ajaxCall(res,"cron_db_update","update_db_on_cron");
-
-
-            //console.log(res);
-            //console.log(newArr);
-            var newarr2=[];
-            newArr.forEach( function (arrayItem)
-              {
+          var newArr1=[];
+          newArr.forEach( function (arrayItem)
+            {
                   // Insert into the new array only those items that have PERPESHORE==true
-                  // if(arrayItem.AKTIV==true){
-                  //   newarr2.push(arrayItem);
+                  // if(arrayItem.PERPESHORE==true){
+                  //   newArr1.push(arrayItem);
                   // }
                   if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
-                    newarr2.push(arrayItem);
+                    newArr1.push(arrayItem);
                   }
-              });
-              newarr2 = removeDuplicates(newarr2, "KODARTIKULLI");
-              console.log(newarr2);
+            });
+            newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
+            console.log(newArr1);
+            //newArr1=JSON.stringify(newArr1);
 
-              $.ajax({
+            $.ajax({
                   beforeSend: function (xhr) {
                       xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
                   },
@@ -243,44 +227,41 @@
                   'ndermarrjaserver': 'MAXOPTIKA'
                   },
                   success: function (res) {
-                    //alert('Shit');
-                    //console.log(res);
-                    //var newArr3 = res.entiteteTeReja.artRi;
-                    //console.log(newArr3);
-                    //console.log(res);
-                    var newArr3 = res.entiteteTeReja.cmimeReja;
+
+                    var newArrCmime = res.entiteteTeReja.cmimeReja;
                     //var newArr4 = [];
 
-                    var arraycmim=remove_duplicates(newarr2,newArr3);
-                    var uniqueArray = removeDuplicates(arraycmim, "KODARTIKULLI");
-                    console.log(uniqueArray);
+                    var newArrCmime=remove_duplicates(newArr1,newArrCmime);
+                    var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
+                    console.log(newArr2);
+                    //newArr2=JSON.stringify(newArr2);
                     
 
 
-                    // $.ajax({
-                    //     beforeSend: function (xhr) {
-                    //         xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
-                    //     },
-                    //     url: ip + "/entitetepost",
-                    //     type: 'POST',
-                    //     contentType: 'application/json',
-                    //     data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
-                    //     dataType: 'json',
-                    //     headers: {
-                    //     'ndermarrjaserver': 'MAXOPTIKA'
-                    //     },
-                    //     success: function (res) {
-                    //       //alert('Shit');
-                    //       console.log(res);
-                    //       //var newArr = res.entiteteTeReja.artRi;
+                    $.ajax({
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                        },
+                        url: ip + "/entitetepost",
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
+                        dataType: 'json',
+                        headers: {
+                        'ndermarrjaserver': 'MAXOPTIKA'
+                        },
+                        success: function (res) {
+                          //alert('Shit');
+                          console.log(res);
+                          //var newArrMagGjendje = res.entiteteTeReja.artRi;
 
 
-                    //     },
-                    //     error: function (res) {
-                    //         console.error('Something went wrong!');
-                    //         console.log(res);
-                    //     }   
-                    // });
+                        },
+                        error: function (res) {
+                            console.error('Something went wrong!');
+                            console.log(res);
+                        }   
+                    });
 
 
 
