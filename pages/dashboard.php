@@ -153,7 +153,7 @@
           var newArr = res.entiteteTeReja.artRi;
           //console.log(newArr);
           newArr=JSON.stringify(newArr);
-          //console.log(res);
+          console.log(newArr);
 
             /*console.log("Connected Successfully");
             console.log(res.entiteteTeReja.artRi.length);
