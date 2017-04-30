@@ -152,8 +152,8 @@
           //console.log(res);
           var newArr = res.entiteteTeReja.artRi;
           //console.log(newArr);
-          newArr=JSON.stringify(newArr);
-          console.log(newArr);
+          //newArr=JSON.stringify(newArr);
+          //console.log(newArr);
 
             /*console.log("Connected Successfully");
             console.log(res.entiteteTeReja.artRi.length);
@@ -169,24 +169,31 @@
             //ajaxCall(res,"cron_db_update","update_db_on_cron");
 
 
-
-       $.ajax({
-              url: "worker.php",
-              type: "post",
-              data: {dhena:newArr },
-              success: function (response) {
-
-                 // you will get response from your php page (what you echo or print) 
-                 //console.log(typeof(response));
-                 console.log(response);              
-
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
+            console.log(res);
 
 
-          });
+
+
+
+
+
+       // $.ajax({
+       //        url: "worker.php",
+       //        type: "post",
+       //        data: {dhena:newArr },
+       //        success: function (response) {
+
+       //           // you will get response from your php page (what you echo or print) 
+       //           //console.log(typeof(response));
+       //           console.log(response);              
+
+       //        },
+       //        error: function(jqXHR, textStatus, errorThrown) {
+       //           console.log(textStatus, errorThrown);
+       //        }
+
+
+       //    });
 
 
 
