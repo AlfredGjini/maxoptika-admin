@@ -142,7 +142,7 @@
         url: ip + "/artikujpost",
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":1,"NRSEL":400,"PERDORUES":"dea"}]}),
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
         dataType: 'json',
         headers: {
         'ndermarrjaserver': 'MAXOPTIKA'
@@ -174,12 +174,13 @@
             var newarr2=[];
             newArr.forEach( function (arrayItem)
               {
-                  // if(arrayItem.AKTIV==true){
-                  //   newarr2.push(arrayItem);
-                  // }
-                  if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
+                  // Insert into the new array only those items that have PERPESHORE==true
+                  if(arrayItem.AKTIV==true){
                     newarr2.push(arrayItem);
                   }
+                  // if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
+                  //   newarr2.push(arrayItem);
+                  // }
               });
               console.log(newarr2);
 
