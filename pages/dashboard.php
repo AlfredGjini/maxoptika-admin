@@ -252,6 +252,7 @@
 
                     var arraycmim=remove_duplicates(newarr2,newArr3);
                     var uniqueArray = removeDuplicates(arrayWithDuplicates, "KODARTIKULLI");
+                    console.log(uniqueArray);
                     
 
 
