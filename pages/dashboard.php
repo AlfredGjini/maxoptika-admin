@@ -251,7 +251,7 @@
                     //var newArr4 = [];
 
                     var arraycmim=remove_duplicates(newarr2,newArr3);
-                    var uniqueArray = removeDuplicates(arrayWithDuplicates, "KODARTIKULLI");
+                    var uniqueArray = removeDuplicates(arraycmim, "KODARTIKULLI");
                     console.log(uniqueArray);
                     
 
