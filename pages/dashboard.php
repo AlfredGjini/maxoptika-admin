@@ -211,7 +211,7 @@
                         url: ip + "/artikujGjendje",
                         type: 'POST',
                         contentType: 'application/json',
-                        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
                         dataType: 'json',
                         headers: {
                         'ndermarrjaserver': 'MAXOPTIKA'
