@@ -199,8 +199,9 @@
                   success: function (res) {
                     //alert('Shit');
                     //console.log(res);
-                    var newArr3 = res.entiteteTeReja.artRi;
-                    console.log(newArr3);
+                    //var newArr3 = res.entiteteTeReja.artRi;
+                    //console.log(newArr3);
+                    console.log(res);
 
 
                   },
