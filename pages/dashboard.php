@@ -159,7 +159,7 @@
         url: ip + "/artikujpost",
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":1,"NRSEL":200,"PERDORUES":"dea"}]}),
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
         dataType: 'json',
         headers: {
         'ndermarrjaserver': 'MAXOPTIKA'
@@ -208,7 +208,7 @@
                   url: ip + "/cmimipost",
                   type: 'POST',
                   contentType: 'application/json',
-                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":1,"NRSEL":200,"PERDORUES":"dea"}]}),
+                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
                   dataType: 'json',
                   headers: {
                   'ndermarrjaserver': 'MAXOPTIKA'
@@ -220,21 +220,9 @@
                     //console.log(newArr3);
                     //console.log(res);
                     var newArr3 = res.entiteteTeReja.cmimeReja;
-                    var newArr4 = [];
+                    //var newArr4 = [];
 
-                    //remove_duplicates(newarr2,newArr3);
-
-
-                    for (var i = 0, len = newarr2.length; i < len; i++) { 
-                        for (var j = 0, len2 = newArr3.length; j < len2; j++) { 
-                            if (newarr2[i].KODARTIKULLI === newArr3[j].KODARTIKULLI) {
-                                //b.splice(j, 1);
-                                newArr4.push(newArr3[j]);
-                                //len2=b.length;
-                            }
-                        }
-                    }
-                    console.log(newArr4);
+                    remove_duplicates(newarr2,newArr3);
                     
 
 
