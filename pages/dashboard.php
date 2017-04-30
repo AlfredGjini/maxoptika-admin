@@ -142,7 +142,7 @@
         url: ip + "/magazinatpost",
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":400,"PERDORUES":"dea"}]}),
         dataType: 'json',
         headers: {
         'ndermarrjaserver': 'MAXOPTIKA'
