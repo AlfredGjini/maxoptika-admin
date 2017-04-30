@@ -87,21 +87,17 @@
             </div>
             <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
           </div>
+          <div id="container" style="width:100%; height:50px; border:1px solid black;">
+            <div id="progress-bar" style="width:50%;background-color:#b0112b;height:48px;">
+            </div>
+          </div>
         </div> 
         <!-- ./col -->
         <?php } ?>
       </div>
-      <div class="row">
-      <p><img class="gifloader pull-left" style="padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></p>
-      <p>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></p>
-      </div>
 
-      <div id="container" style="width:100%; height:50px; border:1px solid black;">
-        <div id="progress-bar" style="width:50%;/*change this width */
-             background-color:red;
-             height:45px;">
-        </div>
-      </div>
+
+      
 
       <!-- /.row -->
       <!-- Main row -->
