@@ -174,7 +174,10 @@
             var newarr2=[];
             newArr.forEach( function (arrayItem)
               {
-                  if(arrayItem.AKTIV==true){
+                  // if(arrayItem.AKTIV==true){
+                  //   newarr2.push(arrayItem);
+                  // }
+                  if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
                     newarr2.push(arrayItem);
                   }
               });
