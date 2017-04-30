@@ -208,10 +208,10 @@
                         beforeSend: function (xhr) {
                             xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
                         },
-                        url: ip + "/entitetepost",
+                        url: ip + "/artikujGjendje",
                         type: 'POST',
                         contentType: 'application/json',
-                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                        data: JSON.stringify({"gjendje":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
                         dataType: 'json',
                         headers: {
                         'ndermarrjaserver': 'MAXOPTIKA'
