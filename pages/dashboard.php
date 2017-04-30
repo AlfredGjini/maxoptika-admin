@@ -91,6 +91,8 @@
         <!-- ./col -->
         <?php } ?>
       </div>
+      <div><img class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
+      <div>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></div>
       <!-- /.row -->
       <!-- Main row -->
       
@@ -245,7 +247,7 @@
                         url: ip + "/entitetepost",
                         type: 'POST',
                         contentType: 'application/json',
-                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
+                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":0,"NRCHUNK":0,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
                         dataType: 'json',
                         headers: {
                         'ndermarrjaserver': 'MAXOPTIKA'
@@ -253,7 +255,11 @@
                         success: function (res) {
                           //alert('Shit');
                           console.log(res);
-                          //var newArrMagGjendje = res.entiteteTeReja.artRi;
+                          var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
+                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          console.log(newArr3);
+                          //newArr3=JSON.stringify(newArr3);
 
 
                         },
