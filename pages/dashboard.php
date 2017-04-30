@@ -187,7 +187,7 @@
 
 
             //console.log(res);
-            console.log(newArr);
+            //console.log(newArr);
             var newarr2=[];
             newArr.forEach( function (arrayItem)
               {
@@ -220,8 +220,21 @@
                     //console.log(newArr3);
                     console.log(res);
                     var newArr3 = res.entiteteTeReja.cmimeReja;
+                    var newArr4 = [];
 
                     remove_duplicates(newarr2,newArr3);
+
+
+                    for (var i = 0, len = newarr2.length; i < len; i++) { 
+                        for (var j = 0, len2 = newArr3.length; j < len2; j++) { 
+                            if (newarr2[i].KODARTIKULLI === newArr3[j].KODARTIKULLI) {
+                                //b.splice(j, 1);
+                                newArr4.push(j);
+                                //len2=b.length;
+                            }
+                        }
+                    }
+                    console.log(newArr4);
                     
 
 
