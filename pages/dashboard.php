@@ -142,7 +142,7 @@
         url: ip + "/artikujpost",
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":200,"PERDORUES":"dea"}]}),
         dataType: 'json',
         headers: {
         'ndermarrjaserver': 'MAXOPTIKA'
@@ -191,7 +191,7 @@
                   url: ip + "/cmimipost",
                   type: 'POST',
                   contentType: 'application/json',
-                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":200,"PERDORUES":"dea"}]}),
                   dataType: 'json',
                   headers: {
                   'ndermarrjaserver': 'MAXOPTIKA'
@@ -202,6 +202,35 @@
                     //var newArr3 = res.entiteteTeReja.artRi;
                     //console.log(newArr3);
                     console.log(res);
+
+
+                    $.ajax({
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                        },
+                        url: ip + "/magazinatpost",
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({"magazina":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                        dataType: 'json',
+                        headers: {
+                        'ndermarrjaserver': 'MAXOPTIKA'
+                        },
+                        success: function (res) {
+                          //alert('Shit');
+                          console.log(res);
+                          //var newArr = res.entiteteTeReja.artRi;
+
+
+                        },
+                        error: function (res) {
+                            console.error('Something went wrong!');
+                            console.log(res);
+                        }   
+                    });
+
+
+
 
 
                   },
