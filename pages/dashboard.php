@@ -142,7 +142,7 @@
         url: ip + "/artikujpost",
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":200,"PERDORUES":"dea"}]}),
+        data: JSON.stringify({"art":[{"MARRE":"1990-01-01","NRCHUNK":1,"NRSEL":200,"PERDORUES":"dea"}]}),
         dataType: 'json',
         headers: {
         'ndermarrjaserver': 'MAXOPTIKA'
@@ -191,7 +191,7 @@
                   url: ip + "/cmimipost",
                   type: 'POST',
                   contentType: 'application/json',
-                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":200,"PERDORUES":"dea"}]}),
+                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":1,"NRSEL":200,"PERDORUES":"dea"}]}),
                   dataType: 'json',
                   headers: {
                   'ndermarrjaserver': 'MAXOPTIKA'
@@ -208,10 +208,10 @@
                         beforeSend: function (xhr) {
                             xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
                         },
-                        url: ip + "/magazinatpost",
+                        url: ip + "/artikujGjendje",
                         type: 'POST',
                         contentType: 'application/json',
-                        data: JSON.stringify({"magazina":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
                         dataType: 'json',
                         headers: {
                         'ndermarrjaserver': 'MAXOPTIKA'
