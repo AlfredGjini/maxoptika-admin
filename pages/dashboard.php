@@ -227,7 +227,7 @@
                     newarr2.push(arrayItem);
                   }
               });
-              newarr2 = removeDuplicates(arraycmim, "KODARTIKULLI");
+              newarr2 = removeDuplicates(newarr2, "KODARTIKULLI");
               console.log(newarr2);
 
               $.ajax({
