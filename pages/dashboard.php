@@ -188,7 +188,7 @@
                   beforeSend: function (xhr) {
                       xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
                   },
-                  url: ip + "/cmimeReja",
+                  url: ip + "/cmimipost",
                   type: 'POST',
                   contentType: 'application/json',
                   data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
