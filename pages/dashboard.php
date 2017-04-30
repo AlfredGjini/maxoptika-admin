@@ -96,6 +96,13 @@
       <p>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></p>
       </div>
 
+      <div id="container" style="width:100%; height:50px; border:1px solid black;">
+        <div id="progress-bar" style="width:50%;/*change this width */
+             background-color:red;
+             height:45px;">
+        </div>
+      </div>
+
       <!-- /.row -->
       <!-- Main row -->
       
