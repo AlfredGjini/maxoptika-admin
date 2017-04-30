@@ -101,6 +101,23 @@
 
   <script type="text/javascript">
 
+
+    function remove_duplicates(a, b) {
+     for (var i = 0, len = a.length; i < len; i++) { 
+            for (var j = 0, len2 = b.length; j < len2; j++) { 
+                if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
+                    b.splice(j, 1);
+                    len2=b.length;
+                }
+            }
+        }
+
+        console.log(a);
+        console.log(b);
+
+    }
+
+
     var ip = 'http://46.252.37.186:3040';
     var username = "dea";
     var password  = "IMB.DEA";
@@ -175,12 +192,12 @@
             newArr.forEach( function (arrayItem)
               {
                   // Insert into the new array only those items that have PERPESHORE==true
-                  if(arrayItem.AKTIV==true){
-                    newarr2.push(arrayItem);
-                  }
-                  // if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
+                  // if(arrayItem.AKTIV==true){
                   //   newarr2.push(arrayItem);
                   // }
+                  if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
+                    newarr2.push(arrayItem);
+                  }
               });
               console.log(newarr2);
 
@@ -202,32 +219,36 @@
                     //var newArr3 = res.entiteteTeReja.artRi;
                     //console.log(newArr3);
                     console.log(res);
+                    var newArr3 = res.entiteteTeReja.cmimeReja;
+
+                    remove_duplicates(newarr2,newArr3);
+                    
 
 
-                    $.ajax({
-                        beforeSend: function (xhr) {
-                            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
-                        },
-                        url: ip + "/entitetepost",
-                        type: 'POST',
-                        contentType: 'application/json',
-                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
-                        dataType: 'json',
-                        headers: {
-                        'ndermarrjaserver': 'MAXOPTIKA'
-                        },
-                        success: function (res) {
-                          //alert('Shit');
-                          console.log(res);
-                          //var newArr = res.entiteteTeReja.artRi;
+                    // $.ajax({
+                    //     beforeSend: function (xhr) {
+                    //         xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                    //     },
+                    //     url: ip + "/entitetepost",
+                    //     type: 'POST',
+                    //     contentType: 'application/json',
+                    //     data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
+                    //     dataType: 'json',
+                    //     headers: {
+                    //     'ndermarrjaserver': 'MAXOPTIKA'
+                    //     },
+                    //     success: function (res) {
+                    //       //alert('Shit');
+                    //       console.log(res);
+                    //       //var newArr = res.entiteteTeReja.artRi;
 
 
-                        },
-                        error: function (res) {
-                            console.error('Something went wrong!');
-                            console.log(res);
-                        }   
-                    });
+                    //     },
+                    //     error: function (res) {
+                    //         console.error('Something went wrong!');
+                    //         console.log(res);
+                    //     }   
+                    // });
 
 
 
