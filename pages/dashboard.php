@@ -92,14 +92,8 @@
         <?php } ?>
       </div>
       <div class="row">
-      <div class="col-lg-3 col-xs-6">
-      <img class="gifloader pull-left" style="padding-top: 30px;width: 30px;" src="assets/img/loader.gif">
-      </div>
-      <div class="col-lg-3 col-xs-6">
-      <h5>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></h5>
-      </div>
-
-      
+      <p><img class="gifloader pull-left" style="padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></p>
+      <p>Perditesimi i te dhenave <span id="perditesimiDhenave"></span></p>
       </div>
 
       <!-- /.row -->
