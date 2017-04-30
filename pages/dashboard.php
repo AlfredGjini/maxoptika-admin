@@ -110,22 +110,40 @@
             for (var j = 0, len2 = b.length; j < len2; j++) { 
                 if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
                     //b.splice(j, 1);
-                    //len2=b.length;
                     count2++;
                     arrayre.push(b[j]);
+                    // len2=b.length;
                 }else{
                   count1++;
                 }
             }
         }
 
-        console.log(a);
-        console.log(b);
-        console.log(count1);
-        console.log(count2);
-        console.log(arrayre);
+        // console.log(a);
+        // console.log(b);
+        // console.log(count1);
+        // console.log(count2);
+        // console.log(arrayre);
+        return arrayre;
 
     }
+
+
+    function removeDuplicates(originalArray, prop) {
+         var newArray = [];
+         var lookupObject  = {};
+
+         for(var i in originalArray) {
+            lookupObject[originalArray[i][prop]] = originalArray[i];
+         }
+
+         for(i in lookupObject) {
+             newArray.push(lookupObject[i]);
+         }
+          return newArray;
+     }
+
+
 
 
     var ip = 'http://46.252.37.186:3040';
@@ -232,7 +250,8 @@
                     var newArr3 = res.entiteteTeReja.cmimeReja;
                     //var newArr4 = [];
 
-                    remove_duplicates(newarr2,newArr3);
+                    var arraycmim=remove_duplicates(newarr2,newArr3);
+                    var uniqueArray = removeDuplicates(arrayWithDuplicates, "KODARTIKULLI");
                     
 
 
