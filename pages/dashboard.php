@@ -151,7 +151,7 @@
           //alert('Shit');
           //console.log(res);
           var newArr = res.entiteteTeReja.artRi;
-          //console.log(newArr);
+          console.log(newArr);
           //newArr=JSON.stringify(newArr);
           //console.log(newArr);
 
