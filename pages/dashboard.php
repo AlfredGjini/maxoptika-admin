@@ -170,6 +170,7 @@
 
 
             console.log(res);
+            console.log(newArr);
 
 
 
