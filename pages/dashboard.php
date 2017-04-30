@@ -169,8 +169,18 @@
             //ajaxCall(res,"cron_db_update","update_db_on_cron");
 
 
-            console.log(res);
+            //console.log(res);
             console.log(newArr);
+            var newarr2=[];
+            newArr.forEach( function (arrayItem)
+              {
+                  var x = arrayItem.prop1 + 2;
+                  alert(x);
+                  if(arrayItem.AKTIV==true){
+                    newarr2.push(arrayItem);
+                  }
+              });
+              console.log(newarr2);
 
 
 
