@@ -105,12 +105,14 @@
     function remove_duplicates(a, b) {
       var count1=0;
       var count2=0;
+      var arrayre=[];
      for (var i = 0, len = a.length; i < len; i++) { 
             for (var j = 0, len2 = b.length; j < len2; j++) { 
                 if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
-                    b.splice(j, 1);
-                    len2=b.length;
+                    //b.splice(j, 1);
+                    //len2=b.length;
                     count2++;
+                    arrayre.push(b[j]);
                 }else{
                   count1++;
                 }
@@ -121,6 +123,7 @@
         console.log(b);
         console.log(count1);
         console.log(count2);
+        console.log(arrayre);
 
     }
 
