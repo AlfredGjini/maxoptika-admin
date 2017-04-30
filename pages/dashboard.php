@@ -174,8 +174,6 @@
             var newarr2=[];
             newArr.forEach( function (arrayItem)
               {
-                  var x = arrayItem.prop1 + 2;
-                  alert(x);
                   if(arrayItem.AKTIV==true){
                     newarr2.push(arrayItem);
                   }
