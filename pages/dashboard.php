@@ -208,7 +208,7 @@
                         beforeSend: function (xhr) {
                             xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
                         },
-                        url: ip + "/artikujGjendje",
+                        url: ip + "/entitetepost",
                         type: 'POST',
                         contentType: 'application/json',
                         data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":200,"NRCHUNK":1,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
