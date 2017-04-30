@@ -1,2 +1,1 @@
-web: vendor/bin/heroku-php-apache2 www/
-worker: php bin/worker.php
+worker: cd ~/www/ && ~/php/bin/php worker.php
