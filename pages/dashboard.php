@@ -86,11 +86,12 @@
               <i class="fa fa-database"></i>
             </div>
             <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-          </div>
-          <div id="container" style="width:100%; height:50px; border:1px solid black;">
-            <div id="progress-bar" style="width:50%;background-color:#b0112b;height:48px;">
+            <div id="container" style="width:100%; height:30px; border:1px solid black;border-radius:5px;">
+              <div id="progress-bar" style="width:50%;background-color:#b0112b;height:28px;border-radius:5px;">
+              </div>
             </div>
           </div>
+          
         </div> 
         <!-- ./col -->
         <?php } ?>
