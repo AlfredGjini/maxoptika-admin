@@ -251,7 +251,7 @@
             });
             newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
             console.log(newArr1);
-            newArr1=JSON.stringify(newArr1);
+            
             $('.progress-bar').css("width", "33%");
             $('.progress-bar').text("33%");
 
@@ -272,10 +272,9 @@
                     var newArrCmime = res.entiteteTeReja.cmimeReja;
                     //var newArr4 = [];
 
-                    //var newArrCmime=remove_duplicates(newArr1,newArrCmime);
+                    var newArrCmime=remove_duplicates(newArr1,newArrCmime);
                     var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
-                    var newArrCmime=remove_duplicates(newArr1,newArr2);
-                    console.log(newArrCmime);
+                    console.log(newArr2);
                     //newArr2=JSON.stringify(newArr2);
                     $('.progress-bar').css("width", "66%");
                     $('.progress-bar').text("66%");
@@ -283,56 +282,57 @@
                     
 
 
-                    // $.ajax({
-                    //     beforeSend: function (xhr) {
-                    //         xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
-                    //     },
-                    //     url: ip + "/entitetepost",
-                    //     type: 'POST',
-                    //     contentType: 'application/json',
-                    //     data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":0,"NRCHUNK":0,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
-                    //     dataType: 'json',
-                    //     headers: {
-                    //     'ndermarrjaserver': 'MAXOPTIKA'
-                    //     },
-                    //     success: function (res) {
-                    //       //alert('Shit');
-                    //       console.log(res);
-                    //       var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-                    //       var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
-                    //       var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
-                    //       console.log(newArr3);
-                    //       //newArr3=JSON.stringify(newArr3);
-                    //       $('.progress-bar').css("width", "100%");
-                    //       $('.progress-bar').text("100%");
-                    //       $('.progress').hide();
+                    $.ajax({
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                        },
+                        url: ip + "/entitetepost",
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":0,"NRCHUNK":0,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
+                        dataType: 'json',
+                        headers: {
+                        'ndermarrjaserver': 'MAXOPTIKA'
+                        },
+                        success: function (res) {
+                          //alert('Shit');
+                          console.log(res);
+                          var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
+                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          console.log(newArr3);
+                          //newArr3=JSON.stringify(newArr3);
+                          $('.progress-bar').css("width", "100%");
+                          $('.progress-bar').text("100%");
+                          $('.progress').hide();
+                          newArr1=JSON.stringify(newArr1);
 
-                    //       $.ajax({
-                    //           url: "worker.php",
-                    //           type: "post",
-                    //           data: {dhena:newArr1 },
-                    //           success: function (response) {
+                          $.ajax({
+                              url: "worker.php",
+                              type: "post",
+                              data: {dhena:newArr1 },
+                              success: function (response) {
 
-                    //              // you will get response from your php page (what you echo or print) 
-                    //              //console.log(typeof(response));
-                    //              console.log(response);              
+                                 // you will get response from your php page (what you echo or print) 
+                                 //console.log(typeof(response));
+                                 console.log(response);              
 
-                    //           },
-                    //           error: function(jqXHR, textStatus, errorThrown) {
-                    //              console.log(textStatus, errorThrown);
-                    //           }
-
-
-                    //       });
+                              },
+                              error: function(jqXHR, textStatus, errorThrown) {
+                                 console.log(textStatus, errorThrown);
+                              }
 
 
+                          });
 
-                    //     },
-                    //     error: function (res) {
-                    //         console.error('Something went wrong!');
-                    //         console.log(res);
-                    //     }   
-                    // });
+
+
+                        },
+                        error: function (res) {
+                            console.error('Something went wrong!');
+                            console.log(res);
+                        }   
+                    });
 
 
 
