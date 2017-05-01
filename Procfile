@@ -1,1 +1,1 @@
-worker: while true; do cd /app/www/ && /app/bin/php worker.php; sleep 1; done
+worker: cd  worker.php;
