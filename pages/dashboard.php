@@ -306,6 +306,8 @@
                           $('.progress-bar').text("100%");
                           $('.progress').hide();
                           newArr1=JSON.stringify(newArr1);
+                          newArr2=JSON.stringify(newArr2);
+                          newArr3=JSON.stringify(newArr3);
 
                           $.ajax({
                               url: "worker.php",
