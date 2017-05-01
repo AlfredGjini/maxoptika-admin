@@ -1,1 +1,1 @@
-worker: cd  worker.php;
+worker: php  worker.php;
