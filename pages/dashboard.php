@@ -274,7 +274,8 @@
 
                     //var newArrCmime=remove_duplicates(newArr1,newArrCmime);
                     var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
-                    console.log(newArr2);
+                    var newArrCmime=remove_duplicates(newArr1,newArr2);
+                    console.log(newArrCmime);
                     //newArr2=JSON.stringify(newArr2);
                     $('.progress-bar').css("width", "66%");
                     $('.progress-bar').text("66%");
