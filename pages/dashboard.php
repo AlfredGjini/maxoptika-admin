@@ -269,13 +269,14 @@
                   },
                   success: function (res) {
 
-                    var newArrCmime = res.entiteteTeReja.cmimeReja;
+                    //var newArrCmime = res.entiteteTeReja.cmimeReja;
                     //var newArr4 = [];
 
-                    var newArrCmime=remove_duplicates(newArr1,newArrCmime);
-                    var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
-                    console.log(newArr2);
+                    //var newArrCmime=remove_duplicates(newArr1,newArrCmime);
+                    //var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
+                    //console.log(newArr2);
                     //newArr2=JSON.stringify(newArr2);
+                    console.log(res);
                     $('.progress-bar').css("width", "66%");
                     $('.progress-bar').text("66%");
 
