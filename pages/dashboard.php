@@ -251,7 +251,7 @@
             });
             newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
             console.log(newArr1);
-            //newArr1=JSON.stringify(newArr1);
+            newArr1=JSON.stringify(newArr1);
             $('.progress-bar').css("width", "33%");
             $('.progress-bar').text("33%");
 
@@ -304,7 +304,25 @@
                           //newArr3=JSON.stringify(newArr3);
                           $('.progress-bar').css("width", "100%");
                           $('.progress-bar').text("100%");
-                          $('.progress').show();
+                          $('.progress').hide();
+
+                          $.ajax({
+                              url: "worker.php",
+                              type: "post",
+                              data: {dhena:newArr1 },
+                              success: function (response) {
+
+                                 // you will get response from your php page (what you echo or print) 
+                                 //console.log(typeof(response));
+                                 console.log(response);              
+
+                              },
+                              error: function(jqXHR, textStatus, errorThrown) {
+                                 console.log(textStatus, errorThrown);
+                              }
+
+
+                          });
 
 
 
