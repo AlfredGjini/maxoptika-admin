@@ -272,7 +272,7 @@
                     var newArrCmime = res.entiteteTeReja.cmimeReja;
                     //var newArr4 = [];
 
-                    var newArrCmime=remove_duplicates(newArr1,newArrCmime);
+                    //var newArrCmime=remove_duplicates(newArr1,newArrCmime);
                     //var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
                     console.log(newArrCmime);
                     //newArr2=JSON.stringify(newArr2);
