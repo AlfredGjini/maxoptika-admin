@@ -1,2 +1,2 @@
 web: sh boot.sh
-worker: cd ~/php/bin/php worker.php
+worker: cd ~/www/ && ~/php/bin/php worker.php
