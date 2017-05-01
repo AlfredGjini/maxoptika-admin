@@ -4,15 +4,15 @@
     width: 0;
     height: 100%;
     font-size: 16px;
-    line-height: 15px;
+    line-height: 30px;
     color: #fff;
     text-align: center;
-    background-color: #337ab7;
     -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
     -webkit-transition: width .6s ease;
     -o-transition: width .6s ease;
     transition: width .6s ease;
+    font-weight: bold;
 }
 .progress {
   margin-top: -10px;
