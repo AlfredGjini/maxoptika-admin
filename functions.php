@@ -242,6 +242,22 @@ switch ($action) {
 		echo json_encode($dashboardData);
 	break;
 
+	case 'manage_doc_times':
+		$id=1;
+		var_dump($data);
+		echo "koti aa2";
+		//$updateOraret = DB::getInstance()->update("oraret",$id,['oraret'=>$data]);
+
+		// if($updateOraret){
+		// 	$success = "ok";
+		// 	echo json_encode($success);
+		// }else{
+		// 	$success = "not ok";
+		// 	echo json_encode($success);
+		// }
+		
+	break;
+
 
 	case 'update_db_on_cron':
 		$params = Input::get('dhena');

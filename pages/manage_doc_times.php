@@ -60,6 +60,7 @@
       console.log(dates2);
       $("#manage_doc_times").submit(function(event) {
         console.log('zx');
+        console.log(dates2);
 
 
       /* Stop form from submitting normally */
