@@ -249,10 +249,10 @@ switch ($action) {
 		$updateOraret = DB::getInstance()->update("oraret",$id,['oraret'=>$data['data']]);
 
 		if($updateOraret){
-			$success = "ok";
+			$success = "1";
 			echo json_encode($success);
 		}else{
-			$success = "not ok";
+			$success = "2";
 			echo json_encode($success);
 		}
 		

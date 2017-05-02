@@ -55,12 +55,13 @@
 
 
       var dates = $('#mdp-demo').multiDatesPicker('getDates');
-      console.log(dates);
-      var dates2=JSON.stringify(dates);
-      console.log(dates2);
+      //console.log(dates);
+      
       $("#manage_doc_times").submit(function(event) {
-        console.log('zx');
-        console.log(dates2);
+        var dates2=$('#mdp-demo').multiDatesPicker('getDates');
+        dates2=JSON.stringify(dates2);
+        //console.log('zx');
+        //console.log(dates2);
 
 
       /* Stop form from submitting normally */
