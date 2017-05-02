@@ -47,7 +47,8 @@
 
   <?php 
 
-   $orariResult = DB::getInstance()->getAll('oraret')->results(); 
+   $orariResult = DB::getInstance()->getAll('oraret')->results();
+   var_dump($orariResult); 
 
   ?>
 
