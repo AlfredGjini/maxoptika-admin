@@ -82,6 +82,7 @@
             </span>
           </a>
         </li>
+        <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
         <li class="treeview manage_doc_times">
           <a href="?page=manage_doc_times">
             <i class="fa fa-clock-o"></i> <span>Orari Doktorit</span>
@@ -90,6 +91,7 @@
             </span>
           </a>
         </li>
+        <?php } ?>
         
       </ul>
     </section>

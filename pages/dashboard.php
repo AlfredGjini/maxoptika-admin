@@ -119,6 +119,7 @@
               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">
                 5%
               </div>
+              <div class="progressSuccess">Te dhenat u transferuan me sukses. Ju lutem prisni afersisht 1 ore per te pare produktet e perditesuara ne aplikacion</div>
             </div>
           
         </div> 
@@ -212,10 +213,18 @@
       }
   });
 
-
+jQuery('.perditeso').click( function(){
+$('.progress').show();
+$('.progress-bar').css("width", "100%");
+$('.progress-bar').text("100%");
+  setTimeout(function(){
+    $('.progress').hide();
+    $('.progressSuccess').hide();
+  }, 4000)
+});
 
     
-  jQuery('.perditeso').click( function(){
+  jQuery('.perditeso2').click( function(){
     console.log("thirreads");
     $('.progress').show();
 
