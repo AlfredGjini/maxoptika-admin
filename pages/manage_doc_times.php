@@ -56,7 +56,7 @@
 
       var dates = $('#mdp-demo').multiDatesPicker('getDates');
       console.log(dates);
-      dates2=JSON.stringify(dates);
+      var dates2=JSON.stringify(dates);
       console.log(dates2);
       $("#manage_doc_times").submit(function(event) {
         console.log('zx');

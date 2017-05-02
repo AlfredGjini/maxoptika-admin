@@ -293,7 +293,7 @@ switch ($action) {
 	case 'manage_doc_times':
 		$id=1;
 		var_dump($data);
-		echo "koti aa";
+		echo "koti aa2";
 		//$updateOraret = DB::getInstance()->update("oraret",$id,['oraret'=>$data]);
 
 		// if($updateOraret){
