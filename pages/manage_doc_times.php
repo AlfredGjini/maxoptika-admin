@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Rezervimet
+        Orari i Doktorit
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Prenotimet</a></li>
@@ -15,14 +15,14 @@
           
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Menaxho Oraret e lejuara te Vizitave</h3>
+              <h3 class="box-title">Zgjidhni ditet kur doktori eshte i gatshem per vizita:</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <form id="register_clients" action="functions.php?action=register_clients" method="post" class="form-horizontal">
               <div id="mdp-demo"></div>
               <div class="box-footer" >
-                <button type="submit" class="btn btn-info pull-right">Register</button>
+                <button type="submit" class="btn btn-info pull-right">Update</button>
               </div>
               </form>
 
@@ -45,9 +45,11 @@
 
   <script type="text/javascript">
 
-    var date = new Date();
-    $('#mdp-demo').multiDatesPicker({
-      // preselect the 14th and 19th of the current month
-      addDates: [date.setDate(14), date.setDate(19)]
-    }); 
+var today = new Date();
+var y = today.getFullYear();
+$('#mdp-demo').multiDatesPicker({
+  addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
+  numberOfMonths: [3,4],
+  defaultDate: '1/1/'+y
+});
   </script>
