@@ -82,6 +82,14 @@
             </span>
           </a>
         </li>
+        <li class="treeview manage_doc_timetable">
+          <a href="?page=manage_doc_times">
+            <i class="fa fa-edit"></i> <span>Orari Doktorit</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
         
       </ul>
     </section>

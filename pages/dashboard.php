@@ -312,7 +312,7 @@
                           $.ajax({
                               url: "worker.php",
                               type: "post",
-                              data: {dhena:newArr1 },
+                              data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
                               success: function (response) {
 
                                  // you will get response from your php page (what you echo or print) 

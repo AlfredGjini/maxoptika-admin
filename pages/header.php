@@ -18,6 +18,8 @@
   <script src="plugins/iCheck/icheck.min.js"></script>
   <!-- Crypto JS -->
   <script type="text/javascript" src="assets/libs/crypto-js/crypto-js.js"></script>
+  <!-- MultiDatesPicker JS -->
+  <script type="text/javascript" src="plugins/MultiDatesPicker/jquery-ui.multidatespicker.js"></script>
   
   
   <!-- Morris.js charts -->
@@ -59,6 +61,8 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!-- Sweet Alert -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.0/sweetalert2.min.css">
+  <!-- MultiDatesPicker -->
+  <link rel="stylesheet" type="text/css" href="plugins/MultiDatesPicker/jquery-ui.multidatespicker.css">
   <style type="text/css">
     .shtydjathtas{
       margin-right: 10px;

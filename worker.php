@@ -3,16 +3,22 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once 'core/init.php';
 
-$params = Input::get('dhena');
+$params = Input::get('dhena1');
+$params2 = Input::get('dhena2');
+$params3 = Input::get('dhena3');
 		//$gjendjet =  $data;
 		//$gjendjet =json_decode(json_encode($params), true);
 		$gjendjet=(array) json_decode($params);
+		$cmimet=(array) json_decode($params2);
+		$magazinat=(array) json_decode($params3);
 		//var_dump($gjendjet);
 		//echo "kot update";
 		//$gjendje = $params['']
 		//$artikuj_no = count($artikujt);
 		//print_r($artikujt);
 		//print_r($artikujt) ; 
+
+		// Insert or update new products
 		foreach ($gjendjet as $key => $artikull) {
 			// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
 			//$artikull1=json_decode(json_encode($artikull), true);
@@ -44,6 +50,36 @@ $params = Input::get('dhena');
 				
 			}
 		}
-		echo "sukseseee2";
+		//echo "sukseseee2";
+
+		// Insert or update new cmime
+		foreach ($cmimet as $key => $cmimi) {
+			// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
+			//$artikull1=json_decode(json_encode($artikull), true);
+			//var_dump($artikull1);
+			//echo "hapsire";
+			$cmimi=(array) $cmimi;
+			//var_dump($artikull2);
+
+			$cmimi_exist = DB::getInstance()->get('cmime2',[['idprodukti','=',$cmimi['KODARTIKULLI']]])->firstResult();
+			//var_dump($product_exist);
+			
+			if($cmimi_exist!=0){
+				$delete_cmimi = DB::getInstance()->delete('cmime2',[['idprodukti','=',$cmimi['KODARTIKULLI']]]);
+
+
+				$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimi'=>$cmimi['CMIMI'],'monedha'=>$cmimi['MONEDHAKOD']]);
+
+
+
+			}else{
+
+				$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimi'=>$cmimi['CMIMI'],'monedha'=>$cmimi['MONEDHAKOD']]);
+
+			}
+		}
+
+
+
 
 ?>
