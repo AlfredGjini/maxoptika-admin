@@ -45,10 +45,16 @@
 
   <script type="text/javascript">
 
+  <?php 
+
+   $orariResult = DB::getInstance()->getAll('oraret')->results(); 
+
+  ?>
+
       var today = new Date();
       var y = today.getFullYear();
       $('#mdp-demo').multiDatesPicker({
-        addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
+        addDates: <?php echo $orariResult; ?>,
         numberOfMonths: [3,4],
         defaultDate: '1/1/'+y
       });
@@ -80,21 +86,21 @@
                   // Response: 1 - Success
                    swal(
                     '',
-                    'Perdoruesi u regjistrua me sukses',
+                    'Oraret u perditsuan me sukses',
                     'success'
                   )
-                }else if (response == "2"){
+                }else if (response == "3"){
                   // Response: 2 - Empty Fields
                   swal(
                     '',
                     'Ju lutem plotesoni te gjitha fushat',
                     'warning'
                   )
-                 }else if (response == "3"){
+                 }else if (response == "2"){
                   // Response: 2 - Empty Fields
                   swal(
                     '',
-                    'Ky perdorues ekziston',
+                    'Operacioni deshtoi. Ju lutem provoni perseri.',
                     'warning'
                   )
                  }
