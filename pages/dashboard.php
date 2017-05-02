@@ -26,11 +26,11 @@
 }
 .progressSuccess {
     font-size: 16px;
-    margin-top: -20px;
+    margin-top: -10px;
     text-align: justify;
     font-weight: bold;
     color: white;
-    border: 2px solid darkblue;
+    border: 2px solid #8787a2;
     padding: 8px;
     background: orange;
 }
@@ -127,11 +127,11 @@
           </div>
             <div class="progress" style="display: none;">
               <div class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar"
-              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">
-                5%
+              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:7%">
+                7%
               </div>
             </div>
-            <div class="progressSuccess">Te dhenat u transferuan me sukses. Ju lutem prisni afersisht 1 ore per te pare produktet e perditesuara ne aplikacion</div>
+            <div class="progressSuccess" style="display: none;">Te dhenat u transferuan me sukses. Ju lutem prisni afersisht 1 ore per te pare produktet e perditesuara ne aplikacion.</div>
           
         </div> 
         <!-- ./col -->
@@ -224,19 +224,9 @@
       }
   });
 
-jQuery('.perditeso').click( function(){
-$('.progress').show();
-$('.progressSuccess').show();
-$('.progress-bar').css("width", "100%");
-$('.progress-bar').text("100%");
-  setTimeout(function(){
-    $('.progress').hide();
-    $('.progressSuccess').hide();
-  }, 4000)
-});
 
     
-  jQuery('.perditeso2').click( function(){
+  jQuery('.perditeso').click( function(){
     console.log("thirreads");
     $('.progress').show();
 
@@ -326,6 +316,10 @@ $('.progress-bar').text("100%");
                           $('.progress-bar').css("width", "100%");
                           $('.progress-bar').text("100%");
                           $('.progress').hide();
+                          $('.progressSuccess').show();
+                          setTimeout(function(){
+                            $('.progressSuccess').hide();
+                          }, 5000)
                           newArr1=JSON.stringify(newArr1);
                           newArr2=JSON.stringify(newArr2);
                           newArr3=JSON.stringify(newArr3);
