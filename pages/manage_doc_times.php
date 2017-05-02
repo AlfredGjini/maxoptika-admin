@@ -54,7 +54,7 @@
       var today = new Date();
       var y = today.getFullYear();
       $('#mdp-demo').multiDatesPicker({
-        addDates: <?php echo $orariResult; ?>,
+        addDates: <?php echo $orariResult[0]; ?>,
         numberOfMonths: [3,4],
         defaultDate: '1/1/'+y
       });
