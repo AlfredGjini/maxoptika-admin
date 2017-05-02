@@ -57,7 +57,9 @@
       var dates = $('#mdp-demo').multiDatesPicker('getDates');
       console.log(dates);
       dates2=JSON.stringify(dates);
+      console.log(dates2);
       $("#manage_doc_times").submit(function(event) {
+        console.log('zx');
 
 
       /* Stop form from submitting normally */
@@ -70,7 +72,7 @@
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 //console.log(response);
+                 console.log(response);
                  
                 if(response=="1"){ 
                   // Response: 1 - Success
