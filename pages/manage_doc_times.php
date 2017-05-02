@@ -43,5 +43,5 @@
     $('#mdp-demo').multiDatesPicker({
       // preselect the 14th and 19th of the current month
       addDates: [date.setDate(14), date.setDate(19)]
-    });
+    }); 
   </script>
