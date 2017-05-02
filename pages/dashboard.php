@@ -24,6 +24,17 @@
     -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
 }
+.progressSuccess {
+    font-size: 16px;
+    margin-top: -20px;
+    text-align: justify;
+    font-weight: bold;
+    color: white;
+    border: 2px solid darkblue;
+    padding: 8px;
+    background: orange;
+}
+
 </style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -119,8 +130,8 @@
               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">
                 5%
               </div>
-              <div class="progressSuccess">Te dhenat u transferuan me sukses. Ju lutem prisni afersisht 1 ore per te pare produktet e perditesuara ne aplikacion</div>
             </div>
+            <div class="progressSuccess">Te dhenat u transferuan me sukses. Ju lutem prisni afersisht 1 ore per te pare produktet e perditesuara ne aplikacion</div>
           
         </div> 
         <!-- ./col -->
@@ -215,6 +226,7 @@
 
 jQuery('.perditeso').click( function(){
 $('.progress').show();
+$('.progressSuccess').show();
 $('.progress-bar').css("width", "100%");
 $('.progress-bar').text("100%");
   setTimeout(function(){
