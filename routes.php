@@ -24,6 +24,10 @@ switch ($page) {
 	case 'manage_clinic_card':
 		include 'pages/manage_clinic_card.php';	
 		break;
+	case 'manage_doc_times':
+		include 'pages/manage_doc_times.php';	
+		break;
+		
 	default:
 		include "pages/dashboard.php";
 		break;

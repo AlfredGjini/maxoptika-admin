@@ -19,7 +19,13 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+              <form id="register_clients" action="functions.php?action=register_clients" method="post" class="form-horizontal">
               <div id="mdp-demo"></div>
+              <div class="box-footer" >
+                <button type="submit" class="btn btn-info pull-right">Register</button>
+              </div>
+              </form>
+
 
             </div>
             <!-- /.box-body -->
