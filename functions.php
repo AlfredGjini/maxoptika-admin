@@ -250,10 +250,10 @@ switch ($action) {
 
 		if($updateOraret){
 			$success = "1";
-			echo json_encode($success);
+			echo $success;
 		}else{
 			$success = "2";
-			echo json_encode($success);
+			echo $success;
 		}
 		
 	break;
