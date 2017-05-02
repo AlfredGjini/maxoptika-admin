@@ -45,11 +45,15 @@
 
   <script type="text/javascript">
 
-var today = new Date();
-var y = today.getFullYear();
-$('#mdp-demo').multiDatesPicker({
-  addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
-  numberOfMonths: [3,4],
-  defaultDate: '1/1/'+y
-});
+      var today = new Date();
+      var y = today.getFullYear();
+      $('#mdp-demo').multiDatesPicker({
+        addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
+        numberOfMonths: [3,4],
+        defaultDate: '1/1/'+y
+      });
+
+
+      var dates = $('#mdp-demo').multiDatesPicker('getDates');
+      console.log(dates);
   </script>
