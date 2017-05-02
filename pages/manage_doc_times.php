@@ -39,8 +39,9 @@
 
   <script type="text/javascript">
 
+    var date = new Date();
     $('#mdp-demo').multiDatesPicker({
-      dateFormat: "y-m-d",
-      defaultDate:"85-2-19"
+      // preselect the 14th and 19th of the current month
+      addDates: [date.setDate(14), date.setDate(19)]
     });
   </script>
