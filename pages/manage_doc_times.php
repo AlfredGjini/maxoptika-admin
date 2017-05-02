@@ -19,7 +19,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <form id="register_clients" action="functions.php?action=register_clients" method="post" class="form-horizontal">
+              <form id="manage_doc_times" action="functions.php?action=manage_doc_times" method="post" class="form-horizontal">
               <div id="mdp-demo"></div>
               <div class="box-footer" >
                 <button type="submit" class="btn btn-info pull-right">Update</button>
@@ -56,4 +56,58 @@
 
       var dates = $('#mdp-demo').multiDatesPicker('getDates');
       console.log(dates);
+      dates2=JSON.stringify(dates);
+      $("#manage_doc_times").submit(function(event) {
+
+
+      /* Stop form from submitting normally */
+      event.preventDefault();
+
+             $.ajax({
+              url: "functions.php?action=manage_doc_times",
+              type: "post",
+              data: dates2 ,
+              success: function (response) {
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 //console.log(response);
+                 
+                if(response=="1"){ 
+                  // Response: 1 - Success
+                   swal(
+                    '',
+                    'Perdoruesi u regjistrua me sukses',
+                    'success'
+                  )
+                }else if (response == "2"){
+                  // Response: 2 - Empty Fields
+                  swal(
+                    '',
+                    'Ju lutem plotesoni te gjitha fushat',
+                    'warning'
+                  )
+                 }else if (response == "3"){
+                  // Response: 2 - Empty Fields
+                  swal(
+                    '',
+                    'Ky perdorues ekziston',
+                    'warning'
+                  )
+                 }
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
+
+
+
+
+
+    }
   </script>
