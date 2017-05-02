@@ -48,14 +48,15 @@
   <?php 
 
    $orariResult = DB::getInstance()->getAll('oraret')->results();
-   var_dump($orariResult); 
+   $orari=$orariResult[0]->oraret;
+   //var_dump($orariResult); 
 
   ?>
 
       var today = new Date();
       var y = today.getFullYear();
       $('#mdp-demo').multiDatesPicker({
-        addDates: <?php var_dump($orariResult); ?>,
+        addDates: <?php echo $orari; ?>,
         numberOfMonths: [3,4],
         defaultDate: '1/1/'+y
       });
