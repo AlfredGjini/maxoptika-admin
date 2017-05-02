@@ -69,7 +69,7 @@
              $.ajax({
               url: "functions.php?action=manage_doc_times",
               type: "post",
-              data: dates2 ,
+              data: {data:dates2} ,
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
