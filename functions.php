@@ -244,17 +244,17 @@ switch ($action) {
 
 	case 'manage_doc_times':
 		$id=1;
-		var_dump($data);
-		echo "koti aa2";
-		//$updateOraret = DB::getInstance()->update("oraret",$id,['oraret'=>$data]);
+		//var_dump($data);
+		//echo "koti aa2";
+		$updateOraret = DB::getInstance()->update("oraret",$id,['oraret'=>$data['data']]);
 
-		// if($updateOraret){
-		// 	$success = "ok";
-		// 	echo json_encode($success);
-		// }else{
-		// 	$success = "not ok";
-		// 	echo json_encode($success);
-		// }
+		if($updateOraret){
+			$success = "ok";
+			echo json_encode($success);
+		}else{
+			$success = "not ok";
+			echo json_encode($success);
+		}
 		
 	break;
 
