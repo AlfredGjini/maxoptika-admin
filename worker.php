@@ -51,28 +51,56 @@ $params3 = Input::get('dhena3');
 		//echo "sukseseee2";
 
 		// Insert or update new cmime
-		foreach ($cmimet as $key => $cmimi) {
+		// foreach ($cmimet as $key => $cmimi) {
+		// 	// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
+		// 	//$artikull1=json_decode(json_encode($artikull), true);
+		// 	//var_dump($artikull1);
+		// 	//echo "hapsire";
+		// 	$cmimi=(array) $cmimi;
+		// 	//var_dump($artikull2);
+
+		// 	$cmimi_exist = DB::getInstance()->get('cmime2',[['idprodukti','=',$cmimi['KODARTIKULLI']]])->firstResult();
+		// 	//var_dump($product_exist);
+			
+		// 	if($cmimi_exist!=0){
+		// 		$delete_cmimi = DB::getInstance()->delete('cmime2',[['idprodukti','=',$cmimi['KODARTIKULLI']]]);
+
+
+		// 		$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimi'=>$cmimi['CMIMI'],'monedha'=>$cmimi['MONEDHAKOD']]);
+
+
+
+		// 	}else{
+
+		// 		$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimi'=>$cmimi['CMIMI'],'monedha'=>$cmimi['MONEDHAKOD']]);
+
+		// 	}
+		// }
+
+
+		// Insert or update new magazina
+		foreach ($magazinat as $key => $magazina) {
 			// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
 			//$artikull1=json_decode(json_encode($artikull), true);
 			//var_dump($artikull1);
 			//echo "hapsire";
-			$cmimi=(array) $cmimi;
+			$magazina=(array) $magazina;
 			//var_dump($artikull2);
 
-			$cmimi_exist = DB::getInstance()->get('cmime2',[['idprodukti','=',$cmimi['KODARTIKULLI']]])->firstResult();
+			$magazina_exist = DB::getInstance()->get('magazina',[['kodartikull','=',$magazina['KODARTIKULLI']]])->firstResult();
 			//var_dump($product_exist);
 			
-			if($cmimi_exist!=0){
-				$delete_cmimi = DB::getInstance()->delete('cmime2',[['idprodukti','=',$cmimi['KODARTIKULLI']]]);
+			if($magazina_exist!=0){
+				$delete_magazina = DB::getInstance()->delete('magazina',[['kodartikull','=',$magazina['KODARTIKULLI']]]);
 
 
-				$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimi'=>$cmimi['CMIMI'],'monedha'=>$cmimi['MONEDHAKOD']]);
+				$update_products = DB::getInstance()->insert('magazina',['kodartikull'=>$magazina['KODARTIKULLI'],'sasia'=>$magazina['gjendje'],'njesia'=>$magazina['KODNJESIA1']]);
 
 
 
 			}else{
 
-				$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimi'=>$cmimi['CMIMI'],'monedha'=>$cmimi['MONEDHAKOD']]);
+				$update_products = DB::getInstance()->insert('magazina',['kodartikull'=>$magazina['KODARTIKULLI'],'sasia'=>$magazina['gjendje'],'njesia'=>$magazina['KODNJESIA1']]);
 
 			}
 		}
