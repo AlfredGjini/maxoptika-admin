@@ -228,7 +228,7 @@
               	$('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 //console.log(response);
+                 console.log(response);
                  response = JSON.parse(response);
                  console.log(response);
                  setFieldValsClinicCard(response);
@@ -313,7 +313,7 @@
               	$('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 //console.log(response);
+                 console.log(response);
                  response = JSON.parse(response);
                  console.log(response);
                  if(response.exist==3){
