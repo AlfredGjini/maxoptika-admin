@@ -15,7 +15,7 @@
           
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Zgjidhni ditet kur doktori eshte i gatshem per vizita:</h3>
+              <h3 class="box-title">Zgjidhni ditet kur doktori nuk eshte i gatshem per vizita:</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
