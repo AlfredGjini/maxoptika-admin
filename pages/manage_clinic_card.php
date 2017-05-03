@@ -230,8 +230,25 @@
                  //console.log(typeof(response));
                  console.log(response);
                  response = JSON.parse(response);
-                 console.log(response);
+                 // console.log(response);
+                 // setFieldValsClinicCard(response);
+
+
+                 if(response.exist==3){
+                 	swal({
+					  title: 'Deshironi ta krijoni tani',
+					  text: "Kartela nuk ekziston per kete klient",
+					  type: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: 'Po!'
+					}).then(function () {
+					  window.location.href = "home.php?page=create_clinic_card&id="+response.id;
+					})
+                 }else{
                  setFieldValsClinicCard(response);
+                 }
                  
                 //$('#register_clients').trigger("reset");               
 
@@ -313,7 +330,7 @@
               	$('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 console.log(response);
+                 //console.log(response);
                  response = JSON.parse(response);
                  console.log(response);
                  if(response.exist==3){
