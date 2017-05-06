@@ -122,7 +122,7 @@ switch ($action) {
 		$dataForDT = ["data"=>[]];
 		$i = 0;
 		foreach ($dataResult as $tableRows) {
-			$userDataResult = DB::getInstance()->get('clients',[['user_id','=',$tableRows->id_klienti]])->firstResult();
+			$userDataResult = DB::getInstance()->get('clients',[['id','=',$tableRows->id_klienti]])->firstResult();
 			if($tableRows->aprovuar=="jo"){
 			$dataForDT["data"][$i] = [$tableRows->id,$userDataResult->emer." ".$userDataResult->mbiemer,$tableRows->data,$tableRows->ora,$tableRows->dyqani,$tableRows->shenime,"<button type=\"button\" class=\"btn btn-danger\">JO</button>","<a class=\"btn btn-warning pull-left\" id='$tableRows->id' name='modReservation' href='#'>Modifiko</a>&nbsp;&nbsp;<a class=\"btn btn-danger pull-right\" id='$tableRows->id' name='delReservation' href='#'>Fshij</a>"];
 		}else {
