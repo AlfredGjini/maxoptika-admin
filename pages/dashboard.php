@@ -227,8 +227,8 @@
 
     
   jQuery('.perditeso').click( function(){
-    console.log("thirreads 2");
-    //$('.progress').show();
+    console.log("thirreads");
+    $('.progress').show();
 
     $.ajax({
         beforeSend: function (xhr) {
@@ -249,22 +249,22 @@
           //console.log(newArr);
           //newArr=JSON.stringify(newArr);
           //console.log(newArr);
-          // var newArr1=[];
-          // newArr.forEach( function (arrayItem)
-          //   {
-          //         // Insert into the new array only those items that have PERPESHORE==true
-          //         // if(arrayItem.PERPESHORE==true){
-          //         //   newArr1.push(arrayItem);
-          //         // }
-          //         if(arrayItem.KODIFIKIMARTIKULLI=="Jonida Rrumbullaku"){
-          //           newArr1.push(arrayItem);
-          //         }
-          //   });
-          //   //newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
-          //   console.log(newArr1);
+          var newArr1=[];
+          newArr.forEach( function (arrayItem)
+            {
+                  // Insert into the new array only those items that have PERPESHORE==true
+                  // if(arrayItem.PERPESHORE==true){
+                  //   newArr1.push(arrayItem);
+                  // }
+                  if(arrayItem.KODIFIKIMARTIKULLI=="Jonida Rrumbullaku"){
+                    newArr1.push(arrayItem);
+                  }
+            });
+            //newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
+            console.log(newArr1);
             
-          //   $('.progress-bar').css("width", "33%");
-          //   $('.progress-bar').text("33%");
+            $('.progress-bar').css("width", "33%");
+            $('.progress-bar').text("33%");
 
             // $.ajax({
             //       beforeSend: function (xhr) {
