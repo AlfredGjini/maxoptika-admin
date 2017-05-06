@@ -256,7 +256,7 @@
                   // if(arrayItem.PERPESHORE==true){
                   //   newArr1.push(arrayItem);
                   // }
-                  if(arrayItem.KODIFIKIMARTIKULLI2=="Ray Ban"){
+                  if(arrayItem.KODIFIKIMARTIKULLI=="Jonida Rrumbullaku"){
                     newArr1.push(arrayItem);
                   }
             });
