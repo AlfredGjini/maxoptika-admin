@@ -244,7 +244,7 @@
         },
         success: function (res) {
           //alert('Shit');
-          console.log(res);
+          //console.log(res);
           var newArr = res.entiteteTeReja.artRi;
           //console.log(newArr);
           //newArr=JSON.stringify(newArr);
@@ -256,111 +256,111 @@
                   // if(arrayItem.PERPESHORE==true){
                   //   newArr1.push(arrayItem);
                   // }
-                  if(arrayItem.KODIFIKIMARTIKULLI=="Jonida Rrumbullaku"){
+                  if(arrayItem.PERPESHORE==true){
                     newArr1.push(arrayItem);
                   }
             });
-            //newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
+            newArr1 = removeDuplicates(newArr1, "KODARTIKULLI");
             console.log(newArr1);
             
             $('.progress-bar').css("width", "33%");
             $('.progress-bar').text("33%");
 
-            // $.ajax({
-            //       beforeSend: function (xhr) {
-            //           xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
-            //       },
-            //       url: ip + "/cmimipost",
-            //       type: 'POST',
-            //       contentType: 'application/json',
-            //       data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
-            //       dataType: 'json',
-            //       headers: {
-            //       'ndermarrjaserver': 'MAXOPTIKA'
-            //       },
-            //       success: function (res) {
+            $.ajax({
+                  beforeSend: function (xhr) {
+                      xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                  },
+                  url: ip + "/cmimipost",
+                  type: 'POST',
+                  contentType: 'application/json',
+                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                  dataType: 'json',
+                  headers: {
+                  'ndermarrjaserver': 'MAXOPTIKA'
+                  },
+                  success: function (res) {
 
-            //         var newArrCmime = res.entiteteTeReja.cmimeReja;
-            //         //var newArr4 = [];
+                    var newArrCmime = res.entiteteTeReja.cmimeReja;
+                    //var newArr4 = [];
 
-            //         var newArrCmime=remove_duplicates(newArr1,newArrCmime);
-            //         var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
-            //         console.log(newArr2);
-            //         //newArr2=JSON.stringify(newArr2);
-            //         $('.progress-bar').css("width", "66%");
-            //         $('.progress-bar').text("66%");
+                    var newArrCmime=remove_duplicates(newArr1,newArrCmime);
+                    var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
+                    console.log(newArr2);
+                    //newArr2=JSON.stringify(newArr2);
+                    $('.progress-bar').css("width", "66%");
+                    $('.progress-bar').text("66%");
 
                     
 
 
-            //         // $.ajax({
-            //         //     beforeSend: function (xhr) {
-            //         //         xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
-            //         //     },
-            //         //     url: ip + "/entitetepost",
-            //         //     type: 'POST',
-            //         //     contentType: 'application/json',
-            //         //     data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":0,"NRCHUNK":0,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
-            //         //     dataType: 'json',
-            //         //     headers: {
-            //         //     'ndermarrjaserver': 'MAXOPTIKA'
-            //         //     },
-            //         //     success: function (res) {
-            //         //       //alert('Shit');
-            //         //       console.log(res);
-            //         //       var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-            //         //       var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
-            //         //       var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
-            //         //       console.log(newArr3);
-            //         //       //newArr3=JSON.stringify(newArr3);
-            //         //       $('.progress-bar').css("width", "100%");
-            //         //       $('.progress-bar').text("100%");
-            //         //       $('.progress').hide();
-            //         //       $('.progressSuccess').show();
-            //         //       setTimeout(function(){
-            //         //         $('.progressSuccess').hide();
-            //         //       }, 5000)
-            //         //       newArr1=JSON.stringify(newArr1);
-            //         //       newArr2=JSON.stringify(newArr2);
-            //         //       newArr3=JSON.stringify(newArr3);
+                    $.ajax({
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                        },
+                        url: ip + "/entitetepost",
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({"artikujGjendje":[{"MARRE":"1/1/1900","NRSEL":0,"NRCHUNK":0,"PERDORUES":"","MAGKODI":"","KODARTIKULLI":"","ARTBARKOD":"","DETAJIM1":"","DETAJIM2":""}]}),
+                        dataType: 'json',
+                        headers: {
+                        'ndermarrjaserver': 'MAXOPTIKA'
+                        },
+                        success: function (res) {
+                          //alert('Shit');
+                          console.log(res);
+                          var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
+                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          console.log(newArr3);
+                          //newArr3=JSON.stringify(newArr3);
+                          $('.progress-bar').css("width", "100%");
+                          $('.progress-bar').text("100%");
+                          $('.progress').hide();
+                          $('.progressSuccess').show();
+                          setTimeout(function(){
+                            $('.progressSuccess').hide();
+                          }, 5000)
+                          newArr1=JSON.stringify(newArr1);
+                          newArr2=JSON.stringify(newArr2);
+                          newArr3=JSON.stringify(newArr3);
 
-            //         //       $.ajax({
-            //         //           url: "worker.php",
-            //         //           type: "post",
-            //         //           data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
-            //         //           success: function (response) {
+                          $.ajax({
+                              url: "worker.php",
+                              type: "post",
+                              data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
+                              success: function (response) {
 
-            //         //              // you will get response from your php page (what you echo or print) 
-            //         //              //console.log(typeof(response));
-            //         //              console.log(response);              
+                                 // you will get response from your php page (what you echo or print) 
+                                 //console.log(typeof(response));
+                                 console.log(response);              
 
-            //         //           },
-            //         //           error: function(jqXHR, textStatus, errorThrown) {
-            //         //              console.log(textStatus, errorThrown);
-            //         //           }
-
-
-            //         //       });
+                              },
+                              error: function(jqXHR, textStatus, errorThrown) {
+                                 console.log(textStatus, errorThrown);
+                              }
 
 
-
-            //         //     },
-            //         //     error: function (res) {
-            //         //         console.error('Something went wrong!');
-            //         //         console.log(res);
-            //         //     }   
-            //         // });
+                          });
 
 
 
+                        },
+                        error: function (res) {
+                            console.error('Something went wrong!');
+                            console.log(res);
+                        }   
+                    });
 
 
-            //       },
-            //       error: function (res) {
-            //           console.error('Something went wrong!');
-            //           console.log(res);
-            //       }   
-            //   });
+
+
+
+                  },
+                  error: function (res) {
+                      console.error('Something went wrong!');
+                      console.log(res);
+                  }   
+              });
 
 
 
