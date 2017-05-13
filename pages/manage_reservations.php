@@ -116,7 +116,7 @@
     $("#manage_reservations").DataTable({
         "ajax" : "functions.php?action=manage_reservations",
         "destroy":true,
-        "iDisplayLength": 50
+        "iDisplayLength": 50,
         "responsive": true,
         "initComplete": function(settings, json) {
           modClick();
