@@ -244,7 +244,7 @@
         },
         success: function (res) {
           //alert('Shit');
-          //console.log(res);
+          console.log(res);
           var newArr = res.entiteteTeReja.artRi;
           //console.log(newArr);
           //newArr=JSON.stringify(newArr);
@@ -279,6 +279,7 @@
                   'ndermarrjaserver': 'MAXOPTIKA'
                   },
                   success: function (res) {
+                    console.log(res);
 
                     var newArrCmime = res.entiteteTeReja.cmimeReja;
                     //var newArr4 = [];
