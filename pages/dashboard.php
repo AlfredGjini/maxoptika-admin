@@ -325,23 +325,23 @@
                           newArr2=JSON.stringify(newArr2);
                           newArr3=JSON.stringify(newArr3);
 
-                          // $.ajax({
-                          //     url: "worker.php",
-                          //     type: "post",
-                          //     data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
-                          //     success: function (response) {
+                          $.ajax({
+                              url: "worker.php",
+                              type: "post",
+                              data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
+                              success: function (response) {
 
-                          //        // you will get response from your php page (what you echo or print) 
-                          //        //console.log(typeof(response));
-                          //        console.log(response);              
+                                 // you will get response from your php page (what you echo or print) 
+                                 //console.log(typeof(response));
+                                 console.log(response);              
 
-                          //     },
-                          //     error: function(jqXHR, textStatus, errorThrown) {
-                          //        console.log(textStatus, errorThrown);
-                          //     }
+                              },
+                              error: function(jqXHR, textStatus, errorThrown) {
+                                 console.log(textStatus, errorThrown);
+                              }
 
 
-                          // });
+                          });
 
 
 
