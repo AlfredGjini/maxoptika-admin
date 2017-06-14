@@ -175,7 +175,7 @@ switch ($action) {
 		// var_dump($data);
 		$clinic_card_data_exist  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['clients']]])->firstResult();
 		if($clinic_card_data_exist==0){
-		$user_id  = DB::getInstance()->get('clients',[['user_id','=',$data['clients']]])->firstResult();
+		$user_id  = DB::getInstance()->get('clients',[['id','=',$data['clients']]])->firstResult();
 		echo "string";
 		var_dump($user_id);
 		//echo "Klienti u regjistrua me sukses";
