@@ -177,9 +177,9 @@ switch ($action) {
 		if($clinic_card_data_exist==0){
 		$user_id  = DB::getInstance()->get('clients',[['user_id','=',$data['clients']]])->firstResult();
 		echo "string";
-		echo $user_id;
+		var_dump($user_id);
 		//echo "Klienti u regjistrua me sukses";
-		$register_clinic_card = DB::getInstance()->insert('clinic_card',['id_client'=>$data['clients'],'data_vizites'=>$data['date'],'djathte_larg_sph'=>$data['sdlsph'],'djathte_larg_cyl'=>$data['sdlcyl'],'djathte_larg_axe'=>$data['sdlaxe'],'djathte_afer_sph'=>$data['sdasph'],'djathte_afer_cyl'=>$data['sdacyl'],'djathte_afer_axe'=>$data['sdaaxe'],'majte_larg_sph'=>$data['smlsph'],'majte_larg_cyl'=>$data['smlcyl'],'majte_larg_axe'=>$data['smlaxe'],'majte_afer_sph'=>$data['smasph'],'majte_afer_cyl'=>$data['smacyl'],'majte_afer_axe'=>$data['smaaxe'],'distanca_pupilare_larg'=>$data['dpl'],'distanca_pupilare_afer'=>$data['dpa'],'shenime'=>$data['shenime']]);
+		// $register_clinic_card = DB::getInstance()->insert('clinic_card',['id_client'=>$data['clients'],'data_vizites'=>$data['date'],'djathte_larg_sph'=>$data['sdlsph'],'djathte_larg_cyl'=>$data['sdlcyl'],'djathte_larg_axe'=>$data['sdlaxe'],'djathte_afer_sph'=>$data['sdasph'],'djathte_afer_cyl'=>$data['sdacyl'],'djathte_afer_axe'=>$data['sdaaxe'],'majte_larg_sph'=>$data['smlsph'],'majte_larg_cyl'=>$data['smlcyl'],'majte_larg_axe'=>$data['smlaxe'],'majte_afer_sph'=>$data['smasph'],'majte_afer_cyl'=>$data['smacyl'],'majte_afer_axe'=>$data['smaaxe'],'distanca_pupilare_larg'=>$data['dpl'],'distanca_pupilare_afer'=>$data['dpa'],'shenime'=>$data['shenime']]);
 		if($register_clinic_card){
 			$responserc="1";
 			//echo json_encode($responserc);
