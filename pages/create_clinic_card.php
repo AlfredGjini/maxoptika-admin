@@ -239,7 +239,7 @@
               success: function (response) {
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 //console.log(response);
+                 console.log(response);
                  
                 if(response=="1"){ 
                   // Response: 1 - Success
