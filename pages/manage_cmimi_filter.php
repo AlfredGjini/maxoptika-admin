@@ -47,7 +47,7 @@
 				<div class='clinic-card-container'>
 					
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-4">
 							<div class="col-sm-12">
 								<h4>Syze Dielli</h4>
 							</div>
@@ -69,7 +69,7 @@
 			                </div>
 		                </div>
 
-		                <div class="col-sm-6">
+		                <div class="col-sm-4">
 							<div class="col-sm-12">
 								<h4>Syze Optike</h4>
 							</div>
@@ -91,7 +91,7 @@
 			                </div>
 		                </div>
 
-		                <div class="col-sm-6">
+		                <div class="col-sm-4">
 							<div class="col-sm-12">
 								<h4>Lente</h4>
 							</div>
