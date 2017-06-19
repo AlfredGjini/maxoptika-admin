@@ -35,10 +35,19 @@
 								echo "string";
 								echo $dataResult[0]->cmimimin;
 
-								// foreach ($dataResult as $tableRows) {
-								// 	echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
+								foreach ($dataResult as $tableRows) {
+									if ($tableRows->vendi==0) {
+										$diellMin=$tableRows->cmimimin;
+										$diellMax=$tableRows->cmimimax;
+									}else if ($tableRows->vendi==1) {
+										$optikeMin=$tableRows->cmimimin;
+										$optikeMax=$tableRows->cmimimax;
+									}else if ($tableRows->vendi==2) {
+										$lenteMin=$tableRows->cmimimin;
+										$lenteMax=$tableRows->cmimimax;
+									}
 									
-								// }
+								}
 	                    	?>
 	                    </select>
                     </center>
@@ -58,13 +67,13 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Min</div>
-			                    <div class="col-sm-3"><input type='text' name='diellMin' value="<?php echo $dataResult[0]->cmimimin; ?>" /></div>
+			                    <div class="col-sm-3"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Max</div>
-			                    <div class="col-sm-3"><input type='text' name='diellMax' value="<?php echo $dataResult[0]->cmimimax; ?>" /></div>
+			                    <div class="col-sm-3"><input type='text' name='diellMax' value="<?php echo $diellMax; ?>" /></div>
 
 			                  </div>
 			                </div>
@@ -80,13 +89,13 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Min</div>
-			                    <div class="col-sm-3"><input type='text' name='optikeMin' value="<?php echo $dataResult[1]->cmimimin; ?>" /></div>
+			                    <div class="col-sm-3"><input type='text' name='optikeMin' value="<?php echo $optikeMin; ?>" /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Max</div>
-			                    <div class="col-sm-3"><input type='text' name='optikeMax' value="<?php echo $dataResult[1]->cmimimax; ?>" /></div>
+			                    <div class="col-sm-3"><input type='text' name='optikeMax' value="<?php echo $optikeMax; ?>" /></div>
 
 			                  </div>
 			                </div>
@@ -102,13 +111,13 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Min</div>
-			                    <div class="col-sm-3"><input type='text' name='lenteMin' value="<?php echo $dataResult[2]->cmimimin; ?>"/></div>
+			                    <div class="col-sm-3"><input type='text' name='lenteMin' value="<?php echo $lenteMin; ?>"/></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Max</div>
-			                    <div class="col-sm-3"><input type='text' name='lenteMax' value="<?php echo $dataResult[2]->cmimimax; ?>" /></div>
+			                    <div class="col-sm-3"><input type='text' name='lenteMax' value="<?php echo $lenteMax; ?>" /></div>
 
 			                  </div>
 			                </div>
