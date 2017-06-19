@@ -91,6 +91,15 @@
             </span>
           </a>
         </li>
+        
+        <li class="treeview manage_cmimi_filter">
+          <a href="?page=manage_cmimi_filter">
+            <i class="fa fa-edit"></i> <span>Cmimi Filter</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
         <?php } ?>
         
       </ul>

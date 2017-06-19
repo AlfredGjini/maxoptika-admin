@@ -27,6 +27,9 @@ switch ($page) {
 	case 'manage_doc_times':
 		include 'pages/manage_doc_times.php';	
 		break;
+	case 'manage_cmimi_filter':
+		include 'pages/manage_cmimi_filter.php';	
+		break;
 		
 	default:
 		include "pages/dashboard.php";
