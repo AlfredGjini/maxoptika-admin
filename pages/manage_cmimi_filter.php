@@ -56,13 +56,13 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Min</div>
-			                    <div class="col-sm-3"><input type='text' name='diellMin' /></div>
+			                    <div class="col-sm-3"><input type='text' name='diellMin' value="<?php echo "$dataResult[0]->cmimimin"; ?>" /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Max</div>
-			                    <div class="col-sm-3"><input type='text' name='diellMax' /></div>
+			                    <div class="col-sm-3"><input type='text' name='diellMax' value="<?php echo "$dataResult[0]->cmimimax"; ?>" /></div>
 
 			                  </div>
 			                </div>
@@ -78,13 +78,13 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Min</div>
-			                    <div class="col-sm-3"><input type='text' name='optikeMin' /></div>
+			                    <div class="col-sm-3"><input type='text' name='optikeMin' value="<?php echo "$dataResult[1]->cmimimin"; ?>" /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Max</div>
-			                    <div class="col-sm-3"><input type='text' name='optikeMax' /></div>
+			                    <div class="col-sm-3"><input type='text' name='optikeMax' value="<?php echo "$dataResult[1]->cmimimax"; ?>" /></div>
 
 			                  </div>
 			                </div>
@@ -100,13 +100,13 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Min</div>
-			                    <div class="col-sm-3"><input type='text' name='lenteMin' /></div>
+			                    <div class="col-sm-3"><input type='text' name='lenteMin' value="<?php echo "$dataResult[2]->cmimimin"; ?>"/></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Max</div>
-			                    <div class="col-sm-3"><input type='text' name='lenteMax' /></div>
+			                    <div class="col-sm-3"><input type='text' name='lenteMax' value="<?php echo "$dataResult[2]->cmimimax"; ?>" /></div>
 
 			                  </div>
 			                </div>
