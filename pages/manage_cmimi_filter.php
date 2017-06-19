@@ -28,16 +28,15 @@
 	                    <h4>Zgjidh Klientin :</h4>
 	                    	<?php
 	                    		
-								$dataResult = DB::getInstance()->getAll('clients')->results();
+								$dataResult = DB::getInstance()->getAll('cmimifilter')->results();
 								$res = '';
 								$dataForDT = ["data"=>[]];
-								$i = 0;
-								echo '<select name="clients" id="clientsSelect">';
-								echo "<option value='bosh'>....</option>";
-								foreach ($dataResult as $tableRows) {
-									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
+								var_dump($dataResult);
+
+								// foreach ($dataResult as $tableRows) {
+								// 	echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
 									
-								}
+								// }
 	                    	?>
 	                    </select>
                     </center>
@@ -116,7 +115,7 @@
 	              	</div>
 
               		<div class="box-footer" >
-	                	<button type="submit" class="btn btn-info pull-right">Register</button>
+	                	<button type="submit" class="btn btn-info pull-right">Vendos</button>
 	              </div>
 				</div>
               <!-- /.box-body -->
