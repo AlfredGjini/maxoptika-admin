@@ -29,20 +29,15 @@
 	                    	<?php
 	                    		
 								$dataResult = DB::getInstance()->getAll('cmimifilter')->results();
-								$res = '';
-								$dataForDT = ["data"=>[]];
-								var_dump($dataResult);
-								echo "string";
-								echo $dataResult[0]->cmimimin;
 
 								foreach ($dataResult as $tableRows) {
-									if ($tableRows->vendi==0) {
+									if ($tableRows->vendi==1) {
 										$diellMin=$tableRows->cmimimin;
 										$diellMax=$tableRows->cmimimax;
-									}else if ($tableRows->vendi==1) {
+									}else if ($tableRows->vendi==2) {
 										$optikeMin=$tableRows->cmimimin;
 										$optikeMax=$tableRows->cmimimax;
-									}else if ($tableRows->vendi==2) {
+									}else if ($tableRows->vendi==3) {
 										$lenteMin=$tableRows->cmimimin;
 										$lenteMax=$tableRows->cmimimax;
 									}
