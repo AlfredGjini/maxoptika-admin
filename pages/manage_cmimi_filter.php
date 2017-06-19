@@ -25,19 +25,19 @@
           		<div class="form-group">
                   <div class="col-sm-12">
                     <center>
-	                    <h4>Zgjidh Klientin :</h4>
+	                    <h4></h4>
 	                    	<?php
 	                    		
 								$dataResult = DB::getInstance()->getAll('cmimifilter')->results();
 
 								foreach ($dataResult as $tableRows) {
-									if ($tableRows->vendi==1) {
+									if ($tableRows->id==1) {
 										$diellMin=$tableRows->cmimimin;
 										$diellMax=$tableRows->cmimimax;
-									}else if ($tableRows->vendi==2) {
+									}else if ($tableRows->id==2) {
 										$optikeMin=$tableRows->cmimimin;
 										$optikeMax=$tableRows->cmimimax;
-									}else if ($tableRows->vendi==3) {
+									}else if ($tableRows->id==3) {
 										$lenteMin=$tableRows->cmimimin;
 										$lenteMax=$tableRows->cmimimax;
 									}
@@ -143,47 +143,7 @@
   </div>
 
   <script type="text/javascript">
-    var today = moment();
-    
-    //console.log(today);
 
-    $('#datetimepicker1').daterangepicker({
-        "singleDatePicker": true,
-        "showDropdowns": true,
-        "opens": "left",
-	    "minDate": today,
-	    "timePicker": false,
-	    "locale": {
-            "format": 'MM/DD/YYYY h:mm A'
-        }
-    }, 
-    function(start, end, label) {
-        var years = moment().diff(start, 'years');
-        start=moment(start).format('Y-M-D'); 
-        //console.log(start);
-        //alert("You are " + years + " years old.");
-        $('#datazgjedhur').val(start);
-    });
-    today=moment(today).format('Y-M-D'); 
-    $('#datazgjedhur').val(today);
-
-
-	$('[name=iCheck]').iCheck({
-	    checkboxClass: 'icheckbox_flat',
-	    radioClass: 'iradio_flat'
-	  });
-
-	$('#clientsSelect').on('change', function() {
-		//console.log("called");
-	  if(this.value=="bosh"){
-	  	//console.log("1");
-	  	$('.clinic-card-container').hide();
-	  }else{
-	  	//console.log("2");
-	  	//console.log(this.value);
-	  	$('.clinic-card-container').show();
-	  }
-	})
 
 
 
@@ -195,7 +155,7 @@
       var values = $(this).serialize();
 
        $.ajax({
-              url: "functions.php?action=create_clinic_card",
+              url: "functions.php?action=manage_cmimi_filter",
               type: "post",
               data: values ,
               success: function (response) {
@@ -207,7 +167,7 @@
                   // Response: 1 - Success
                    swal(
                     '',
-                    'Kartela u krijua me sukses',
+                    'Cmimet u perditesuan me sukses',
                     'success'
                   )
                 }else if (response == "2"){

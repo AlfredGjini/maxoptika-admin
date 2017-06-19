@@ -185,7 +185,6 @@ switch ($action) {
 			$responserc="1";
 			//echo json_encode($responserc);
 			echo $responserc;
-		}
 		}else{
 			$responserc="3";
 			//echo json_encode($responserc);
@@ -259,6 +258,29 @@ switch ($action) {
 			echo $success;
 		}
 		
+	break;
+
+	case 'manage_cmimi_filter':
+		//var_dump($data);
+		//echo "u be ";
+		var_dump($data);
+
+		$updateUsers = DB::getInstance()->update("cmimifilter",$params["user_id"],['username'=>$params["username"],'password'=>$params["password"]]);
+
+
+
+		// if($register_clinic_card){
+		// 	$responserc="1";
+		// 	//echo json_encode($responserc);
+		// 	echo $responserc;
+		// }else{
+		// 	$responserc="3";
+		// 	//echo json_encode($responserc);
+		// 	echo $responserc;
+		// }
+
+
+
 	break;
 
 	default:	
