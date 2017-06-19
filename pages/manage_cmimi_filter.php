@@ -2,11 +2,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Kartelat Klinike
+        Cmimi Filter
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Kartela Klinike</a></li>
-        <li class="active">Krijo Kartelen Klinike</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Cmimi Filter</a></li>
+        <li class="active">Vendos cmimet e filtrave</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -16,7 +16,7 @@
           
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Krijo Kartelen Klinike</h3>
+              <h3 class="box-title">Vendos cmimet e filtrave</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -44,120 +44,77 @@
                   </div>
                 </div>
 				<!-- hidden -->
-				<div class='clinic-card-container' style="display: none;">
-					<div class="form-group">
-	                  <div class="col-sm-2"></div>
-	                  <div class="col-sm-8">
-	                    <center>
-		                    <h4>Data e vizites :</h4>
-	                    	<div class="form-group">
-			                    <div class='input-group date' id='datetimepicker1'>
-				                    <input id="datazgjedhur" name="date" type='text' class="form-control" value="" />
-				                    <span class="input-group-addon">
-				                        <span class="glyphicon glyphicon-calendar"></span>
-				                    </span>
-				                </div>
-			                </div>
-	                    </center>
-	                  </div>
-	                  <div class="col-sm-2"></div>
-	                </div>
+				<div class='clinic-card-container'>
 					
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="col-sm-12">
-								<h4>Syri i djathte</h4>
+								<h4>Syze Dielli</h4>
 							</div>
 						
 			                <div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3"></div>
-			                    <div class="col-sm-3">Sph.</div>
-			                    <div class="col-sm-3">Cyl.</div>
-			                    <div class="col-sm-3">Axe.</div>
-			                  </div>
 							</div>
 			                <div class="form-group">
 			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-3"><input type='text' name='sdlsph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdlcyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdlaxe' /></div>
+			                    <div class="col-sm-3">Min</div>
+			                    <div class="col-sm-3"><input type='text' name='diellMin' /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Afer</div>
-			                    <div class="col-sm-3"><input type='text' name='sdasph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdacyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdaaxe' /></div>
+			                    <div class="col-sm-3">Max</div>
+			                    <div class="col-sm-3"><input type='text' name='diellMax' /></div>
+
 			                  </div>
 			                </div>
 		                </div>
 
 		                <div class="col-sm-6">
 							<div class="col-sm-12">
-								<h4>Syri i majte</h4>
+								<h4>Syze Optike</h4>
 							</div>
 						
 			                <div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3"></div>
-			                    <div class="col-sm-3">Sph.</div>
-			                    <div class="col-sm-3">Cyl.</div>
-			                    <div class="col-sm-3">Axe.</div>
-			                  </div>
 							</div>
 			                <div class="form-group">
 			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-3"><input type='text' name='smlsph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smlcyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smlaxe' /></div>
+			                    <div class="col-sm-3">Min</div>
+			                    <div class="col-sm-3"><input type='text' name='optikeMin' /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Afer</div>
-			                    <div class="col-sm-3"><input type='text' name='smasph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smacyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smaaxe' /></div>
+			                    <div class="col-sm-3">Max</div>
+			                    <div class="col-sm-3"><input type='text' name='optikeMax' /></div>
+
 			                  </div>
 			                </div>
 		                </div>
-	              	</div>
 
-					<div class="row">
-						<div class="col-sm-6">
-							<div class='col-sm-12'>
-								<h4>Distanca Pupilare</h4>
+		                <div class="col-sm-6">
+							<div class="col-sm-12">
+								<h4>Lente</h4>
 							</div>
-							<div class="form-group">
+						
+			                <div class="form-group">
+							</div>
+			                <div class="form-group">
 			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-9"><input type='text' name='dpl' style="width:100%" /></div>
+			                    <div class="col-sm-3">Min</div>
+			                    <div class="col-sm-3"><input type='text' name='lenteMin' /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Afer</div>
-			                    <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" /></div>
+			                    <div class="col-sm-3">Max</div>
+			                    <div class="col-sm-3"><input type='text' name='lenteMax' /></div>
+
 			                  </div>
 			                </div>
-						</div>
+		                </div>
 
-						<div class="col-sm-6">
-							<div class='col-sm-12'>
-								<h4>Shenime</h4>
-							</div>
-							
-							<div class="col-sm-12">
-								<textarea rows="3" style="width: 100%;" name="shenime"></textarea>
-							</div>
-			              	
-						</div>
-				
-              		</div>
+	              	</div>
+
               		<div class="box-footer" >
 	                	<button type="submit" class="btn btn-info pull-right">Register</button>
 	              </div>
