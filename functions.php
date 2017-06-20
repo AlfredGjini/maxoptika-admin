@@ -264,8 +264,11 @@ switch ($action) {
 		//var_dump($data);
 		//echo "u be ";
 		var_dump($data);
-
-		//$updateUsers = DB::getInstance()->update("cmimifilter",$params["user_id"],['username'=>$params["username"],'password'=>$params["password"]]);
+		var_dump($data["diellMax"]);
+		$updateUsers = DB::getInstance()->update("cmimifilter",1,['cmimimax'=>$data["diellMax"],'cmimimin'=>$data["diellMin"]]);
+		$updateUsers = DB::getInstance()->update("cmimifilter",2,['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
+		$updateUsers = DB::getInstance()->update("cmimifilter",3,['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
+		
 
 
 
