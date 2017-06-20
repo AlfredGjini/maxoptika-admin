@@ -192,9 +192,8 @@ switch ($action) {
 			echo $responserc;
 		}
 
-
-
 	break;
+
 
 	case 'manage_clinic_card':
 		//var_dump($data);
@@ -266,7 +265,7 @@ switch ($action) {
 		//echo "u be ";
 		var_dump($data);
 
-		$updateUsers = DB::getInstance()->update("cmimifilter",$params["user_id"],['username'=>$params["username"],'password'=>$params["password"]]);
+		//$updateUsers = DB::getInstance()->update("cmimifilter",$params["user_id"],['username'=>$params["username"],'password'=>$params["password"]]);
 
 
 
