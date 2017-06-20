@@ -265,22 +265,20 @@ switch ($action) {
 		//echo "u be ";
 		var_dump($data);
 		var_dump($data["diellMax"]);
-		$updateUsers = DB::getInstance()->update("cmimifilter",1,['cmimimax'=>$data["diellMax"],'cmimimin'=>$data["diellMin"]]);
-		$updateUsers = DB::getInstance()->update("cmimifilter",2,['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
-		$updateUsers = DB::getInstance()->update("cmimifilter",3,['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
+		$updateCmimiFilter = DB::getInstance()->update("cmimifilter",1,['cmimimax'=>$data["diellMax"],'cmimimin'=>$data["diellMin"]]);
+		$updateCmimiFilter = DB::getInstance()->update("cmimifilter",2,['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
+		$updateCmimiFilter = DB::getInstance()->update("cmimifilter",3,['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
 		
 
-
-
-		// if($register_clinic_card){
-		// 	$responserc="1";
-		// 	//echo json_encode($responserc);
-		// 	echo $responserc;
-		// }else{
-		// 	$responserc="3";
-		// 	//echo json_encode($responserc);
-		// 	echo $responserc;
-		// }
+		if($updateCmimiFilter){
+			$responserc="1";
+			//echo json_encode($responserc);
+			echo $responserc;
+		}else{
+			$responserc="2";
+			//echo json_encode($responserc);
+			echo $responserc;
+		}
 
 
 

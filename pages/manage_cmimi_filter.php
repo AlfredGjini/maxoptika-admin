@@ -177,15 +177,7 @@
                     'Ju lutem plotesoni te gjitha fushat',
                     'warning'
                   )
-                 }else if (response == "3"){
-                  // Response: 2 - Empty Fields
-                  swal(
-                    '',
-                    'Kartela per kete klient ekziston njehere',
-                    'warning'
-                  )
-                 }
-                $('#register_clients').trigger("reset");               
+                 }               
 
               },
               error: function(jqXHR, textStatus, errorThrown) {
