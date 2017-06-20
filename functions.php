@@ -263,8 +263,8 @@ switch ($action) {
 	case 'manage_cmimi_filter':
 		//var_dump($data);
 		//echo "u be ";
-		var_dump($data);
-		var_dump($data["diellMax"]);
+		//var_dump($data);
+
 		$updateCmimiFilter = DB::getInstance()->update("cmimifilter",1,['cmimimax'=>$data["diellMax"],'cmimimin'=>$data["diellMin"]]);
 		$updateCmimiFilter = DB::getInstance()->update("cmimifilter",2,['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
 		$updateCmimiFilter = DB::getInstance()->update("cmimifilter",3,['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
