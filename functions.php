@@ -185,6 +185,7 @@ switch ($action) {
 			$responserc="1";
 			//echo json_encode($responserc);
 			echo $responserc;
+		}
 		}else{
 			$responserc="3";
 			//echo json_encode($responserc);
