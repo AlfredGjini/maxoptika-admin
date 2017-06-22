@@ -1,5 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<div class="content-wrapper" ng-app="">
+<div class="content-wrapper" ng-app="myApp" ng-controller="myCtrl">
+Full Name: {{firstName + " " + lastName}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -184,6 +185,15 @@
     </section>
     <!-- /.content -->
   </div>
+
+
+  <script type="text/javascript">
+    var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope) {
+          $scope.firstName = "John";
+          $scope.lastName = "Doe";
+      });
+  </script>
 
   <script type="text/javascript">
     var today = moment();
