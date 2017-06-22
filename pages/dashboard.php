@@ -229,6 +229,42 @@
   jQuery('.perditeso').click( function(){
     console.log("thirreads");
     $('.progress').show();
+$.ajax({
+                  beforeSend: function (xhr) {
+                      xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+                  },
+                  url: ip + "/cmimipost",
+                  type: 'POST',
+                  contentType: 'application/json',
+                  data: JSON.stringify({"cmime":[{"MARRE":"1990-01-01","NRCHUNK":0,"NRSEL":0,"PERDORUES":"dea"}]}),
+                  dataType: 'json',
+                  headers: {
+                  'ndermarrjaserver': 'MAXOPTIKA'
+                  },
+                  success: function (res) {
+                    console.log(res);
+
+                    var newArrCmime = res.entiteteTeReja.cmimeReja;
+                    //var newArr4 = [];
+
+                    var newArrCmime=remove_duplicates(newArr1,newArrCmime);
+                    var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
+                    console.log(newArr2);
+                    //newArr2=JSON.stringify(newArr2);
+                    $('.progress-bar').css("width", "66%");
+                    $('.progress-bar').text("66%");
+
+
+},
+                        error: function (res) {
+                            console.error('Something went wrong!');
+                            console.log(res);
+                        } 
+                      });
+
+
+
+
 
     $.ajax({
         beforeSend: function (xhr) {
