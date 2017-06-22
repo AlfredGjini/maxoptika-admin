@@ -230,7 +230,7 @@
                  //console.log(typeof(response));
                  console.log(response);
                  response = JSON.parse(response);
-                 // console.log(response);
+                 console.log(response);
                  // setFieldValsClinicCard(response);
 
 
