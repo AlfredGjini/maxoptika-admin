@@ -197,7 +197,7 @@ switch ($action) {
 
 	case 'manage_clinic_card':
 		//var_dump($data['id']);
-		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]]);
+		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]])->results();
 		if ($clinic_card_data==0) {
 			$result=array(
 			    "exist" => 3,
@@ -206,8 +206,8 @@ switch ($action) {
 			echo json_encode($result);
 		}else{
 			//var_dump($clinic_card_data);
-			echo $clinic_card_data;
-		//echo json_encode($clinic_card_data);
+			//echo $clinic_card_data;
+		echo json_encode($clinic_card_data);
 		}
 
 	break;
