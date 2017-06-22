@@ -22,8 +22,7 @@
             <!-- /.box-header -->
             <!-- form start -->
 
-            <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
-              <div class="box-body">
+            
           		<div class="form-group">
                   <div class="col-sm-12">
                   <div><img class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
@@ -46,6 +45,8 @@
                     </center>
                   </div>
                 </div>
+        <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
+              <div class="box-body">
 				<!-- hidden -->
 				<div class='clinic-card-container' style="display: none;">
 					<div class="form-group">
@@ -236,16 +237,16 @@
 
                  if(response.exist==3){
                  	swal({
-					  title: 'Deshironi ta krijoni tani',
-					  text: "Kartela nuk ekziston per kete klient",
-					  type: 'warning',
-					  showCancelButton: true,
-					  confirmButtonColor: '#3085d6',
-					  cancelButtonColor: '#d33',
-					  confirmButtonText: 'Po!'
-					}).then(function () {
-					  window.location.href = "home.php?page=create_clinic_card&id="+response.id;
-					})
+          					  title: 'Deshironi ta krijoni tani',
+          					  text: "Kartela nuk ekziston per kete klient",
+          					  type: 'warning',
+          					  showCancelButton: true,
+          					  confirmButtonColor: '#3085d6',
+          					  cancelButtonColor: '#d33',
+          					  confirmButtonText: 'Po!'
+          					}).then(function () {
+          					  window.location.href = "home.php?page=create_clinic_card&id="+response.id;
+          					})
                  }else{
                  setFieldValsClinicCard(response);
                  }
