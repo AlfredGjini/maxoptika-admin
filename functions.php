@@ -196,7 +196,7 @@ switch ($action) {
 
 
 	case 'manage_clinic_card':
-		var_dump($data);
+		var_dump($data['id']);
 		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]]);
 		if ($clinic_card_data==0) {
 			$result=array(
