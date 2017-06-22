@@ -173,7 +173,8 @@ switch ($action) {
 		//var_dump($data);
 		//echo "u be ";
 		// var_dump($data);
-		$clinic_card_data_exist  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['clients']]])->firstResult();
+		// $clinic_card_data_exist  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['clients']]])->firstResult();
+	$clinic_card_data_exist=0;
 		if($clinic_card_data_exist==0){
 		$user_id  = DB::getInstance()->get('clients',[['id','=',$data['clients']]])->firstResult();
 		//echo "string";
@@ -185,7 +186,7 @@ switch ($action) {
 			$responserc="1";
 			//echo json_encode($responserc);
 			echo $responserc;
-		}
+			}
 		}else{
 			$responserc="3";
 			//echo json_encode($responserc);
