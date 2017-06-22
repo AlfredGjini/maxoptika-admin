@@ -174,8 +174,8 @@ switch ($action) {
 		//echo "u be ";
 		// var_dump($data);
 		// $clinic_card_data_exist  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['clients']]])->firstResult();
-	$clinic_card_data_exist=0;
-		if($clinic_card_data_exist==0){
+
+		// if($clinic_card_data_exist==0){
 		$user_id  = DB::getInstance()->get('clients',[['id','=',$data['clients']]])->firstResult();
 		//echo "string";
 		//var_dump($user_id);
@@ -186,8 +186,7 @@ switch ($action) {
 			$responserc="1";
 			//echo json_encode($responserc);
 			echo $responserc;
-			}
-		}else{
+			}else{
 			$responserc="3";
 			//echo json_encode($responserc);
 			echo $responserc;
@@ -198,7 +197,7 @@ switch ($action) {
 
 	case 'manage_clinic_card':
 		//var_dump($data);
-		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]])->firstResult();
+		$clinic_card_data  = DB::getInstance()->getAll('clinic_card',[['id_client','=',$data['id']]]);
 		if ($clinic_card_data==0) {
 			$result=array(
 			    "exist" => 3,
