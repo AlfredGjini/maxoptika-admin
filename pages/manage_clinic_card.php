@@ -84,9 +84,10 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-3"><input type='text' name='sdlsph' /></div>
+			                    <div class="col-sm-3"><input type='text' name='sdlsph' ng-model="name" /></div>
 			                    <div class="col-sm-3"><input type='text' name='sdlcyl' /></div>
 			                    <div class="col-sm-3"><input type='text' name='sdlaxe' /></div>
+                          {{name}}
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
