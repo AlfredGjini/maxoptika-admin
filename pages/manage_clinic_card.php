@@ -1,5 +1,5 @@
-
-<div class="content-wrapper">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<div class="content-wrapper" ng-app="">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -45,8 +45,8 @@
                     </center>
                   </div>
                 </div>
-        <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
-              <div class="box-body">
+    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
+      <div class="box-body">
 				<!-- hidden -->
 				<div class='clinic-card-container' style="display: none;">
 					<div class="form-group">

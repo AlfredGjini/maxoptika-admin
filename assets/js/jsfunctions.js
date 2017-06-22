@@ -194,6 +194,16 @@ function setFieldValsReservations(data,param){
 	$("#dialogModifiko").dialog("open");
 }
 
+
+function updateDashboard(data){
+	$(".numberOfReservations").html(data.reservations);
+	$(".numberOfClients").html(data.clients);
+	$(".numberOfClinicCards").html(data.clinic_cards);
+}
+
+
+
+
 function setFieldValsClinicCard(data){
 	$("#clientsSelect").val(data.id_client);
 	$('#datazgjedhur').val(data.data_vizites);
@@ -212,12 +222,6 @@ function setFieldValsClinicCard(data){
 	$("[name=dpl]").val(data.distanca_pupilare_larg);
 	$("[name=dpa]").val(data.distanca_pupilare_afer);
 	$("[name=shenime]").val(data.shenime);
-}
-
-function updateDashboard(data){
-	$(".numberOfReservations").html(data.reservations);
-	$(".numberOfClients").html(data.clients);
-	$(".numberOfClinicCards").html(data.clinic_cards);
 }
 
 
