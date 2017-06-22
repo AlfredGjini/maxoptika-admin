@@ -206,7 +206,8 @@ switch ($action) {
 			echo json_encode($result);
 		}else{
 			//var_dump($clinic_card_data);
-		echo json_encode($clinic_card_data);
+			echo $clinic_card_data;
+		//echo json_encode($clinic_card_data);
 		}
 
 	break;
