@@ -52,9 +52,9 @@
     <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal formaNr{{info.id}}" >
       <div class="box-body" >
 
-      <div >
+<!--       <div >
         {{info.id}}
-      </div>
+      </div> -->
         <!-- hidden -->
         <div class='clinic-card-container' >
           <div class="form-group">
