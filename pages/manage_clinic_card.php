@@ -42,7 +42,7 @@ Full Name: {{firstName + " " + lastName}}
                 $res = '';
                 $dataForDT = ["data"=>[]];
                 $i = 0;
-                echo '<select ng-change="updateKartele()" name="clients" id="clientsSelect">';
+                echo '<select ng-change="updateKartele()" ng-model="idd" name="clients" id="clientsSelect">';
                 echo "<option value='bosh'>....</option>";
                 foreach ($dataResult as $tableRows) {
                   echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
@@ -197,10 +197,21 @@ Full Name: {{firstName + " " + lastName}}
     <!-- /.content -->
   </div>
 
+<?php 
 
-  <script type="text/javascript">
-    var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope, $http) {
+$tedhenat='';
+foreach ($dataResult as $tableRows) {
+  
+        $tedhenat=$tedhenat.','.$tableRows->id;   
+        }
+echo '<script type="text/javascript">
+    var app = angular.module(\'myApp\', []);
+      app.controller(\'myCtrl\', function($scope, $http) {
+        $scope.idd='.$tedhenat;
+
+?>
+  
+
 
 
         $scope.updateKartele = function(){
