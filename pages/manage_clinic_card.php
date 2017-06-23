@@ -1,8 +1,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <div class="content-wrapper" ng-app="myApp" ng-controller="myCtrl">
 Full Name: {{firstName + " " + lastName}}
-<div ng-show="erdhiKartela" ng-repeat="info in kartela">
+<div>
+<div ng-repeat="info in kartela">
         {{info[$index].id}}
+      </div>
       </div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
