@@ -200,7 +200,7 @@ Full Name: {{firstName + " " + lastName}}
 
   <script type="text/javascript">
     var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope) {
+      app.controller('myCtrl', function($scope, $http) {
 
 
 
@@ -218,7 +218,7 @@ Full Name: {{firstName + " " + lastName}}
          jQuery('.gifloader').show();
 
 
-         
+
     $http({
        method: 'POST',
        //url: 'https://tarzantest.herokuapp.com/login',
