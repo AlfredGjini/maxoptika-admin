@@ -46,7 +46,12 @@
                     </center>
                   </div>
                 </div>
-    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" ng-show="erdhiKartela" ng-repeat="info in kartela">
+    <div class="container">
+      <button ng-show="erdhiKartela" ng-repeat="info in kartela" type="button" class="btn btn-info btn-block">Vizita numer: {{$index}} Date: {{info.data_vizites}}</button>
+        
+      </div>
+    </div>
+    <form id="create_clinic_card{{info.id}}" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" >
       <div class="box-body" >
 
       <div >
@@ -333,7 +338,6 @@
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope, $http, $timeout) {
 
-        //$scope.selectId=0;
         $scope.updateKartele = function(){
           console.log($scope.selectId);
 
@@ -352,7 +356,6 @@
                  $scope.kartela=response;
                  $scope.erdhiKartela=true;
                  console.log($scope.kartela);
-                 //$scope.selectId=40;
 
                  $timeout(function() {
                   angular.element('#myselector').triggerHandler('click');
