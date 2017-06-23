@@ -51,10 +51,10 @@ Full Name: {{firstName + " " + lastName}}
                     </center>
                   </div>
                 </div>
-    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" >
+    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" ng-show="erdhiKartela" ng-repeat="info in kartela">
       <div class="box-body" >
 
-      <div ng-show="erdhiKartela" ng-repeat="info in kartela">
+      <div >
         {{info.id}}
       </div>
         <!-- hidden -->
@@ -225,6 +225,7 @@ Full Name: {{firstName + " " + lastName}}
                  console.log($scope.kartela);
                  $timeout(function() {
                   angular.element('#myselector').triggerHandler('click');
+                  console.log('u klikua');
                 });
                  // setFieldValsClinicCard(response);
                  $scope.records = [
