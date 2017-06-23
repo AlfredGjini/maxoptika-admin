@@ -1,11 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <div class="content-wrapper" ng-app="myApp" ng-controller="myCtrl">
-Full Name: {{firstName + " " + lastName}}
-<div>
-<div ng-repeat="info in kartela">
-        {{info.id}}
-      </div>
-      </div>
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -94,8 +89,8 @@ Full Name: {{firstName + " " + lastName}}
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">Larg</div>
-                          <div class="col-sm-3"><input type='text' name='sdlsph' ng-model="name" /></div>
-                          <div class="col-sm-3"><input type='text' name='sdlcyl' /></div>
+                          <div class="col-sm-3"><input type='text' name='sdlsph' ng-model="info.djathte_larg_sph" /></div>
+                          <div class="col-sm-3"><input type='text' name='sdlcyl' value="info.djathte_larg_cyl" /></div>
                           <div class="col-sm-3"><input type='text' name='sdlaxe' /></div>
                           {{name}}
                         </div>
