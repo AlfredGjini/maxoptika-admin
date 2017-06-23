@@ -308,6 +308,7 @@
     function(start, end, label) {
         var years = moment().diff(start, 'years');
         start=moment(start).format('Y-M-D'); 
+        console.log("data u thirr");
         //console.log(start);
         //alert("You are " + years + " years old.");
         jQuery('#datazgjedhur').val(start);
