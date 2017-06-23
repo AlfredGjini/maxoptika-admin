@@ -359,6 +359,7 @@
                   console.log('u klikua');
                   $scope.selectId=40;
                   jQuery("#clientsSelect").val($scope.selectId);
+                  console.log($scope.selectId);
                 });
                  // setFieldValsClinicCard(response);
                  
