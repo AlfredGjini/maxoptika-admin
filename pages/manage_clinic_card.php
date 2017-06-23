@@ -333,7 +333,7 @@
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope, $http, $timeout) {
 
-        $scope.selectId=0;
+        //$scope.selectId=0;
         $scope.updateKartele = function(){
           console.log($scope.selectId);
 
@@ -352,12 +352,12 @@
                  $scope.kartela=response;
                  $scope.erdhiKartela=true;
                  console.log($scope.kartela);
-                 $scope.selectId=40;
+                 //$scope.selectId=40;
 
                  $timeout(function() {
                   angular.element('#myselector').triggerHandler('click');
                   console.log('u klikua');
-                  $scope.selectId=40;
+                  //$scope.selectId=40;
                   jQuery("#clientsSelect").val($scope.selectId);
                   console.log($scope.selectId);
                 });
