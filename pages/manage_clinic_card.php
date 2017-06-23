@@ -218,6 +218,7 @@ Full Name: {{firstName + " " + lastName}}
                  console.log(response);
                  $scope.kartela=response;
                  $scope.erdhiKartela=false;
+                 console.log($scope.erdhiKartela);
                  // setFieldValsClinicCard(response);
 
 
