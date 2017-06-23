@@ -218,19 +218,15 @@
                  $scope.kartela=response;
                  $scope.erdhiKartela=true;
                  console.log($scope.kartela);
+                 $scope.selectId=40;
+
                  $timeout(function() {
                   angular.element('#myselector').triggerHandler('click');
                   console.log('u klikua');
-                  jQuery('.clinic-card-container').show(); 
+                  $scope.selectId=40;
                 });
                  // setFieldValsClinicCard(response);
-                 $scope.records = [
-                    "Alfreds Futterkiste",
-                    "Berglunds snabbköp",
-                    "Centro comercial Moctezuma",
-                    "Ernst Handel",
-                  ]
-
+                 
 
                  if(response.exist==3){
                   swal({
@@ -299,7 +295,7 @@
     
     //console.log(today);
 
-    $('#datetimepicker1').daterangepicker({
+    jQuery('#datetimepicker1').daterangepicker({
         "singleDatePicker": true,
         "showDropdowns": true,
         "opens": "left",
@@ -314,10 +310,10 @@
         start=moment(start).format('Y-M-D'); 
         //console.log(start);
         //alert("You are " + years + " years old.");
-        $('#datazgjedhur').val(start);
+        jQuery('#datazgjedhur').val(start);
     });
     today=moment(today).format('Y-M-D'); 
-    $('#datazgjedhur').val(today);
+    jQuery('#datazgjedhur').val(today);
 
 
 
@@ -325,12 +321,12 @@
 
 
 
-    $("#create_clinic_card").submit(function(event) {
+    jQuery("#create_clinic_card").submit(function(event) {
 
 
       /* Stop form from submitting normally */
       event.preventDefault();
-      var values = $(this).serialize();
+      var values = jQuery(this).serialize();
 
        $.ajax({
               url: "functions.php?action=update_clinic_card",
@@ -379,15 +375,15 @@
   <?php
   if (isset($_GET['id'])) { ?>
     <script type="text/javascript">
-    $('.gifloader').show();
+    jQuery('.gifloader').show();
 
-           $.ajax({
+           jQuery.ajax({
               url: "functions.php?action=manage_clinic_card",
               type: "post",
               data: {id: <?php echo $_GET['id']; ?>} ,
               success: function (response) {
-                $('.gifloader').hide();
-                $('.clinic-card-container').show(); 
+                jQuery('.gifloader').hide();
+                jQuery('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  //console.log(response);
