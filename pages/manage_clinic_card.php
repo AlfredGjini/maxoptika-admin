@@ -46,7 +46,7 @@ Full Name: {{firstName + " " + lastName}}
                     </center>
                   </div>
                 </div>
-    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" ng-repeat="info in kartela">
+    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" ng-show="erdhiKartela" ng-repeat="info in kartela">
       <div class="box-body">
 				<!-- hidden -->
 				<div class='clinic-card-container' style="display: none;">
@@ -190,6 +190,8 @@ Full Name: {{firstName + " " + lastName}}
   <script type="text/javascript">
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope) {
+
+        $scope.erdhiKartela=false;
           $scope.firstName = "John";
           $scope.lastName = "Doe";
 
@@ -215,6 +217,7 @@ Full Name: {{firstName + " " + lastName}}
                  response = JSON.parse(response);
                  console.log(response);
                  $scope.kartela=response;
+                 $scope.erdhiKartela=false;
                  // setFieldValsClinicCard(response);
 
 
