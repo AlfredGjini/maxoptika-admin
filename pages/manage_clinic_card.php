@@ -217,8 +217,8 @@ Full Name: {{firstName + " " + lastName}}
                  response = JSON.parse(response);
                  console.log(response);
                  $scope.kartela=response;
-                 $scope.erdhiKartela=false;
-                 console.log($scope.erdhiKartela);
+                 $scope.erdhiKartela=true;
+                 console.log($scope.kartela);
                  // setFieldValsClinicCard(response);
 
 
