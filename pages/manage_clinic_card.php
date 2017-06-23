@@ -46,7 +46,7 @@ Full Name: {{firstName + " " + lastName}}
                     </center>
                   </div>
                 </div>
-    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
+    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" ng-repeat="info in kartela">
       <div class="box-body">
 				<!-- hidden -->
 				<div class='clinic-card-container' style="display: none;">
@@ -211,9 +211,10 @@ Full Name: {{firstName + " " + lastName}}
                 jQuery('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
-                 console.log(response);
+                 //console.log(response);
                  response = JSON.parse(response);
                  console.log(response);
+                 $scope.kartela=response;
                  // setFieldValsClinicCard(response);
 
 
