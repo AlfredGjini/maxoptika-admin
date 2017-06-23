@@ -31,25 +31,25 @@ Full Name: {{firstName + " " + lastName}}
             <!-- form start -->
 
             
-          		<div class="form-group">
+              <div class="form-group">
                   <div class="col-sm-12">
                   <div><img class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
                     <center>
-	                    <h4>Zgjidh Klientin :</h4>
-	                    	<?php
-	                    		
-								$dataResult = DB::getInstance()->getAll('clients')->results();
-								$res = '';
-								$dataForDT = ["data"=>[]];
-								$i = 0;
-								echo '<select name="clients" id="clientsSelect">';
-								echo "<option value='bosh'>....</option>";
-								foreach ($dataResult as $tableRows) {
-									echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
-									
-								}
-	                    	?>
-	                    </select>
+                      <h4>Zgjidh Klientin :</h4>
+                        <?php
+                          
+                $dataResult = DB::getInstance()->getAll('clients')->results();
+                $res = '';
+                $dataForDT = ["data"=>[]];
+                $i = 0;
+                echo '<select ng-change="updateKartele($event)"> name="clients" id="clientsSelect">';
+                echo "<option value='bosh'>....</option>";
+                foreach ($dataResult as $tableRows) {
+                  echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
+                  
+                }
+                        ?>
+                      </select>
                     </center>
                   </div>
                 </div>
@@ -59,126 +59,126 @@ Full Name: {{firstName + " " + lastName}}
       <div ng-show="erdhiKartela" ng-repeat="info in kartela">
         {{info[$index].id}}
       </div>
-				<!-- hidden -->
-				<div class='clinic-card-container' style="display: none;">
-					<div class="form-group">
-	                  <div class="col-sm-2"></div>
-	                  <div class="col-sm-8">
-	                    <center>
-		                    <h4>Data e vizites :</h4>
-	                    	<div class="form-group">
-			                    <div class='input-group date' id='datetimepicker1'>
-				                    <input id="datazgjedhur" name="date" type='text' class="form-control" value="" />
-				                    <span class="input-group-addon">
-				                        <span class="glyphicon glyphicon-calendar"></span>
-				                    </span>
-				                </div>
-			                </div>
-	                    </center>
-	                  </div>
-	                  <div class="col-sm-2"></div>
-	                </div>
-					
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="col-sm-12">
-								<h4>Syri i djathte</h4>
-							</div>
-						
-			                <div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3"></div>
-			                    <div class="col-sm-3">Sph.</div>
-			                    <div class="col-sm-3">Cyl.</div>
-			                    <div class="col-sm-3">Axe.</div>
-			                  </div>
-							</div>
-			                <div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-3"><input type='text' name='sdlsph' ng-model="name" /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdlcyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdlaxe' /></div>
+        <!-- hidden -->
+        <div class='clinic-card-container' style="display: none;">
+          <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                      <center>
+                        <h4>Data e vizites :</h4>
+                        <div class="form-group">
+                          <div class='input-group date' id='datetimepicker1'>
+                            <input id="datazgjedhur" name="date" type='text' class="form-control" value="" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                      </div>
+                      </center>
+                    </div>
+                    <div class="col-sm-2"></div>
+                  </div>
+          
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="col-sm-12">
+                <h4>Syri i djathte</h4>
+              </div>
+            
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3"></div>
+                          <div class="col-sm-3">Sph.</div>
+                          <div class="col-sm-3">Cyl.</div>
+                          <div class="col-sm-3">Axe.</div>
+                        </div>
+              </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3">Larg</div>
+                          <div class="col-sm-3"><input type='text' name='sdlsph' ng-model="name" /></div>
+                          <div class="col-sm-3"><input type='text' name='sdlcyl' /></div>
+                          <div class="col-sm-3"><input type='text' name='sdlaxe' /></div>
                           {{name}}
-			                  </div>
-			              	</div>
-			              	<div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Afer</div>
-			                    <div class="col-sm-3"><input type='text' name='sdasph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdacyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='sdaaxe' /></div>
-			                  </div>
-			                </div>
-		                </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3">Afer</div>
+                          <div class="col-sm-3"><input type='text' name='sdasph' /></div>
+                          <div class="col-sm-3"><input type='text' name='sdacyl' /></div>
+                          <div class="col-sm-3"><input type='text' name='sdaaxe' /></div>
+                        </div>
+                      </div>
+                    </div>
 
-		                <div class="col-sm-6">
-							<div class="col-sm-12">
-								<h4>Syri i majte</h4>
-							</div>
-						
-			                <div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3"></div>
-			                    <div class="col-sm-3">Sph.</div>
-			                    <div class="col-sm-3">Cyl.</div>
-			                    <div class="col-sm-3">Axe.</div>
-			                  </div>
-							</div>
-			                <div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-3"><input type='text' name='smlsph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smlcyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smlaxe' /></div>
-			                  </div>
-			              	</div>
-			              	<div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Afer</div>
-			                    <div class="col-sm-3"><input type='text' name='smasph' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smacyl' /></div>
-			                    <div class="col-sm-3"><input type='text' name='smaaxe' /></div>
-			                  </div>
-			                </div>
-		                </div>
-	              	</div>
+                    <div class="col-sm-6">
+              <div class="col-sm-12">
+                <h4>Syri i majte</h4>
+              </div>
+            
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3"></div>
+                          <div class="col-sm-3">Sph.</div>
+                          <div class="col-sm-3">Cyl.</div>
+                          <div class="col-sm-3">Axe.</div>
+                        </div>
+              </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3">Larg</div>
+                          <div class="col-sm-3"><input type='text' name='smlsph' /></div>
+                          <div class="col-sm-3"><input type='text' name='smlcyl' /></div>
+                          <div class="col-sm-3"><input type='text' name='smlaxe' /></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3">Afer</div>
+                          <div class="col-sm-3"><input type='text' name='smasph' /></div>
+                          <div class="col-sm-3"><input type='text' name='smacyl' /></div>
+                          <div class="col-sm-3"><input type='text' name='smaaxe' /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-					<div class="row">
-						<div class="col-sm-6">
-							<div class='col-sm-12'>
-								<h4>Distanca Pupilare</h4>
-							</div>
-							<div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Larg</div>
-			                    <div class="col-sm-9"><input type='text' name='dpl' style="width:100%" /></div>
-			                  </div>
-			              	</div>
-			              	<div class="form-group">
-			                  <div class="col-sm-12">
-			                    <div class="col-sm-3">Afer</div>
-			                    <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" /></div>
-			                  </div>
-			                </div>
-						</div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class='col-sm-12'>
+                <h4>Distanca Pupilare</h4>
+              </div>
+              <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3">Larg</div>
+                          <div class="col-sm-9"><input type='text' name='dpl' style="width:100%" /></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="col-sm-3">Afer</div>
+                          <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" /></div>
+                        </div>
+                      </div>
+            </div>
 
-						<div class="col-sm-6">
-							<div class='col-sm-12'>
-								<h4>Shenime</h4>
-							</div>
-							
-							<div class="col-sm-12">
-								<textarea rows="3" style="width: 100%;" name="shenime"></textarea>
-							</div>
-			              	
-						</div>
-				
-              		</div>
-              		<div class="box-footer" >
-	                	<button type="submit" class="btn btn-info pull-right">Update</button>
-	              </div>
-				</div>
+            <div class="col-sm-6">
+              <div class='col-sm-12'>
+                <h4>Shenime</h4>
+              </div>
+              
+              <div class="col-sm-12">
+                <textarea rows="3" style="width: 100%;" name="shenime"></textarea>
+              </div>
+                      
+            </div>
+        
+                  </div>
+                  <div class="box-footer" >
+                    <button type="submit" class="btn btn-info pull-right">Update</button>
+                </div>
+        </div>
               <!-- /.box-body -->
               
               <!-- /.box-footer -->
@@ -203,57 +203,66 @@ Full Name: {{firstName + " " + lastName}}
       app.controller('myCtrl', function($scope, $http) {
 
 
+        $scope.updateKartele = function(event){
+          console.log(event);
+          console.log("called inside");
+
+              $http({
+                 method: 'POST',
+                 //url: 'https://tarzantest.herokuapp.com/login',
+                 url: 'functions.php?action=manage_clinic_card',
+                 headers: {
+                   'Content-Type': 'application/x-www-form-urlencoded'
+                 },
+                 transformRequest: function(obj) {
+                   var str = [];
+                   for (var p in obj)
+                     str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                   return str.join("&");
+                 },
+                 data: {
+                   id : this.value
+                 }
+               }).success(function(response) {
+
+                response = JSON.parse(response);
+                console.log(response);
+                $scope.kartela=response;
+                console.log($scope.kartela);
+                $scope.records = [
+                              "Alfreds Futterkiste",
+                              "Berglunds snabbköp",
+                              "Centro comercial Moctezuma",
+                              "Ernst Handel",
+                            ]
+
+                });
+
+        }
+
+
 
         $scope.erdhiKartela=false;
           $scope.firstName = "John";
           $scope.lastName = "Doe";
 
-  jQuery('#clientsSelect').on('change', function() {
-    if(this.value=="bosh"){
-      //console.log("1");
-      jQuery('.clinic-card-container').hide();
-    }else{
-      console.log(this.value);
+  // jQuery('#clientsSelect').on('change', function() {
+  //   if(this.value=="bosh"){
+  //     //console.log("1");
+  //     jQuery('.clinic-card-container').hide();
+  //   }else{
+  //     console.log(this.value);
 
-         jQuery('.gifloader').show();
-
-
-
-    $http({
-       method: 'POST',
-       //url: 'https://tarzantest.herokuapp.com/login',
-       url: 'functions.php?action=manage_clinic_card',
-       headers: {
-         'Content-Type': 'application/x-www-form-urlencoded'
-       },
-       transformRequest: function(obj) {
-         var str = [];
-         for (var p in obj)
-           str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-         return str.join("&");
-       },
-       data: {
-         id : this.value
-       }
-     }).success(function(response) {
-
-      response = JSON.parse(response);
-      console.log(response);
-      $scope.kartela=response;
-      console.log($scope.kartela);
-      $scope.records = [
-                    "Alfreds Futterkiste",
-                    "Berglunds snabbköp",
-                    "Centro comercial Moctezuma",
-                    "Ernst Handel",
-                  ]
-
-      });
+  //        jQuery('.gifloader').show();
 
 
 
-    }
-  })
+
+
+
+
+  //   }
+  // })
 
 
 
@@ -272,9 +281,9 @@ Full Name: {{firstName + " " + lastName}}
         "singleDatePicker": true,
         "showDropdowns": true,
         "opens": "left",
-	    "minDate": today,
-	    "timePicker": false,
-	    "locale": {
+      "minDate": today,
+      "timePicker": false,
+      "locale": {
             "format": 'MM/DD/YYYY h:mm A'
         }
     }, 
@@ -355,25 +364,25 @@ Full Name: {{firstName + " " + lastName}}
               type: "post",
               data: {id: <?php echo $_GET['id']; ?>} ,
               success: function (response) {
-              	$('.gifloader').hide();
-              	$('.clinic-card-container').show(); 
+                $('.gifloader').hide();
+                $('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  //console.log(response);
                  response = JSON.parse(response);
                  console.log(response);
                  if(response.exist==3){
-                 	swal({
-					  title: 'Deshironi ta krijoni tani',
-					  text: "Kartela nuk ekziston per kete klient",
-					  type: 'warning',
-					  showCancelButton: true,
-					  confirmButtonColor: '#3085d6',
-					  cancelButtonColor: '#d33',
-					  confirmButtonText: 'Po!'
-					}).then(function () {
-					  window.location.href = "home.php?page=create_clinic_card&id="+response.id;
-					})
+                  swal({
+            title: 'Deshironi ta krijoni tani',
+            text: "Kartela nuk ekziston per kete klient",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Po!'
+          }).then(function () {
+            window.location.href = "home.php?page=create_clinic_card&id="+response.id;
+          })
                  }else{
                  setFieldValsClinicCard(response);
                  }
@@ -391,6 +400,6 @@ Full Name: {{firstName + " " + lastName}}
     </script>
 
   <?php
-  	//echo "yes it's set";
+    //echo "yes it's set";
   }
   ?>
