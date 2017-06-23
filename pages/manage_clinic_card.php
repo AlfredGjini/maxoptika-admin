@@ -192,161 +192,31 @@
   <div id="myselector"></div>
 
 
-
-
-
   <script type="text/javascript">
-    var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope, $http, $timeout) {
-
-        $scope.selectId=0;
-        $scope.updateKartele = function(){
-          console.log($scope.selectId);
-
-            jQuery.ajax({
-              url: "functions.php?action=manage_clinic_card",
-              type: "post",
-              data: {id: $scope.selectId} ,
-              success: function (response) {
-                jQuery('.gifloader').hide();
-                jQuery('.clinic-card-container').show(); 
-                 // you will get response from your php page (what you echo or print) 
-                 //console.log(typeof(response));
-                 //console.log(response);
-                 response = JSON.parse(response);
-                 console.log(response);
-                 $scope.kartela=response;
-                 $scope.erdhiKartela=true;
-                 console.log($scope.kartela);
-                 $scope.selectId=40;
-
-                     var today = moment();
+    var today = moment();
     
-                    //console.log(today);
+    //console.log(today);
 
-                    jQuery('#datetimepicker1').daterangepicker({
-                        "singleDatePicker": true,
-                        "showDropdowns": true,
-                        "opens": "left",
-                      "minDate": today,
-                      "timePicker": false,
-                      "locale": {
-                            "format": 'MM/DD/YYYY h:mm A'
-                        }
-                    }, 
-                    function(start, end, label) {
-                        var years = moment().diff(start, 'years');
-                        start=moment(start).format('Y-M-D'); 
-                        console.log("data u thirr");
-                        //console.log(start);
-                        //alert("You are " + years + " years old.");
-                        jQuery('#datazgjedhur').val(start);
-                    });
-                    today=moment(today).format('Y-M-D'); 
-                    jQuery('#datazgjedhur').val(today);
-
-
-
-
-
-
-                 
-
-                 $timeout(function() {
-                  angular.element('#myselector').triggerHandler('click');
-                  console.log('u klikua');
-                  $scope.selectId=40;
-                });
-                 // setFieldValsClinicCard(response);
-                 
-
-                 if(response.exist==3){
-                  swal({
-                      title: 'Deshironi ta krijoni tani',
-                      text: "Kartela nuk ekziston per kete klient",
-                      type: 'warning',
-                      showCancelButton: true,
-                      confirmButtonColor: '#3085d6',
-                      cancelButtonColor: '#d33',
-                      confirmButtonText: 'Po!'
-                    }).then(function () {
-                      window.location.href = "home.php?page=create_clinic_card&id="+response.id;
-                    })
-                 }else{
-                 setFieldValsClinicCard(response);
-                 }
-                 
-                //$('#register_clients').trigger("reset");               
-
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
-
-
-          });
-
-
-
+    jQuery('#datetimepicker1').daterangepicker({
+        "singleDatePicker": true,
+        "showDropdowns": true,
+        "opens": "left",
+      "minDate": today,
+      "timePicker": false,
+      "locale": {
+            "format": 'MM/DD/YYYY h:mm A'
         }
-
-
-
-        $scope.erdhiKartela=false;
-          $scope.firstName = "John";
-          $scope.lastName = "Doe";
-
-  // jQuery('#clientsSelect').on('change', function() {
-  //   if(this.value=="bosh"){
-  //     //console.log("1");
-  //     jQuery('.clinic-card-container').hide();
-  //   }else{
-  //     console.log(this.value);
-
-  //        jQuery('.gifloader').show();
-
-
-
-
-
-
-
-  //   }
-  // })
-
-
-
-
-
-
-      });
-  </script>
-
-  <script type="text/javascript">
-    // var today = moment();
-    
-    // //console.log(today);
-
-    // jQuery('#datetimepicker1').daterangepicker({
-    //     "singleDatePicker": true,
-    //     "showDropdowns": true,
-    //     "opens": "left",
-    //   "minDate": today,
-    //   "timePicker": false,
-    //   "locale": {
-    //         "format": 'MM/DD/YYYY h:mm A'
-    //     }
-    // }, 
-    // function(start, end, label) {
-    //     var years = moment().diff(start, 'years');
-    //     start=moment(start).format('Y-M-D'); 
-    //     console.log("data u thirr");
-    //     //console.log(start);
-    //     //alert("You are " + years + " years old.");
-    //     jQuery('#datazgjedhur').val(start);
-    // });
-    // today=moment(today).format('Y-M-D'); 
-    // jQuery('#datazgjedhur').val(today);
+    }, 
+    function(start, end, label) {
+        var years = moment().diff(start, 'years');
+        start=moment(start).format('Y-M-D'); 
+        console.log("data u thirr");
+        //console.log(start);
+        //alert("You are " + years + " years old.");
+        jQuery('#datazgjedhur').val(start);
+    });
+    today=moment(today).format('Y-M-D'); 
+    jQuery('#datazgjedhur').val(today);
 
 
 
@@ -454,3 +324,106 @@
     //echo "yes it's set";
   }
   ?>
+
+
+
+
+
+  <script type="text/javascript">
+    var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope, $http, $timeout) {
+
+        $scope.selectId=0;
+        $scope.updateKartele = function(){
+          console.log($scope.selectId);
+
+            jQuery.ajax({
+              url: "functions.php?action=manage_clinic_card",
+              type: "post",
+              data: {id: $scope.selectId} ,
+              success: function (response) {
+                jQuery('.gifloader').hide();
+                jQuery('.clinic-card-container').show(); 
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 //console.log(response);
+                 response = JSON.parse(response);
+                 console.log(response);
+                 $scope.kartela=response;
+                 $scope.erdhiKartela=true;
+                 console.log($scope.kartela);
+                 $scope.selectId=40;
+
+                 $timeout(function() {
+                  angular.element('#myselector').triggerHandler('click');
+                  console.log('u klikua');
+                  $scope.selectId=40;
+                });
+                 // setFieldValsClinicCard(response);
+                 
+
+                 if(response.exist==3){
+                  swal({
+                      title: 'Deshironi ta krijoni tani',
+                      text: "Kartela nuk ekziston per kete klient",
+                      type: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#3085d6',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Po!'
+                    }).then(function () {
+                      window.location.href = "home.php?page=create_clinic_card&id="+response.id;
+                    })
+                 }else{
+                 setFieldValsClinicCard(response);
+                 }
+                 
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
+
+
+        }
+
+
+
+        $scope.erdhiKartela=false;
+          $scope.firstName = "John";
+          $scope.lastName = "Doe";
+
+  // jQuery('#clientsSelect').on('change', function() {
+  //   if(this.value=="bosh"){
+  //     //console.log("1");
+  //     jQuery('.clinic-card-container').hide();
+  //   }else{
+  //     console.log(this.value);
+
+  //        jQuery('.gifloader').show();
+
+
+
+
+
+
+
+  //   }
+  // })
+
+
+
+
+
+
+      });
+
+
+  </script>
+
+  
