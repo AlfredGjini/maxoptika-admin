@@ -42,7 +42,7 @@ Full Name: {{firstName + " " + lastName}}
                 $res = '';
                 $dataForDT = ["data"=>[]];
                 $i = 0;
-                echo '<select ng-change="updateKartele()" ng-model="idd" name="clients" id="clientsSelect">';
+                echo '<select ng-change="updateKartele()" ng-model="selectId" name="clients" id="clientsSelect">';
                 echo "<option value='bosh'>....</option>";
                 foreach ($dataResult as $tableRows) {
                   echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
@@ -219,11 +219,12 @@ echo '<script type="text/javascript">
 
 
 
-
+        $scope.selectId=0;
         $scope.updateKartele = function(){
-          console.log("called inside");
+          console.log($scope.idd);
+          console.log($scope.selectId);
 
-                     jQuery.ajax({
+            jQuery.ajax({
               url: "functions.php?action=manage_clinic_card",
               type: "post",
               data: {id: this.value} ,
