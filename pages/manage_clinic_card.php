@@ -35,8 +35,8 @@
                 $res = '';
                 $dataForDT = ["data"=>[]];
                 $i = 0;
-                echo '<select ng-change="updateKartele()" ng-model="selectId" name="clients" id="clientsSelect">';
-                echo "<option value='bosh'>....</option>";
+                echo '<select ng-change="updateKartele()" ng-model="selectId" ng-init="sortorder=\'0\'" name="clients" id="clientsSelect">';
+                echo "<option value='0'>....</option>";
                 foreach ($dataResult as $tableRows) {
                   echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
                   
