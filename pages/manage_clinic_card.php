@@ -358,6 +358,7 @@
                   angular.element('#myselector').triggerHandler('click');
                   console.log('u klikua');
                   $scope.selectId=40;
+                  jQuery("#clientsSelect").val($scope.selectId);
                 });
                  // setFieldValsClinicCard(response);
                  
