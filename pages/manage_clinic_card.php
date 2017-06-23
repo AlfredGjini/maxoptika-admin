@@ -192,6 +192,62 @@ Full Name: {{firstName + " " + lastName}}
       app.controller('myCtrl', function($scope) {
           $scope.firstName = "John";
           $scope.lastName = "Doe";
+
+            jQuery('#clientsSelect').on('change', function() {
+    if(this.value=="bosh"){
+      //console.log("1");
+      jQuery('.clinic-card-container').hide();
+    }else{
+      console.log(this.value);
+
+         jQuery('.gifloader').show();
+
+           jQuery.ajax({
+              url: "functions.php?action=manage_clinic_card",
+              type: "post",
+              data: {id: this.value} ,
+              success: function (response) {
+                jQuery('.gifloader').hide();
+                jQuery('.clinic-card-container').show(); 
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 console.log(response);
+                 response = JSON.parse(response);
+                 console.log(response);
+                 // setFieldValsClinicCard(response);
+
+
+                 if(response.exist==3){
+                  swal({
+                      title: 'Deshironi ta krijoni tani',
+                      text: "Kartela nuk ekziston per kete klient",
+                      type: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#3085d6',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Po!'
+                    }).then(function () {
+                      window.location.href = "home.php?page=create_clinic_card&id="+response.id;
+                    })
+                 }else{
+                 setFieldValsClinicCard(response);
+                 }
+                 
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
+    }
+  })
+
+
+
       });
   </script>
 
@@ -222,58 +278,7 @@ Full Name: {{firstName + " " + lastName}}
 
 
 
-	$('#clientsSelect').on('change', function() {
-	  if(this.value=="bosh"){
-	  	//console.log("1");
-	  	$('.clinic-card-container').hide();
-	  }else{
-	  	console.log(this.value);
 
-	  	   $('.gifloader').show();
-
-           $.ajax({
-              url: "functions.php?action=manage_clinic_card",
-              type: "post",
-              data: {id: this.value} ,
-              success: function (response) {
-              	$('.gifloader').hide();
-              	$('.clinic-card-container').show(); 
-                 // you will get response from your php page (what you echo or print) 
-                 //console.log(typeof(response));
-                 console.log(response);
-                 response = JSON.parse(response);
-                 console.log(response);
-                 // setFieldValsClinicCard(response);
-
-
-                 if(response.exist==3){
-                 	swal({
-          					  title: 'Deshironi ta krijoni tani',
-          					  text: "Kartela nuk ekziston per kete klient",
-          					  type: 'warning',
-          					  showCancelButton: true,
-          					  confirmButtonColor: '#3085d6',
-          					  cancelButtonColor: '#d33',
-          					  confirmButtonText: 'Po!'
-          					}).then(function () {
-          					  window.location.href = "home.php?page=create_clinic_card&id="+response.id;
-          					})
-                 }else{
-                 setFieldValsClinicCard(response);
-                 }
-                 
-                //$('#register_clients').trigger("reset");               
-
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
-
-
-          });
-
-	  }
-	})
 
 
 
