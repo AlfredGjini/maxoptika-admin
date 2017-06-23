@@ -3,7 +3,7 @@
 Full Name: {{firstName + " " + lastName}}
 <div>
 <div ng-repeat="info in kartela">
-        {{info[$index].id}}
+        {{info.id}}
       </div>
       </div>
 
@@ -57,7 +57,7 @@ Full Name: {{firstName + " " + lastName}}
       <div class="box-body" >
 
       <div ng-show="erdhiKartela" ng-repeat="info in kartela">
-        {{info[$index].id}}
+        {{info.id}}
       </div>
         <!-- hidden -->
         <div class='clinic-card-container' style="display: none;">
@@ -204,10 +204,9 @@ Full Name: {{firstName + " " + lastName}}
   <script type="text/javascript">
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope, $http) {
-        
+
         $scope.selectId=0;
         $scope.updateKartele = function(){
-          console.log($scope.idd);
           console.log($scope.selectId);
 
             jQuery.ajax({
