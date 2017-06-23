@@ -6,6 +6,8 @@ Full Name: {{firstName + " " + lastName}}
         {{info[$index].id}}
       </div>
       </div>
+
+      <h1 ng-repeat="x in records">{{x}}</h1>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -199,6 +201,13 @@ Full Name: {{firstName + " " + lastName}}
   <script type="text/javascript">
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope) {
+
+        $scope.records = [
+    "Alfreds Futterkiste",
+    "Berglunds snabbköp",
+    "Centro comercial Moctezuma",
+    "Ernst Handel",
+  ]
 
         $scope.erdhiKartela=false;
           $scope.firstName = "John";
