@@ -58,7 +58,7 @@ Full Name: {{firstName + " " + lastName}}
         {{info.id}}
       </div>
         <!-- hidden -->
-        <div class='clinic-card-container' style="display: none;">
+        <div class='clinic-card-container' >
           <div class="form-group">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8">
