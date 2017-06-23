@@ -66,7 +66,7 @@ Full Name: {{firstName + " " + lastName}}
                         <h4>Data e vizites :</h4>
                         <div class="form-group">
                           <div class='input-group date' id='datetimepicker1'>
-                            <input id="datazgjedhur" name="date" type='text' class="form-control" value="" />
+                            <input id="datazgjedhur" name="date" type='text' class="form-control" value="{{info.data_vizites}}" />
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -226,6 +226,7 @@ Full Name: {{firstName + " " + lastName}}
                  $timeout(function() {
                   angular.element('#myselector').triggerHandler('click');
                   console.log('u klikua');
+                  jQuery('.clinic-card-container').show(); 
                 });
                  // setFieldValsClinicCard(response);
                  $scope.records = [
