@@ -6,8 +6,6 @@ Full Name: {{firstName + " " + lastName}}
         {{info.id}}
       </div>
       </div>
-
-      <h1 ng-repeat="x in records">{{x}}</h1>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -196,6 +194,7 @@ Full Name: {{firstName + " " + lastName}}
     </section>
     <!-- /.content -->
   </div>
+  <div id="myselector"></div>
 
 
 
@@ -203,7 +202,7 @@ Full Name: {{firstName + " " + lastName}}
 
   <script type="text/javascript">
     var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope, $http) {
+      app.controller('myCtrl', function($scope, $http, $timeout) {
 
         $scope.selectId=0;
         $scope.updateKartele = function(){
@@ -224,6 +223,9 @@ Full Name: {{firstName + " " + lastName}}
                  $scope.kartela=response;
                  $scope.erdhiKartela=true;
                  console.log($scope.kartela);
+                 $timeout(function() {
+                  angular.element('#myselector').triggerHandler('click');
+                });
                  // setFieldValsClinicCard(response);
                  $scope.records = [
                     "Alfreds Futterkiste",
