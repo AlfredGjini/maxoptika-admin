@@ -42,7 +42,7 @@ Full Name: {{firstName + " " + lastName}}
                 $res = '';
                 $dataForDT = ["data"=>[]];
                 $i = 0;
-                echo '<select ng-change="updateKartele($event)"> name="clients" id="clientsSelect">';
+                echo '<select ng-change="updateKartele($event)" name="clients" id="clientsSelect">';
                 echo "<option value='bosh'>....</option>";
                 foreach ($dataResult as $tableRows) {
                   echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
