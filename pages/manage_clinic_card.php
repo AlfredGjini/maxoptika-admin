@@ -48,6 +48,10 @@ Full Name: {{firstName + " " + lastName}}
                 </div>
     <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" >
       <div class="box-body" ng-show="erdhiKartela" ng-repeat="info in kartela">
+
+      <div ng-show="erdhiKartela" ng-repeat="info in kartela">
+        {{info[$index].id}}
+      </div>
 				<!-- hidden -->
 				<div class='clinic-card-container' style="display: none;">
 					<div class="form-group">
