@@ -197,28 +197,14 @@ Full Name: {{firstName + " " + lastName}}
     <!-- /.content -->
   </div>
 
-<?php 
-
-$tedhenat='';
-$cikle=0;
-foreach ($dataResult as $tableRows) {
-  $cikle++; 
-  if ($cikle==1) {
-    $tedhenat=$tableRows->id;
-  }else{
-    $tedhenat=$tedhenat.','.$tableRows->id;
-  }
-  
-}
-echo '<script type="text/javascript">
-    var app = angular.module(\'myApp\', []);
-      app.controller(\'myCtrl\', function($scope, $http) {
-        $scope.idd=['.$tedhenat.']';
-
-?>
 
 
 
+
+  <script type="text/javascript">
+    var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope, $http) {
+        
         $scope.selectId=0;
         $scope.updateKartele = function(){
           console.log($scope.idd);
@@ -227,7 +213,7 @@ echo '<script type="text/javascript">
             jQuery.ajax({
               url: "functions.php?action=manage_clinic_card",
               type: "post",
-              data: {id: this.value} ,
+              data: {id: $scope.selectId} ,
               success: function (response) {
                 jQuery('.gifloader').hide();
                 jQuery('.clinic-card-container').show(); 
