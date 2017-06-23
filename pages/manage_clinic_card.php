@@ -220,6 +220,38 @@
                  console.log($scope.kartela);
                  $scope.selectId=40;
 
+                     var today = moment();
+    
+                    //console.log(today);
+
+                    jQuery('#datetimepicker1').daterangepicker({
+                        "singleDatePicker": true,
+                        "showDropdowns": true,
+                        "opens": "left",
+                      "minDate": today,
+                      "timePicker": false,
+                      "locale": {
+                            "format": 'MM/DD/YYYY h:mm A'
+                        }
+                    }, 
+                    function(start, end, label) {
+                        var years = moment().diff(start, 'years');
+                        start=moment(start).format('Y-M-D'); 
+                        console.log("data u thirr");
+                        //console.log(start);
+                        //alert("You are " + years + " years old.");
+                        jQuery('#datazgjedhur').val(start);
+                    });
+                    today=moment(today).format('Y-M-D'); 
+                    jQuery('#datazgjedhur').val(today);
+
+
+
+
+
+
+                 
+
                  $timeout(function() {
                   angular.element('#myselector').triggerHandler('click');
                   console.log('u klikua');
@@ -291,30 +323,30 @@
   </script>
 
   <script type="text/javascript">
-    var today = moment();
+    // var today = moment();
     
-    //console.log(today);
+    // //console.log(today);
 
-    jQuery('#datetimepicker1').daterangepicker({
-        "singleDatePicker": true,
-        "showDropdowns": true,
-        "opens": "left",
-      "minDate": today,
-      "timePicker": false,
-      "locale": {
-            "format": 'MM/DD/YYYY h:mm A'
-        }
-    }, 
-    function(start, end, label) {
-        var years = moment().diff(start, 'years');
-        start=moment(start).format('Y-M-D'); 
-        console.log("data u thirr");
-        //console.log(start);
-        //alert("You are " + years + " years old.");
-        jQuery('#datazgjedhur').val(start);
-    });
-    today=moment(today).format('Y-M-D'); 
-    jQuery('#datazgjedhur').val(today);
+    // jQuery('#datetimepicker1').daterangepicker({
+    //     "singleDatePicker": true,
+    //     "showDropdowns": true,
+    //     "opens": "left",
+    //   "minDate": today,
+    //   "timePicker": false,
+    //   "locale": {
+    //         "format": 'MM/DD/YYYY h:mm A'
+    //     }
+    // }, 
+    // function(start, end, label) {
+    //     var years = moment().diff(start, 'years');
+    //     start=moment(start).format('Y-M-D'); 
+    //     console.log("data u thirr");
+    //     //console.log(start);
+    //     //alert("You are " + years + " years old.");
+    //     jQuery('#datazgjedhur').val(start);
+    // });
+    // today=moment(today).format('Y-M-D'); 
+    // jQuery('#datazgjedhur').val(today);
 
 
 
