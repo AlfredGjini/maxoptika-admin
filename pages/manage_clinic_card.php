@@ -8,7 +8,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Kartela Klinike</a></li>
-        <li class="active">Menaxh Kartelen Klinike</li>
+        <li class="active">Menaxho Kartelen Klinike</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -18,7 +18,7 @@
           
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Menaxh Kartelen Klinike</h3>
+              <h3 class="box-title">Menaxho Kartelen Klinike</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -47,9 +47,9 @@
                   </div>
                 </div>
     <div class="container-fluid" ng-show="erdhiKartela" ng-repeat="info in kartela">
-      <button  type="button" class="btn btn-info btn-block btn-lg">Vizita numer: {{$index}} Date: {{info.data_vizites}}</button>
+      <button  type="button" class="btn btn-info btn-block btn-lg" data-toggle="collapse" data-target=".formaNr{{info.id}}">Vizita numer: {{$index+1}} Date: {{info.data_vizites}}</button>
     
-    <form id="create_clinic_card{{info.id}}" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" >
+    <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal formaNr{{info.id}}" >
       <div class="box-body" >
 
       <div >
