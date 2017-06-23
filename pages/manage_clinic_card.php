@@ -202,12 +202,7 @@ Full Name: {{firstName + " " + lastName}}
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope) {
 
-        $scope.records = [
-    "Alfreds Futterkiste",
-    "Berglunds snabbköp",
-    "Centro comercial Moctezuma",
-    "Ernst Handel",
-  ]
+
 
         $scope.erdhiKartela=false;
           $scope.firstName = "John";
@@ -238,6 +233,12 @@ Full Name: {{firstName + " " + lastName}}
                  $scope.erdhiKartela=true;
                  console.log($scope.kartela);
                  // setFieldValsClinicCard(response);
+                 $scope.records = [
+                    "Alfreds Futterkiste",
+                    "Berglunds snabbköp",
+                    "Centro comercial Moctezuma",
+                    "Ernst Handel",
+                  ]
 
 
                  if(response.exist==3){
