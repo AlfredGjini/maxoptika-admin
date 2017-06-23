@@ -207,7 +207,7 @@ foreach ($dataResult as $tableRows) {
 echo '<script type="text/javascript">
     var app = angular.module(\'myApp\', []);
       app.controller(\'myCtrl\', function($scope, $http) {
-        $scope.idd='.$tedhenat;
+        $scope.idd=['.$tedhenat.']';
 
 ?>
   
