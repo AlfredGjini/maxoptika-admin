@@ -200,10 +200,16 @@ Full Name: {{firstName + " " + lastName}}
 <?php 
 
 $tedhenat='';
+$cikle=0;
 foreach ($dataResult as $tableRows) {
+  $cikle++; 
+  if ($cikle==1) {
+    $tedhenat=$tableRows->id;
+  }else{
+    $tedhenat=$tedhenat.','.$tableRows->id;
+  }
   
-        $tedhenat=$tedhenat.','.$tableRows->id;   
-        }
+}
 echo '<script type="text/javascript">
     var app = angular.module(\'myApp\', []);
       app.controller(\'myCtrl\', function($scope, $http) {
