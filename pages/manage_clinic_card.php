@@ -46,11 +46,9 @@
                     </center>
                   </div>
                 </div>
-    <div class="container">
-      <button ng-show="erdhiKartela" ng-repeat="info in kartela" type="button" class="btn btn-info btn-block">Vizita numer: {{$index}} Date: {{info.data_vizites}}</button>
-        
-      </div>
-    </div>
+    <div class="container-fluid">
+      <button ng-show="erdhiKartela" ng-repeat="info in kartela" type="button" class="btn btn-info btn-block btn-lg">Vizita numer: {{$index}} Date: {{info.data_vizites}}</button>
+    
     <form id="create_clinic_card{{info.id}}" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal" >
       <div class="box-body" >
 
@@ -181,6 +179,8 @@
               
               <!-- /.box-footer -->
             </form>
+            </div>
+            <!-- Mbyllet ng-repeat -->
           </div>
           <!-- /.box -->
           <!-- general form elements disabled -->
