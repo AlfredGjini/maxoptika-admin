@@ -61,7 +61,7 @@
                         <h4>Data e vizites :</h4>
                         <div class="form-group">
                           <div class='input-group date' id='datetimepicker1'>
-                            <input id="datazgjedhur" name="date" type='text' class="form-control" value="{{info.data_vizites}}" />
+                            <input id="datazgjedhur" name="date" type='text' class="form-control" ng-model="{{info.data_vizites}}" />
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -90,17 +90,17 @@
                         <div class="col-sm-12">
                           <div class="col-sm-3">Larg</div>
                           <div class="col-sm-3"><input type='text' name='sdlsph' ng-model="info.djathte_larg_sph" /></div>
-                          <div class="col-sm-3"><input type='text' name='sdlcyl' value="info.djathte_larg_cyl" /></div>
-                          <div class="col-sm-3"><input type='text' name='sdlaxe' /></div>
+                          <div class="col-sm-3"><input type='text' name='sdlcyl' ng-model="info.djathte_larg_cyl" /></div>
+                          <div class="col-sm-3"><input type='text' name='sdlaxe' ng-model="info.djathte_larg_axe"/></div>
                           {{name}}
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">Afer</div>
-                          <div class="col-sm-3"><input type='text' name='sdasph' /></div>
-                          <div class="col-sm-3"><input type='text' name='sdacyl' /></div>
-                          <div class="col-sm-3"><input type='text' name='sdaaxe' /></div>
+                          <div class="col-sm-3"><input type='text' name='sdasph' ng-model="info.djathte_afer_sph"/></div>
+                          <div class="col-sm-3"><input type='text' name='sdacyl' ng-model="info.djathte_afer_sph"/></div>
+                          <div class="col-sm-3"><input type='text' name='sdaaxe' ng-model="info.djathte_afer_sph"/></div>
                         </div>
                       </div>
                     </div>
@@ -121,17 +121,17 @@
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">Larg</div>
-                          <div class="col-sm-3"><input type='text' name='smlsph' /></div>
-                          <div class="col-sm-3"><input type='text' name='smlcyl' /></div>
-                          <div class="col-sm-3"><input type='text' name='smlaxe' /></div>
+                          <div class="col-sm-3"><input type='text' name='smlsph' ng-model="info.majte_larg_sph"/></div>
+                          <div class="col-sm-3"><input type='text' name='smlcyl' ng-model="info.majte_larg_cyl"/></div>
+                          <div class="col-sm-3"><input type='text' name='smlaxe' ng-model="info.majte_larg_axe"/></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">Afer</div>
-                          <div class="col-sm-3"><input type='text' name='smasph' /></div>
-                          <div class="col-sm-3"><input type='text' name='smacyl' /></div>
-                          <div class="col-sm-3"><input type='text' name='smaaxe' /></div>
+                          <div class="col-sm-3"><input type='text' name='smasph' ng-model="info.majte_afer_sph"/></div>
+                          <div class="col-sm-3"><input type='text' name='smacyl' ng-model="info.majte_afer_cyl"/></div>
+                          <div class="col-sm-3"><input type='text' name='smaaxe' ng-model="info.majte_afer_axe"/></div>
                         </div>
                       </div>
                     </div>
@@ -145,13 +145,13 @@
               <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">Larg</div>
-                          <div class="col-sm-9"><input type='text' name='dpl' style="width:100%" /></div>
+                          <div class="col-sm-9"><input type='text' name='dpl' style="width:100%" ng-model="info.distanca_pupilare_larg"/></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">Afer</div>
-                          <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" /></div>
+                          <div class="col-sm-9"><input type='text' name='dpa' style="width:100%" ng-model="info.distanca_pupilare_afer" /></div>
                         </div>
                       </div>
             </div>
@@ -162,7 +162,7 @@
               </div>
               
               <div class="col-sm-12">
-                <textarea rows="3" style="width: 100%;" name="shenime"></textarea>
+                <textarea rows="3" style="width: 100%;" name="shenime" ng-model="info.shenime" ></textarea>
               </div>
                       
             </div>
