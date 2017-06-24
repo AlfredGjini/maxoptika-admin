@@ -281,55 +281,7 @@
 
 
   </script>
-  <?php
-  if (isset($_GET['id'])) { ?>
-    <script type="text/javascript">
-    jQuery('.gifloader').show();
-
-           jQuery.ajax({
-              url: "functions.php?action=manage_clinic_card",
-              type: "post",
-              data: {id: <?php echo $_GET['id']; ?>} ,
-              success: function (response) {
-                jQuery('.gifloader').hide();
-                jQuery('.clinic-card-container').show(); 
-                 // you will get response from your php page (what you echo or print) 
-                 //console.log(typeof(response));
-                 //console.log(response);
-                 response = JSON.parse(response);
-                 console.log(response);
-                 if(response.exist==3){
-                  swal({
-                      title: 'Deshironi ta krijoni tani',
-                      text: "Kartela nuk ekziston per kete klient",
-                      type: 'warning',
-                      showCancelButton: true,
-                      confirmButtonColor: '#3085d6',
-                      cancelButtonColor: '#d33',
-                      confirmButtonText: 'Po!'
-                    }).then(function () {
-                      window.location.href = "home.php?page=create_clinic_card&id="+response.id;
-                    })
-                 }else{
-                 setFieldValsClinicCard(response);
-                 }
-                 
-                //$('#register_clients').trigger("reset");               
-
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
-
-
-          });
-
-    </script>
-
-  <?php
-    //echo "yes it's set";
-  }
-  ?>
+  
 
 
 
@@ -340,6 +292,8 @@
       app.controller('myCtrl', function($scope, $http, $timeout) {
         $scope.gifloader=false;
 
+
+          // This will fire only if the id is set in the url so every time the user comes from the clients page
           <?php
           if (isset($_GET['id'])) { ?>
 
