@@ -26,7 +26,7 @@
             
               <div class="form-group" style="margin-bottom: 95px;">
                   <div class="col-sm-12">
-                  <div><img class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
+                  <div><img ng-show="gifloader" class="gifloader pull-left" style="display: none;padding-top: 30px;width: 30px;" src="assets/img/loader.gif"></div>
                     <center>
                       <h4>Zgjidh Klientin :</h4>
                         <?php
@@ -340,6 +340,7 @@
       app.controller('myCtrl', function($scope, $http, $timeout) {
 
         $scope.updateKartele = function(){
+          $scope.gifloader=false;
           console.log($scope.selectId);
 
             jQuery.ajax({
@@ -364,6 +365,7 @@
                   //$scope.selectId=40;
                   jQuery("#clientsSelect").val($scope.selectId);
                   console.log($scope.selectId);
+                  $scope.gifloader=true;
                 });
                  // setFieldValsClinicCard(response);
                  
