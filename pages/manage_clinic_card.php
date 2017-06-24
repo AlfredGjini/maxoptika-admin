@@ -176,7 +176,7 @@
         
                   </div>
                   <div class="box-footer" >
-                    <button ng-click="updateVizite($event)" id="dergo{{$index++1}}" class="btn btn-info pull-right ">Update</button>
+                    <button ng-click="updateVizite($index++1)" id="dergo{{$index++1}}" class="btn btn-info pull-right ">Update</button>
                 </div>
         </div>
               <!-- /.box-body -->
