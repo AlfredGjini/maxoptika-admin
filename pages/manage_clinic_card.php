@@ -341,6 +341,7 @@
         $scope.gifloader=false;
 
         $scope.updateKartele = function(){
+          console.log("para gif u thirr");
           $scope.gifloader=true;
           console.log($scope.selectId);
 
@@ -349,8 +350,9 @@
               type: "post",
               data: {id: $scope.selectId} ,
               success: function (response) {
-                jQuery('.gifloader').hide();
-                jQuery('.clinic-card-container').show(); 
+                $scope.gifloader=false;
+                // jQuery('.gifloader').hide();
+                // jQuery('.clinic-card-container').show(); 
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  console.log(response);
@@ -385,7 +387,7 @@
                         //$scope.selectId=40;
                         jQuery("#clientsSelect").val($scope.selectId);
                         console.log($scope.selectId);
-                        $scope.gifloader=false;
+                        
                       });
                  }
                  
