@@ -338,9 +338,10 @@
   <script type="text/javascript">
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope, $http, $timeout) {
+        $scope.gifloader=false;
 
         $scope.updateKartele = function(){
-          $scope.gifloader=false;
+          $scope.gifloader=true;
           console.log($scope.selectId);
 
             jQuery.ajax({
@@ -365,7 +366,7 @@
                   //$scope.selectId=40;
                   jQuery("#clientsSelect").val($scope.selectId);
                   console.log($scope.selectId);
-                  $scope.gifloader=true;
+                  $scope.gifloader=false;
                 });
                  // setFieldValsClinicCard(response);
                  
