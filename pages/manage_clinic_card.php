@@ -53,7 +53,7 @@
     <div class="container-fluid" ng-show="erdhiKartela" ng-repeat="info in kartela">
       <button  type="button" class="btn btn-info btn-block btn-lg" style="margin-bottom: 15px;" data-toggle="collapse" data-target="#formaNr{{info.id}}">Vizita numer: {{$index+1}} Date: {{info.data_vizites}}</button>
     <div id="formaNr{{info.id}}" aria-expanded="false" class="collapse" style="height: 0px;">
-    <form id="create_clinic_card"  method="post" class="form-horizontal " >
+    <form id="create_clinic_card"  method="post" class="form-horizontal dergo{{$index++1}}" >
       <div class="box-body" >
 
 <!--       <div >
@@ -297,6 +297,10 @@
 
         $scope.updateVizite = function(event){
           console.log(event);
+          var klasa=".dergo"+event;
+
+          var values = jQuery(klasa).serialize();
+          console.log(values)
 
         }
 
