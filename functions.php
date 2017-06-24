@@ -203,10 +203,12 @@ switch ($action) {
 			    "exist" => 3,
 			    "id" => $data['id']
 			);
+			echo "u fut";
 			echo json_encode($result);
 		}else{
 			//var_dump($clinic_card_data);
 			//echo $clinic_card_data;
+			echo "nuk u fut";
 		echo json_encode($clinic_card_data);
 		}
 
