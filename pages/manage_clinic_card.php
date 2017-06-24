@@ -343,14 +343,14 @@
           <?php
           if (isset($_GET['id'])) { ?>
 
-                      console.log("para gif u thirr");
+              console.log("para gif u thirr");
           $scope.gifloader=true;
           console.log($scope.selectId);
 
             jQuery.ajax({
               url: "functions.php?action=manage_clinic_card",
               type: "post",
-              data: {id: $scope.selectId} ,
+              data: {id: <?php echo $_GET['id']; ?>} ,
               success: function (response) {
                 $scope.gifloader=false;
                 // jQuery('.gifloader').hide();
@@ -418,7 +418,7 @@
 
           });
 
-            
+
 
           <?php  
           }
