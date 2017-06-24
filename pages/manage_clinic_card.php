@@ -356,8 +356,9 @@
                         angular.element('#myselector').triggerHandler('click');
                         console.log('u klikua');
                         //$scope.selectId=40;
-                        jQuery("#clientsSelect").val($scope.selectId);
+                        jQuery("#clientsSelect").val(<?php echo $_GET['id']; ?>);
                         console.log($scope.selectId);
+                        $scope.selectId=<?php echo $_GET['id']; ?>;
                         
                       });
                  }
