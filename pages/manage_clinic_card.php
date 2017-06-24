@@ -35,7 +35,11 @@
                 $res = '';
                 $dataForDT = ["data"=>[]];
                 $i = 0;
-                echo '<select ng-change="updateKartele()" ng-model="selectId" ng-init="selectId=\'0\'" name="clients" id="clientsSelect">';
+                if (isset($_GET['id'])) { 
+                echo '<select ng-change="updateKartele()" ng-model="selectId" ng-init="selectId=\''.$_GET['id'].'\'" name="clients" id="clientsSelect">';
+                }else{
+                  echo '<select ng-change="updateKartele()" ng-model="selectId" ng-init="selectId=\'0\'" name="clients" id="clientsSelect">';
+                }
                 echo "<option value='0'>....</option>";
                 foreach ($dataResult as $tableRows) {
                   echo '<option value="' . $tableRows->id . '">'. $tableRows->emer.' '.$tableRows->mbiemer.' ( '.$tableRows->email.' )</option>';
@@ -356,9 +360,8 @@
                         angular.element('#myselector').triggerHandler('click');
                         console.log('u klikua');
                         //$scope.selectId=40;
-                        jQuery("#clientsSelect").val(<?php echo $_GET['id']; ?>);
+                        jQuery("#clientsSelect").val($scope.selectId);
                         console.log($scope.selectId);
-                        $scope.selectId=<?php echo $_GET['id']; ?>;
                         
                       });
                  }
