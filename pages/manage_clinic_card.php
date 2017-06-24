@@ -341,10 +341,86 @@
         $scope.gifloader=false;
 
           <?php
-          if (isset($_GET['id'])) { 
-            echo "u thirr";
-          }else{
-            echo "nuk u thirr jk";
+          if (isset($_GET['id'])) { ?>
+
+                      console.log("para gif u thirr");
+          $scope.gifloader=true;
+          console.log($scope.selectId);
+
+            jQuery.ajax({
+              url: "functions.php?action=manage_clinic_card",
+              type: "post",
+              data: {id: $scope.selectId} ,
+              success: function (response) {
+                $scope.gifloader=false;
+                // jQuery('.gifloader').hide();
+                // jQuery('.clinic-card-container').show(); 
+                 // you will get response from your php page (what you echo or print) 
+                 //console.log(typeof(response));
+                 console.log(response);
+                 response = JSON.parse(response);
+                 
+                 // setFieldValsClinicCard(response);
+                 
+
+                 if(response.exist==3){
+                    $scope.kartela=[];
+                    $scope.erdhiKartela=false;
+                    console.log('erdhiKartela');
+                    console.log($scope.erdhiKartela);
+                  swal({
+                      title: 'Deshironi ta krijoni tani',
+                      text: "Kartela nuk ekziston per kete klient",
+                      type: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#3085d6',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Po!'
+                    }).then(function () {
+                      window.location.href = "home.php?page=create_clinic_card&id="+response.id;
+                    })
+
+                    $timeout(function() {
+                        angular.element('#myselector').triggerHandler('click');
+                        console.log('u klikua');
+                        //$scope.selectId=40;
+                        $scope.kartela=[];
+                        $scope.erdhiKartela=false;
+                        
+                      });
+
+
+
+                    
+                 }else{
+                       console.log(response);
+                       $scope.kartela=response;
+                       $scope.erdhiKartela=true;
+                       console.log($scope.kartela);
+
+                       $timeout(function() {
+                        angular.element('#myselector').triggerHandler('click');
+                        console.log('u klikua');
+                        //$scope.selectId=40;
+                        jQuery("#clientsSelect").val($scope.selectId);
+                        console.log($scope.selectId);
+                        
+                      });
+                 }
+                 
+                //$('#register_clients').trigger("reset");               
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+
+
+          });
+
+            
+
+          <?php  
           }
           ?>
 
@@ -432,31 +508,6 @@
 
 
         $scope.erdhiKartela=false;
-          $scope.firstName = "John";
-          $scope.lastName = "Doe";
-
-  // jQuery('#clientsSelect').on('change', function() {
-  //   if(this.value=="bosh"){
-  //     //console.log("1");
-  //     jQuery('.clinic-card-container').hide();
-  //   }else{
-  //     console.log(this.value);
-
-  //        jQuery('.gifloader').show();
-
-
-
-
-
-
-
-  //   }
-  // })
-
-
-
-
-
 
       });
 
