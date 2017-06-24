@@ -284,9 +284,6 @@
   <?php
   if (isset($_GET['id'])) { ?>
     <script type="text/javascript">
-var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope, $http, $timeout) {
-
     jQuery('.gifloader').show();
 
            jQuery.ajax({
@@ -327,8 +324,6 @@ var app = angular.module('myApp', []);
 
           });
 
-           });
-
     </script>
 
   <?php
@@ -344,6 +339,15 @@ var app = angular.module('myApp', []);
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope, $http, $timeout) {
         $scope.gifloader=false;
+
+          <?php
+          if (isset($_GET['id'])) { 
+            echo "u thirr";
+          }else{
+            echo "nuk u thirr jk";
+          }
+          ?>
+
 
         $scope.updateKartele = function(){
           console.log("para gif u thirr");
