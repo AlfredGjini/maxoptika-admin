@@ -364,6 +364,8 @@
                  if(response.exist==3){
                     $scope.kartela=[];
                     $scope.erdhiKartela=false;
+                    console.log('erdhiKartela');
+                    console.log($scope.erdhiKartela);
                   swal({
                       title: 'Deshironi ta krijoni tani',
                       text: "Kartela nuk ekziston per kete klient",
@@ -375,6 +377,19 @@
                     }).then(function () {
                       window.location.href = "home.php?page=create_clinic_card&id="+response.id;
                     })
+
+                    $timeout(function() {
+                        angular.element('#myselector').triggerHandler('click');
+                        console.log('u klikua');
+                        //$scope.selectId=40;
+                        $scope.kartela=[];
+                        $scope.erdhiKartela=false;
+                        
+                      });
+
+
+
+                    
                  }else{
                        console.log(response);
                        $scope.kartela=response;
