@@ -443,15 +443,16 @@
                        $scope.kartela=response;
 
                        $scope.kartela.sort(function(a, b){
-                          var keyA = new Date(a.updated_at),
-                              keyB = new Date(b.updated_at);
+                          var keyA = new Date(a.data_vizites),
+                              keyB = new Date(b.data_vizites);
+                              console.log('brenda dates');
                           // Compare the 2 dates
                           if(keyA < keyB) return -1;
                           if(keyA > keyB) return 1;
                           return 0;
                       });
 
-                       
+
                        $scope.erdhiKartela=true;
                        console.log($scope.kartela);
 
