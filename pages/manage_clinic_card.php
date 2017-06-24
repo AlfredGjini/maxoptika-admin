@@ -54,9 +54,9 @@
       <button  type="button" class="btn btn-info btn-block btn-lg" style="margin-bottom: 15px;" data-toggle="collapse" data-target="#formaNr{{info.id}}">Vizita numer: {{$index+1}} Date: {{info.data_vizites}}</button>
     <div id="formaNr{{info.id}}" aria-expanded="false" class="collapse" style="height: 0px;">
     <form id="create_clinic_card"  method="post" class="form-horizontal dergo{{$index++1}}" >
-      <input type="hidden" name="id" ng-model="info.id" value="{{info.id}}">
-      <input type="hidden" name="id_client" ng-model="info.id_client" value="{{info.id_client}}">
-      <input type="hidden" name="user_id" ng-model="info.user_id" value="{{info.user_id}}">
+      <input type="hidden" name="id" value="{{info.id}}">
+      <input type="hidden" name="id_client" value="{{info.id_client}}">
+      <input type="hidden" name="user_id" value="{{info.user_id}}">
       <div class="box-body" >
 
 <!--       <div >
