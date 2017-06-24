@@ -355,19 +355,7 @@
                  //console.log(typeof(response));
                  console.log(response);
                  response = JSON.parse(response);
-                 console.log(response);
-                 $scope.kartela=response;
-                 $scope.erdhiKartela=true;
-                 console.log($scope.kartela);
-
-                 $timeout(function() {
-                  angular.element('#myselector').triggerHandler('click');
-                  console.log('u klikua');
-                  //$scope.selectId=40;
-                  jQuery("#clientsSelect").val($scope.selectId);
-                  console.log($scope.selectId);
-                  $scope.gifloader=false;
-                });
+                 
                  // setFieldValsClinicCard(response);
                  
 
@@ -384,7 +372,19 @@
                       window.location.href = "home.php?page=create_clinic_card&id="+response.id;
                     })
                  }else{
-                 setFieldValsClinicCard(response);
+                       console.log(response);
+                       $scope.kartela=response;
+                       $scope.erdhiKartela=true;
+                       console.log($scope.kartela);
+
+                       $timeout(function() {
+                        angular.element('#myselector').triggerHandler('click');
+                        console.log('u klikua');
+                        //$scope.selectId=40;
+                        jQuery("#clientsSelect").val($scope.selectId);
+                        console.log($scope.selectId);
+                        $scope.gifloader=false;
+                      });
                  }
                  
                 //$('#register_clients').trigger("reset");               
