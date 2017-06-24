@@ -213,8 +213,8 @@ switch ($action) {
 	break;
 
 	case 'update_clinic_card':
-		//var_dump($data);
-		//echo "u be ";
+		var_dump($data);
+		echo $data['id'];
 		// var_dump($data);
 		// $clinic_card_data_exist  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['clients']]])->firstResult();
 		// if($clinic_card_data_exist!=0){

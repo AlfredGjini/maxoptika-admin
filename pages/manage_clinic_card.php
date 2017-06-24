@@ -302,6 +302,7 @@
           var klasa=".dergo"+event;
 
           var values = jQuery(klasa).serialize();
+          console.log(values);
             
             $.ajax({
               url: "functions.php?action=update_clinic_card",
