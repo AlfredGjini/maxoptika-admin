@@ -233,59 +233,6 @@
 
 
 
-
-
-
-    // jQuery("#create_clinic_card").submit(function(event) {
-
-
-    //   /* Stop form from submitting normally */
-    //   event.preventDefault();
-    //   var values = jQuery(this).serialize();
-
-    //    $.ajax({
-    //           url: "functions.php?action=update_clinic_card",
-    //           type: "post",
-    //           data: values ,
-    //           success: function (response) {
-    //              // you will get response from your php page (what you echo or print) 
-    //              //console.log(typeof(response));
-    //              console.log(response);
-                 
-    //             if(response=="1"){ 
-    //               // Response: 1 - Success
-    //                swal(
-    //                 '',
-    //                 'Kartela u perditesua me sukses',
-    //                 'success'
-    //               )
-    //             }else if (response == "2"){
-    //               // Response: 2 - Empty Fields
-    //               swal(
-    //                 '',
-    //                 'Ju lutem plotesoni te gjitha fushat',
-    //                 'warning'
-    //               )
-    //              }else if (response == "3"){
-    //               // Response: 2 - Empty Fields
-    //               swal(
-    //                 '',
-    //                 'Kartela per kete klient ekziston njehere',
-    //                 'warning'
-    //               )
-    //              }
-    //             //$('#register_clients').trigger("reset");               
-
-    //           },
-    //           error: function(jqXHR, textStatus, errorThrown) {
-    //              console.log(textStatus, errorThrown);
-    //           }
-
-
-    //       });
-    //    });
-
-
   </script>
   
 
@@ -316,7 +263,7 @@
                   // Response: 1 - Success
                    swal(
                     '',
-                    'Kartela u perditesua me sukses',
+                    'Vizita u perditesua me sukses',
                     'success'
                   )
                 }else if (response == "2"){
@@ -330,7 +277,7 @@
                   // Response: 2 - Empty Fields
                   swal(
                     '',
-                    'Kartela per kete klient ekziston njehere',
+                    'Perditesimi i vizites pati nje problem',
                     'warning'
                   )
                  }
