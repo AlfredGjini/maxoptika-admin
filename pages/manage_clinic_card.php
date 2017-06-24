@@ -360,6 +360,8 @@
                  
 
                  if(response.exist==3){
+                    $scope.kartela=[];
+                    $scope.erdhiKartela=false;
                   swal({
                       title: 'Deshironi ta krijoni tani',
                       text: "Kartela nuk ekziston per kete klient",
