@@ -199,7 +199,7 @@ switch ($action) {
 		//var_dump($data['id']);
 		$clinic_card_data  = DB::getInstance()->get('clinic_card',[['id_client','=',$data['id']]])->results();
 		var_dump($clinic_card_data);
-		if ($clinic_card_data==0) {
+		if (empty($clinic_card_data)) {
 			$result=array(
 			    "exist" => 3,
 			    "id" => $data['id']
