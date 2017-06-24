@@ -176,7 +176,7 @@
         
                   </div>
                   <div class="box-footer" >
-                    <button type="submit" class="btn btn-info pull-right">Update</button>
+                    <button type="submit" ng-click="updateVizite($event)" id="dergo{{$index++1}}" class="btn btn-info pull-right ">Update</button>
                 </div>
         </div>
               <!-- /.box-body -->
@@ -234,54 +234,54 @@
 
 
 
-    jQuery("#create_clinic_card").submit(function(event) {
+    // jQuery("#create_clinic_card").submit(function(event) {
 
 
-      /* Stop form from submitting normally */
-      event.preventDefault();
-      var values = jQuery(this).serialize();
+    //   /* Stop form from submitting normally */
+    //   event.preventDefault();
+    //   var values = jQuery(this).serialize();
 
-       $.ajax({
-              url: "functions.php?action=update_clinic_card",
-              type: "post",
-              data: values ,
-              success: function (response) {
-                 // you will get response from your php page (what you echo or print) 
-                 //console.log(typeof(response));
-                 console.log(response);
+    //    $.ajax({
+    //           url: "functions.php?action=update_clinic_card",
+    //           type: "post",
+    //           data: values ,
+    //           success: function (response) {
+    //              // you will get response from your php page (what you echo or print) 
+    //              //console.log(typeof(response));
+    //              console.log(response);
                  
-                if(response=="1"){ 
-                  // Response: 1 - Success
-                   swal(
-                    '',
-                    'Kartela u perditesua me sukses',
-                    'success'
-                  )
-                }else if (response == "2"){
-                  // Response: 2 - Empty Fields
-                  swal(
-                    '',
-                    'Ju lutem plotesoni te gjitha fushat',
-                    'warning'
-                  )
-                 }else if (response == "3"){
-                  // Response: 2 - Empty Fields
-                  swal(
-                    '',
-                    'Kartela per kete klient ekziston njehere',
-                    'warning'
-                  )
-                 }
-                //$('#register_clients').trigger("reset");               
+    //             if(response=="1"){ 
+    //               // Response: 1 - Success
+    //                swal(
+    //                 '',
+    //                 'Kartela u perditesua me sukses',
+    //                 'success'
+    //               )
+    //             }else if (response == "2"){
+    //               // Response: 2 - Empty Fields
+    //               swal(
+    //                 '',
+    //                 'Ju lutem plotesoni te gjitha fushat',
+    //                 'warning'
+    //               )
+    //              }else if (response == "3"){
+    //               // Response: 2 - Empty Fields
+    //               swal(
+    //                 '',
+    //                 'Kartela per kete klient ekziston njehere',
+    //                 'warning'
+    //               )
+    //              }
+    //             //$('#register_clients').trigger("reset");               
 
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
+    //           },
+    //           error: function(jqXHR, textStatus, errorThrown) {
+    //              console.log(textStatus, errorThrown);
+    //           }
 
 
-          });
-       });
+    //       });
+    //    });
 
 
   </script>
@@ -294,6 +294,18 @@
   <script type="text/javascript">
     var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope, $http, $timeout) {
+
+        $scope.updateVizite = function(event){
+          console.log(event);
+
+        }
+
+
+
+
+
+
+
         $scope.gifloader=false;
 
 
