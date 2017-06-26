@@ -198,9 +198,11 @@
 
 
     var ip = 'http://46.252.37.186:3040';
-    var username = "dea";
-    var password  = "IMB.DEA";
-    var encPass = "dIMB.DEA";
+    // var username = "dea";
+    // var password  = "IMB.DEA";
+    // var encPass = "dIMB.DEA";
+    var encPass = "tdea.test";
+
     
     // Make the needed encryption
 
@@ -208,7 +210,7 @@
     //console.log(encPass);
 
     var encrypted = CryptoJS.SHA256(encPass).toString(CryptoJS.enc.Hex);
-    //console.log(encrypted);
+    console.log(encrypted);
 
   // Get dashboard data
   $.ajax({
