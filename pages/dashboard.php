@@ -207,7 +207,7 @@
     //console.log(encPass);
 
     var encrypted = CryptoJS.SHA256(encPass).toString(CryptoJS.enc.Hex);
-    //console.log(encrypted);
+    console.log(encrypted);
 
   // Get dashboard data
   $.ajax({
