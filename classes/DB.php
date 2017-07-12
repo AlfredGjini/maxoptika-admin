@@ -108,6 +108,15 @@ class DB{
 		return $this->action("DELETE",$table,$where);
 	}
 
+	public function deleteAll($table,$extras=[]){
+		$sql = "DELETE FROM {$table}";
+		foreach($extras as $extra){
+			$sql .= " ".$extra;
+		}
+		return $this->query($sql);
+		
+	}
+
 	public function insert($table, $fields = []){
 		if(count($fields)){
 			$attributes = array_keys($fields);
