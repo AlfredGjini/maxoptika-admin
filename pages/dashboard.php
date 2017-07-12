@@ -196,7 +196,7 @@
 
 
 
-    var ip = 'http://46.252.37.186:3040';
+    var ip = 'http://79.106.161.194:3040';
     var username = "dea";
     var password  = "IMB.DEA";
     var encPass = "dIMB.DEA";
