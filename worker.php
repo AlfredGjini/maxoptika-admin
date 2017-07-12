@@ -67,7 +67,7 @@ $params3 = Input::get('dhena3');
 
 
 		// Insert or update new magazina
-		$delete_cmimet = DB::getInstance()->deleteAll('magazina');
+		$delete_magazina = DB::getInstance()->deleteAll('magazina');
 		foreach ($magazinat as $key => $magazina) {
 			// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
 			//$artikull1=json_decode(json_encode($artikull), true);
