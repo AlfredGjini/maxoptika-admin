@@ -179,7 +179,48 @@
     }
 
 
+    function remove_duplicates_cmimi(a, b) {
+      var count1=0;
+      var count2=0;
+      var arrayre=[];
+     for (var i = 0, len = a.length; i < len; i++) { 
+            for (var j = 0, len2 = b.length; j < len2; j++) { 
+                if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
+                    //b.splice(j, 1);
+                    count2++;
+                    arrayre.push(b[j]);
+                    // len2=b.length;
+                }else{
+                  count1++;
+                }
+            }
+        }
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(count1);
+        // console.log(count2);
+        // console.log(arrayre);
+        return arrayre;
+
+    }
+
+
     function removeDuplicates(originalArray, prop) {
+         var newArray = [];
+         var lookupObject  = {};
+
+         for(var i in originalArray) {
+            lookupObject[originalArray[i][prop]] = originalArray[i];
+         }
+
+         for(i in lookupObject) {
+             newArray.push(lookupObject[i]);
+         }
+          return newArray;
+     }
+
+    function removeDuplicatesCmimi(originalArray, prop) {
          var newArray = [];
          var lookupObject  = {};
 
@@ -286,8 +327,34 @@
 
                     var newArrCmime=remove_duplicates(newArr1,newArrCmime);
                     // var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
-                    var newArr2 = newArrCmime;
-                    console.log(newArr2);
+                    var newArrayC = [];
+
+
+
+                    // Loop through all objects in the array
+                    for (var i = 0; i < newArrCmime.length; i++) {
+
+                      // Loop through all of the objects beyond i
+                      // Don't increment automatically; we will do this later
+                      for (var j = i+1; j < newArrCmime.length;j++; ) {
+
+                        // Check if our x values are a match
+                        if (newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI) {
+                          newArrCmime[i].CMIMI_EUR=newArrCmime[j].CMIMI;
+                          newArrCmime[i].MONEDHAKOD_EUR=newArrCmime[j].MONEDHAKOD;
+                          newArrayC.push( newArrCmime[i]);
+                        } 
+                      }
+                    }
+
+
+
+
+
+
+                    //var newArr2 = newArrCmime;
+                    console.log("array i ri");
+                    console.log(newArrayC);
                     //newArr2=JSON.stringify(newArr2);
                     $('.progress-bar').css("width", "66%");
                     $('.progress-bar').text("66%");
