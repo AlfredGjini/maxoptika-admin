@@ -336,7 +336,7 @@
 
                       // Loop through all of the objects beyond i
                       // Don't increment automatically; we will do this later
-                      for (var j = i+1; j < newArrCmime.length;j++; ) {
+                      for (var j = i+1; j < newArrCmime.length;j++ ) {
 
                         // Check if our x values are a match
                         if (newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI) {
