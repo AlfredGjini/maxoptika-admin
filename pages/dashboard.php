@@ -352,7 +352,7 @@
 
 
 
-                    //var newArr2 = newArrCmime;
+                    var newArr2 = newArrayC;
                     console.log("array i ri");
                     console.log(newArrayC);
                     //newArr2=JSON.stringify(newArr2);
