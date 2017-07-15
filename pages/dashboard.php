@@ -343,7 +343,11 @@
                           newArrCmime[i].CMIMI_EUR=newArrCmime[j].CMIMI;
                           newArrCmime[i].MONEDHAKOD_EUR=newArrCmime[j].MONEDHAKOD;
                           newArrayC.push( newArrCmime[i]);
-                        } 
+                        } else if(newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI && newArrCmime[i].MONEDHAKOD=="EUR"){
+                          newArrCmime[j].CMIMI_EUR=newArrCmime[i].CMIMI;
+                          newArrCmime[j].MONEDHAKOD_EUR=newArrCmime[i].MONEDHAKOD;
+                          newArrayC.push( newArrCmime[j]);
+                        }
                       }
                     }
 
