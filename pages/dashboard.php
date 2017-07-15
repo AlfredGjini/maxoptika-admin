@@ -339,7 +339,7 @@
                       for (var j = i+1; j < newArrCmime.length;j++ ) {
 
                         // Check if our x values are a match
-                        if (newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI) {
+                        if (newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI || newArrCmime[i].MONEDHAKOD=="LEK") {
                           newArrCmime[i].CMIMI_EUR=newArrCmime[j].CMIMI;
                           newArrCmime[i].MONEDHAKOD_EUR=newArrCmime[j].MONEDHAKOD;
                           newArrayC.push( newArrCmime[i]);

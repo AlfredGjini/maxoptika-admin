@@ -61,7 +61,7 @@ $params3 = Input::get('dhena3');
 			//var_dump($artikull2);
 
 
-				$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimilek'=>$cmimi['CMIMI'],,'cmimieur'=>$cmimi['CMIMI_EUR'],'monedhalek'=>$cmimi['MONEDHAKOD'], 'monedhaeur'=>$cmimi['MONEDHAKOD_EUR']]);
+				$update_products = DB::getInstance()->insert('cmime2',['idprodukti'=>$cmimi['KODARTIKULLI'],'cmimilek'=>$cmimi['CMIMI'],'cmimieur'=>$cmimi['CMIMI_EUR'],'monedhalek'=>$cmimi['MONEDHAKOD'], 'monedhaeur'=>$cmimi['MONEDHAKOD_EUR']]);
 
 		}
 
