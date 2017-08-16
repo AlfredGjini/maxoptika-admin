@@ -136,6 +136,24 @@
         </div> 
         <!-- ./col -->
         <?php } ?>
+
+        <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
+        <div class="col-lg-3 col-xs-6 perditeso2" style="cursor:pointer;">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h2 style="font-weight: bold;">Test butoni</h2>
+
+              <!-- <p>Unique Visitors</p> -->
+            </div>
+            <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
+          </div>
+          
+        </div> 
+        <!-- ./col -->
+        <?php } ?>
+
+
       </div>
 
 
@@ -179,48 +197,8 @@
     }
 
 
-    function remove_duplicates_cmimi(a, b) {
-      var count1=0;
-      var count2=0;
-      var arrayre=[];
-     for (var i = 0, len = a.length; i < len; i++) { 
-            for (var j = 0, len2 = b.length; j < len2; j++) { 
-                if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
-                    //b.splice(j, 1);
-                    count2++;
-                    arrayre.push(b[j]);
-                    // len2=b.length;
-                }else{
-                  count1++;
-                }
-            }
-        }
-
-        // console.log(a);
-        // console.log(b);
-        // console.log(count1);
-        // console.log(count2);
-        // console.log(arrayre);
-        return arrayre;
-
-    }
-
 
     function removeDuplicates(originalArray, prop) {
-         var newArray = [];
-         var lookupObject  = {};
-
-         for(var i in originalArray) {
-            lookupObject[originalArray[i][prop]] = originalArray[i];
-         }
-
-         for(i in lookupObject) {
-             newArray.push(lookupObject[i]);
-         }
-          return newArray;
-     }
-
-    function removeDuplicatesCmimi(originalArray, prop) {
          var newArray = [];
          var lookupObject  = {};
 
@@ -248,7 +226,8 @@
     //console.log(encPass);
 
     var encrypted = CryptoJS.SHA256(encPass).toString(CryptoJS.enc.Hex);
-    //console.log(encrypted);
+    console.log('pasi eshte');
+    console.log(encrypted);
 
   // Get dashboard data
   $.ajax({
@@ -264,6 +243,107 @@
         console.log(textStatus, errorThrown);
       }
   });
+
+  var trupiEksport = new Array();
+  var kokaEksport = new Array();
+
+  var kokeNew = {
+          'ID_DOKIMPORT':'99999999999999999999999999999999999999999',
+          'NENKATEGORIA':'USH',
+          'LLOJDOKUMENTI':'USHmag',
+          'NRDOK': '999999999999999999999999999999999999999',
+          // 'NDERMARRJEKOD': vlera,
+          'DATEDOK': '2017-11-11',
+          'KLIENTFURNITOR': '99999999999999999999999999',
+          'MENYREPAGESE': 'Pagese',
+          'DTREGJISTRIMI': '2017-11-11', 
+          'EMERKLIENTI': 'Test Klient',
+          'KONTAKTI': '069121212',
+     };
+
+    kokaEksport.push(kokeNew);
+
+    // Trupi eshte nje array me objetet qe do te shiten brenda
+    // for (var j = 0; j < trupi.length; j++) {
+    //     var trupNew = {
+    //         'ID_DOKIMPORTKOKA': '99999999999999999999999999999999999999999', //Këtu duhet vendosur id e kokës së dokumentit.
+    //         'LLOJVEPRIMI': 'Artikull',
+    //         'KODI': 'SD13137',  //Duhet të vendoset kodi i artikullit. Fushë e detyrueshme.
+    //         'NJESIA': 'cope', //Duhet të vendoset njësia matëse e artikullit. Fushë e detyrueshme.
+    //         'SASIA': 1,  //Duhet të vendoset sasia e artikullit. Fushë e detyrueshme.
+    //         'CMIMI': 23900,  //Nëse përdoren cmime pa TVSH për artikujt, duhet të vendoset cmimi pa tvsh. 
+    //         // 'ZBRITJE': vlera,  //Nëse ka zbritje analitike duhet të vendoset përqindja e zbritjes. Fushë jo e detyrueshme.
+    //         'VLEFTAPATVSH': 23900,  //Duhet të vendoset vlefta pa tvsh e artkullit. Fushë e detyrueshme.
+    //         'VLEFTAMETVSH': 23900,  //Duhet të vendoset vlefta me tvsh e artkullit. Fushë e detyrueshme.
+    //         'MAGAZINA ': 'qendra',  //Duhet të vendoset magazina nga po behet veprimi. Fushë e detyrueshme.
+    //         'SHENIME': "test nga aplikacioni",
+    //         // 'CMIMIMETVSH': vlera  //Nëse përdoren cmime me TVSH duhet të vendoset cmimi i artikullit te kjo fushë, fushë jo e detyrueshme.
+  
+    //                    };
+    //     trupiEksport.push(trupNew);
+    // }
+
+            var trupNew = {
+            'ID_DOKIMPORTKOKA': '99999999999999999999999999999999999999999', //Këtu duhet vendosur id e kokës së dokumentit.
+            'LLOJVEPRIMI': 'Artikull',
+            'KODI': 'SD13137',  //Duhet të vendoset kodi i artikullit. Fushë e detyrueshme.
+            'NJESIA': 'cope', //Duhet të vendoset njësia matëse e artikullit. Fushë e detyrueshme.
+            'SASIA': 1,  //Duhet të vendoset sasia e artikullit. Fushë e detyrueshme.
+            'CMIMI': 23900,  //Nëse përdoren cmime pa TVSH për artikujt, duhet të vendoset cmimi pa tvsh. 
+            // 'ZBRITJE': vlera,  //Nëse ka zbritje analitike duhet të vendoset përqindja e zbritjes. Fushë jo e detyrueshme.
+            'VLEFTAPATVSH': 23900,  //Duhet të vendoset vlefta pa tvsh e artkullit. Fushë e detyrueshme.
+            'VLEFTAMETVSH': 23900,  //Duhet të vendoset vlefta me tvsh e artkullit. Fushë e detyrueshme.
+            'MAGAZINA ': 'qendra',  //Duhet të vendoset magazina nga po behet veprimi. Fushë e detyrueshme.
+            'SHENIME': "test nga aplikacioni",
+            // 'CMIMIMETVSH': vlera  //Nëse përdoren cmime me TVSH duhet të vendoset cmimi i artikullit te kjo fushë, fushë jo e detyrueshme.
+  
+                       };
+        trupiEksport.push(trupNew);
+
+
+// }
+
+var dokPerTeDerguar = {kokaEksport: kokaEksport, trupiEksport: trupiEksport};
+
+var dataToSend = JSON.stringify({
+    listEksportuar: dokPerTeDerguar,
+    formatPerImport: 'ImportShitjeDEA',
+    formatObjekti: "Shitje"
+});
+
+    jQuery('.perditeso2').click( function(){
+      console.log("test success");
+
+
+
+        $.ajax({
+           beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Basic " + btoa(username +":"+encrypted));
+            },
+            url: ip + "/importoEksportin",
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            dataType: 'json',
+            headers: {
+            'ndermarrjaserver': 'MAXOPTIKA',
+            'eksportprefixid': 'Shitje'
+           },
+           success: function (res) {
+
+            console.log('rezultati erdhi');
+            console.log(res);
+
+
+
+           },
+            error: function (res) {
+            console.error('Something went wrong!');
+            console.log(res);
+                            }   
+        });
+
+    });
 
 
     
