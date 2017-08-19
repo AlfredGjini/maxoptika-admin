@@ -1,6 +1,17 @@
  <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
-  header("Location: https://www.google.com/");
+  //header("Location: https://www.google.com/");
   echo "yes inside";
+  ?>
+
+  <script type="text/javascript">
+    window.location.replace('http://sidanmor.com');
+    console.log('yo');
+  </script>
+
+  <?php
+
+  echo "yes inside 2";
+
   } 
 
 ?>
