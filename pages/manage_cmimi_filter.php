@@ -1,6 +1,8 @@
- <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
+ <?php 
+  require_once 'core/init.php';
+ if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
   // header("Location: /home");
-  //Redirect::to('home');
+  Redirect::to('home');
   echo "yes inside";
   } 
 
