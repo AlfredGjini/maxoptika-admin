@@ -1,3 +1,10 @@
+ <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
+  header("Location: /home");
+
+  } 
+
+?>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
