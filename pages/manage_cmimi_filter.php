@@ -1,6 +1,7 @@
  <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
-  header("Location: /home");
-
+  // header("Location: /home");
+  Redirect::to('home');
+  echo "yes inside";
   } 
 
 ?>
