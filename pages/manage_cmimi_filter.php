@@ -1,16 +1,13 @@
  <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
-  //header("Location: https://www.google.com/");
-  echo "yes inside";
+
   ?>
 
   <script type="text/javascript">
-    window.location.replace('http://sidanmor.com');
-    console.log('yo');
+    window.location.replace('http://maxoptika-admin2.herokuapp.com/home.php');
   </script>
 
   <?php
 
-  echo "yes inside 2";
 
   } 
 

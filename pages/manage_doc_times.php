@@ -1,5 +1,13 @@
  <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
-  header("Location: /home");
+
+  ?>
+
+  <script type="text/javascript">
+    window.location.replace('http://maxoptika-admin2.herokuapp.com/home.php');
+  </script>
+
+  <?php
+
 
   } 
 
