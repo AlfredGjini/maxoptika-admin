@@ -1,8 +1,5 @@
- <?php 
-  require_once 'core/init.php';
- if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
-  // header("Location: /home");
-  Redirect::to('home');
+ <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
+  header("Location: http://maxoptika-admin2.herokuapp.com/home.php");
   echo "yes inside";
   } 
 
