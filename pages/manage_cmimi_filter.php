@@ -1,5 +1,5 @@
  <?php if (isset($_SESSION['username']) && $_SESSION['username']=="admin" ) {
-  header("Location: http://maxoptika-admin2.herokuapp.com/home.php");
+  header("Location: https://www.google.com/");
   echo "yes inside";
   } 
 
