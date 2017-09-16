@@ -1,6 +1,6 @@
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+//error_reporting(E_ALL);
+//ini_set('display_errors', 'On');
 require_once 'core/init.php';
 $action = Input::get('action');
 $data =  $_POST;
@@ -290,11 +290,29 @@ switch ($action) {
 	case 'manage_store_times':
 		//var_dump($data);
 		//echo "u be ";
-		var_dump($data);
+		//var_dump($data);
 
 		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'qtu',['hene'=>$data["qtuhene"],'marte'=>$data["qtumarte"],'merkure'=>$data["qtumerkure"],'enjte'=>$data["qtuenjte"],'premte'=>$data["qtupremte"],'shtune'=>$data["qtushtune"],'diele'=>$data["qtudiele"]]);
-		// $updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'durres',['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
-		// $updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'fier',['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'mshyri',['hene'=>$data["mshyrihene"],'marte'=>$data["mshyrimarte"],'merkure'=>$data["mshyrimerkure"],'enjte'=>$data["mshyrienjte"],'premte'=>$data["mshyripremte"],'shtune'=>$data["mshyrishtune"],'diele'=>$data["mshyridiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'sheshiwillson',['hene'=>$data["sheshiwillsonhene"],'marte'=>$data["sheshiwillsonmarte"],'merkure'=>$data["sheshiwillsonmerkure"],'enjte'=>$data["sheshiwillsonenjte"],'premte'=>$data["sheshiwillsonpremte"],'shtune'=>$data["sheshiwillsonshtune"],'diele'=>$data["sheshiwillsondiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'21dhjetori',['hene'=>$data["21dhjetorihene"],'marte'=>$data["21dhjetorimarte"],'merkure'=>$data["21dhjetorimerkure"],'enjte'=>$data["21dhjetorienjte"],'premte'=>$data["21dhjetoripremte"],'shtune'=>$data["21dhjetorishtune"],'diele'=>$data["21dhjetoridiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'durres',['hene'=>$data["durreshene"],'marte'=>$data["durresmarte"],'merkure'=>$data["durresmerkure"],'enjte'=>$data["durresenjte"],'premte'=>$data["durrespremte"],'shtune'=>$data["durresshtune"],'diele'=>$data["durresdiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'pogradec',['hene'=>$data["pogradechene"],'marte'=>$data["pogradecmarte"],'merkure'=>$data["pogradecmerkure"],'enjte'=>$data["pogradecenjte"],'premte'=>$data["pogradecpremte"],'shtune'=>$data["pogradecshtune"],'diele'=>$data["pogradecdiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'shkoder',['hene'=>$data["shkoderhene"],'marte'=>$data["shkodermarte"],'merkure'=>$data["shkodermerkure"],'enjte'=>$data["shkoderenjte"],'premte'=>$data["shkoderpremte"],'shtune'=>$data["shkodershtune"],'diele'=>$data["shkoderdiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'lushnje',['hene'=>$data["lushnjehene"],'marte'=>$data["lushnjemarte"],'merkure'=>$data["lushnjemerkure"],'enjte'=>$data["lushnjeenjte"],'premte'=>$data["lushnjepremte"],'shtune'=>$data["lushnjeshtune"],'diele'=>$data["lushnjediele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'vlore',['hene'=>$data["vlorehene"],'marte'=>$data["vloremarte"],'merkure'=>$data["vloremerkure"],'enjte'=>$data["vloreenjte"],'premte'=>$data["vlorepremte"],'shtune'=>$data["vloreshtune"],'diele'=>$data["vlorediele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'fier',['hene'=>$data["fierhene"],'marte'=>$data["fiermarte"],'merkure'=>$data["fiermerkure"],'enjte'=>$data["fierenjte"],'premte'=>$data["fierpremte"],'shtune'=>$data["fiershtune"],'diele'=>$data["fierdiele"]]);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'sarande',['hene'=>$data["sarandehene"],'marte'=>$data["sarandemarte"],'merkure'=>$data["sarandemerkure"],'enjte'=>$data["sarandeenjte"],'premte'=>$data["sarandepremte"],'shtune'=>$data["sarandeshtune"],'diele'=>$data["sarandediele"]]);
 		
 
 		if($updateCmimiFilter){
