@@ -167,6 +167,33 @@ class DB{
 		return false;
 	}
 
+	public function updateOrarDyqani($table, $id, $fields = [],$where = []){
+		$set = '';
+		$index = 1;
+
+		foreach($fields as $name => $value){
+			$set .= "{$name} = ?";
+			if($index < count($fields)){
+				$set .= ', ';
+			}
+			$index++;
+		}
+
+		$sql = "UPDATE {$table} SET {$set} WHERE dyqani = {$id}";
+		
+		if(count($where) !== 0){
+			foreach($where as $cond){
+				$sql .= " {$cond['0']} {$cond['1']} {$cond['2']} {$cond['3']}";
+			}
+		}
+		
+		if(!$this->query($sql,$fields)->error()){
+			return true;
+		}
+
+		return false;
+	}
+
 	public function updateMax($table, $id, $fields = [],$where = []){
 		$set = '';
 		$index = 1;

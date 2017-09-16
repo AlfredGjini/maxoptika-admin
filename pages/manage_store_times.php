@@ -30,11 +30,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Cmimi Filter
+        Oraret e Dyqaneve
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Cmimi Filter</a></li>
-        <li class="active">Vendos cmimet e filtrave</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Oraret e Dyqaneve</a></li>
+        <li class="active">Vendos oraret e vizitave</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -44,11 +44,11 @@
           
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Vendos cmimet e filtrave</h3>
+              <h3 class="box-title">Vendos oraret e vizitave ne dyqane</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form id="create_clinic_card" action="functions.php?action=create_clinic_card" method="post" class="form-horizontal">
+            <form id="update_store_times" action="functions.php?action=update_store_times" method="post" class="form-horizontal">
               <div class="box-body">
           		<div class="form-group">
                   <div class="col-sm-12">
@@ -56,16 +56,21 @@
 	                    <h4></h4>
 	                    	<?php
 	                    		
-								$dataResult = DB::getInstance()->getAll('cmimifilter')->results();
+								$dataResult = DB::getInstance()->getAll('oraridyqan')->results();
 
 								foreach ($dataResult as $tableRows) {
-									if ($tableRows->id==1) {
-										$diellMin=$tableRows->cmimimin;
-										$diellMax=$tableRows->cmimimax;
-									}else if ($tableRows->id==2) {
+									if ($tableRows->dyqani=='durres') {
+										$qtuhene=$tableRows->hene;
+										$qtumarte=$tableRows->marte;
+                    $qtumerkure=$tableRows->merkure;
+                    $qtuenjte=$tableRows->enjte;
+                    $qtupremte=$tableRows->premte;
+                    $qtushtune=$tableRows->shtune;
+                    $qtudiele=$tableRows->diele;
+									}else if ($tableRows->dyqani==2) {
 										$optikeMin=$tableRows->cmimimin;
 										$optikeMax=$tableRows->cmimimax;
-									}else if ($tableRows->id==3) {
+									}else if ($tableRows->dyqani==3) {
 										$lenteMin=$tableRows->cmimimin;
 										$lenteMax=$tableRows->cmimimax;
 									}
@@ -90,43 +95,43 @@
 			                <div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">E Hene</div>
-			                    <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+			                    <div class="col-sm-9"><input type='text' name='qtuhene' value="<?php echo $qtuhene; ?>" /></div>
 			                  </div>
 			              	</div>
 			              	<div class="form-group">
 			                  <div class="col-sm-12">
 			                    <div class="col-sm-3">E Marte</div>
-			                    <div class="col-sm-9"><input type='text' name='diellMax' value="<?php echo $diellMax; ?>" /></div>
+			                    <div class="col-sm-9"><input type='text' name='qtumarte' value="<?php echo $qtumarte; ?>" /></div>
 			                  </div>
 			                </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Merkure</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='qtumerkure' value="<?php echo $qtumerkure; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Enjte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='qtuenjte' value="<?php echo $qtuenjte; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Premte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='qtupremte' value="<?php echo $qtupremte; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Shtune</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='qtushtune' value="<?php echo $qtushtune; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Diele</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='qtudiele' value="<?php echo $qtudiele; ?>" /></div>
                         </div>
                       </div>
 		                </div>
@@ -136,48 +141,48 @@
                 <h4>Myslum Shyri</h4>
               </div>
             
-                      <div class="form-group">
+            <div class="form-group">
               </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Hene</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyrihene' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Marte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMax' value="<?php echo $diellMax; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyrimarte' value="<?php echo $diellMax; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Merkure</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyrimerkure' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Enjte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyrienjte' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Premte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyripremte' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Shtune</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyrishtune' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Diele</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='mshyridiele' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                     </div>
@@ -192,43 +197,43 @@
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Hene</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsonhene' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Marte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMax' value="<?php echo $diellMax; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsonmarte' value="<?php echo $diellMax; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Merkure</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsonmerkure' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Enjte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsonenjte' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Premte</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsonpremte' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Shtune</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsonshtune' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Diele</div>
-                          <div class="col-sm-9"><input type='text' name='diellMin' value="<?php echo $diellMin; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='sheshiwillsondiele' value="<?php echo $diellMin; ?>" /></div>
                         </div>
                       </div>
                     </div>
@@ -680,7 +685,7 @@
 
 
 
-    $("#create_clinic_card").submit(function(event) {
+    $("#update_store_times").submit(function(event) {
 
 
       /* Stop form from submitting normally */
@@ -688,7 +693,7 @@
       var values = $(this).serialize();
 
        $.ajax({
-              url: "functions.php?action=manage_cmimi_filter",
+              url: "functions.php?action=manage_store_times",
               type: "post",
               data: values ,
               success: function (response) {
@@ -700,7 +705,7 @@
                   // Response: 1 - Success
                    swal(
                     '',
-                    'Cmimet u perditesuan me sukses',
+                    'Oraret u perditesuan me sukses',
                     'success'
                   )
                 }else if (response == "2"){

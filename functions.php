@@ -286,6 +286,31 @@ switch ($action) {
 
 	break;
 
+
+	case 'manage_store_times':
+		//var_dump($data);
+		//echo "u be ";
+		//var_dump($data);
+
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'qtu',['cmimimax'=>$data["diellMax"],'cmimimin'=>$data["diellMin"]]);
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'durres',['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'fier',['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
+		
+
+		if($updateCmimiFilter){
+			$responserc="1";
+			//echo json_encode($responserc);
+			echo $responserc;
+		}else{
+			$responserc="2";
+			//echo json_encode($responserc);
+			echo $responserc;
+		}
+
+
+
+	break;
+
 	default:	
 		# code...
 		break;
