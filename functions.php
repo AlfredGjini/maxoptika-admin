@@ -1,6 +1,6 @@
 <?php 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 require_once 'core/init.php';
 $action = Input::get('action');
 $data =  $_POST;
@@ -290,7 +290,7 @@ switch ($action) {
 	case 'manage_store_times':
 		//var_dump($data);
 		//echo "u be ";
-		//var_dump($data);
+		var_dump($data);
 
 		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'qtu',['hene'=>$data["qtuhene"],'marte'=>$data["qtumarte"],'merkure'=>$data["qtumerkure"],'enjte'=>$data["qtuenjte"],'premte'=>$data["qtupremte"],'shtune'=>$data["qtushtune"],'diele'=>$data["qtudiele"]]);
 		// $updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'durres',['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
