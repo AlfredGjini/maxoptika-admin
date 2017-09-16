@@ -100,6 +100,15 @@
             </span>
           </a>
         </li>
+
+        <li class="treeview manage_store_times">
+          <a href="?page=manage_store_times">
+            <i class="fa fa-edit"></i> <span>Oraret e Dyqaneve</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
         <?php } ?>
         
       </ul>

@@ -30,6 +30,9 @@ switch ($page) {
 	case 'manage_cmimi_filter':
 		include 'pages/manage_cmimi_filter.php';	
 		break;
+	case 'manage_store_times':
+		include 'pages/manage_store_times.php';	
+		break;
 		
 	default:
 		include "pages/dashboard.php";

@@ -137,22 +137,6 @@
         <!-- ./col -->
         <?php } ?>
 
-        <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
-        <div class="col-lg-3 col-xs-6 perditeso2" style="cursor:pointer;">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h2 style="font-weight: bold;">Test butoni</h2>
-
-              <!-- <p>Unique Visitors</p> -->
-            </div>
-            <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-          </div>
-          
-        </div> 
-        <!-- ./col -->
-        <?php } ?>
-
 
       </div>
 
@@ -254,10 +238,10 @@
           'NRDOK': '999999999999999999999999999999999999999',
           // 'NDERMARRJEKOD': vlera,
           'DATEDOK': '2017-11-11',
-          'KLIENTFURNITOR': '99999999999999999999999999',
+          'KLIENTFURNITOR': 'KL83',
           'MENYREPAGESE': 'Pagese',
           'DTREGJISTRIMI': '2017-11-11', 
-          'EMERKLIENTI': 'Test Klient',
+          'EMERKLIENTI': 'Test Klienttt',
           'KONTAKTI': '069121212',
      };
 
@@ -290,7 +274,7 @@
             'NJESIA': 'cope', //Duhet të vendoset njësia matëse e artikullit. Fushë e detyrueshme.
             'SASIA': 1,  //Duhet të vendoset sasia e artikullit. Fushë e detyrueshme.
             'CMIMI': 23900,  //Nëse përdoren cmime pa TVSH për artikujt, duhet të vendoset cmimi pa tvsh. 
-            // 'ZBRITJE': vlera,  //Nëse ka zbritje analitike duhet të vendoset përqindja e zbritjes. Fushë jo e detyrueshme.
+            'ZBRITJE': vlera,  //Nëse ka zbritje analitike duhet të vendoset përqindja e zbritjes. Fushë jo e detyrueshme.
             'VLEFTAPATVSH': 23900,  //Duhet të vendoset vlefta pa tvsh e artkullit. Fushë e detyrueshme.
             'VLEFTAMETVSH': 23900,  //Duhet të vendoset vlefta me tvsh e artkullit. Fushë e detyrueshme.
             'MAGAZINA ': 'qendra',  //Duhet të vendoset magazina nga po behet veprimi. Fushë e detyrueshme.
