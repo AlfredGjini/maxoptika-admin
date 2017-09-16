@@ -179,7 +179,7 @@ class DB{
 			$index++;
 		}
 
-		$sql = "UPDATE {$table} SET {$set} WHERE dyqani = {$id}";
+		$sql = "UPDATE {$table} SET {$set} WHERE dyqani = '{$id}'";
 		
 		if(count($where) !== 0){
 			foreach($where as $cond){
