@@ -13,6 +13,19 @@
 
 ?>
 
+<style type="text/css">
+  input {
+    line-height: normal;
+    width: 100%;
+}
+.row {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+</style>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
