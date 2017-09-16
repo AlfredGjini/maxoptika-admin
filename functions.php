@@ -292,9 +292,9 @@ switch ($action) {
 		//echo "u be ";
 		//var_dump($data);
 
-		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'qtu',['cmimimax'=>$data["diellMax"],'cmimimin'=>$data["diellMin"]]);
-		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'durres',['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
-		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'fier',['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'qtu',['hene'=>$data["qtuhene"],'marte'=>$data["qtumarte"],'merkure'=>$data["qtumerkure"],'enjte'=>$data["qtuenjte"],'premte'=>$data["qtupremte"],'shtune'=>$data["qtushtune"],'diele'=>$data["qtudiele"]]);
+		// $updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'durres',['cmimimax'=>$data["optikeMax"],'cmimimin'=>$data["optikeMin"]]);
+		// $updateCmimiFilter = DB::getInstance()->updateOrarDyqani("cmimifilter",'fier',['cmimimax'=>$data["lenteMax"],'cmimimin'=>$data["lenteMin"]]);
 		
 
 		if($updateCmimiFilter){

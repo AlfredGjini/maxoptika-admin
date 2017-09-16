@@ -59,7 +59,7 @@
 								$dataResult = DB::getInstance()->getAll('oraridyqan')->results();
 
 								foreach ($dataResult as $tableRows) {
-									if ($tableRows->dyqani=='durres') {
+									if ($tableRows->dyqani=='qtu') {
 										$qtuhene=$tableRows->hene;
 										$qtumarte=$tableRows->marte;
                     $qtumerkure=$tableRows->merkure;
