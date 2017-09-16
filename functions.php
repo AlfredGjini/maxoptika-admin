@@ -298,7 +298,7 @@ switch ($action) {
 
 		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'sheshiwillson',['hene'=>$data["sheshiwillsonhene"],'marte'=>$data["sheshiwillsonmarte"],'merkure'=>$data["sheshiwillsonmerkure"],'enjte'=>$data["sheshiwillsonenjte"],'premte'=>$data["sheshiwillsonpremte"],'shtune'=>$data["sheshiwillsonshtune"],'diele'=>$data["sheshiwillsondiele"]]);
 
-		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'21dhjetori',['hene'=>$data["21dhjetorihene"],'marte'=>$data["21dhjetorimarte"],'merkure'=>$data["21dhjetorimerkure"],'enjte'=>$data["21dhjetorienjte"],'premte'=>$data["21dhjetoripremte"],'shtune'=>$data["21dhjetorishtune"],'diele'=>$data["21dhjetoridiele"]]);
+		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'dhjetori',['hene'=>$data["dhjetorihene"],'marte'=>$data["dhjetorimarte"],'merkure'=>$data["dhjetorimerkure"],'enjte'=>$data["dhjetorienjte"],'premte'=>$data["dhjetoripremte"],'shtune'=>$data["dhjetorishtune"],'diele'=>$data["dhjetoridiele"]]);
 
 		$updateCmimiFilter = DB::getInstance()->updateOrarDyqani("oraridyqan",'durres',['hene'=>$data["durreshene"],'marte'=>$data["durresmarte"],'merkure'=>$data["durresmerkure"],'enjte'=>$data["durresenjte"],'premte'=>$data["durrespremte"],'shtune'=>$data["durresshtune"],'diele'=>$data["durresdiele"]]);
 

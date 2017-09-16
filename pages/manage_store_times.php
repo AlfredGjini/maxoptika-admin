@@ -83,14 +83,14 @@
                     $sheshiwillsonpremte=$tableRows->premte;
                     $sheshiwillsonshtune=$tableRows->shtune;
                     $sheshiwillsondiele=$tableRows->diele;
-                  }else if ($tableRows->dyqani=='21dhjetori') {
-                    $21dhjetorihene=$tableRows->hene;
-                    $21dhjetorimarte=$tableRows->marte;
-                    $21dhjetorimerkure=$tableRows->merkure;
-                    $21dhjetorienjte=$tableRows->enjte;
-                    $21dhjetoripremte=$tableRows->premte;
-                    $21dhjetorishtune=$tableRows->shtune;
-                    $21dhjetoridiele=$tableRows->diele;
+                  }else if ($tableRows->dyqani=='dhjetori') {
+                    $dhjetorihene=$tableRows->hene;
+                    $dhjetorimarte=$tableRows->marte;
+                    $dhjetorimerkure=$tableRows->merkure;
+                    $dhjetorienjte=$tableRows->enjte;
+                    $dhjetoripremte=$tableRows->premte;
+                    $dhjetorishtune=$tableRows->shtune;
+                    $dhjetoridiele=$tableRows->diele;
                   }else if ($tableRows->dyqani=='durres') {
                     $durreshene=$tableRows->hene;
                     $durresmarte=$tableRows->marte;
@@ -325,43 +325,43 @@
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Hene</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetorihene' value="<?php echo $21dhjetorihene; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetorihene' value="<?php echo $dhjetorihene; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Marte</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetorimarte' value="<?php echo $21dhjetorimarte; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetorimarte' value="<?php echo $dhjetorimarte; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Merkure</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetorimerkure' value="<?php echo $21dhjetorimerkure; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetorimerkure' value="<?php echo $dhjetorimerkure; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Enjte</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetorienjte' value="<?php echo $21dhjetorienjte; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetorienjte' value="<?php echo $dhjetorienjte; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Premte</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetoripremte' value="<?php echo $21dhjetoripremte; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetoripremte' value="<?php echo $dhjetoripremte; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Shtune</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetorishtune' value="<?php echo $21dhjetorishtune; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetorishtune' value="<?php echo $dhjetorishtune; ?>" /></div>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
                           <div class="col-sm-3">E Diele</div>
-                          <div class="col-sm-9"><input type='text' name='21dhjetoridiele' value="<?php echo $21dhjetoridiele; ?>" /></div>
+                          <div class="col-sm-9"><input type='text' name='dhjetoridiele' value="<?php echo $dhjetoridiele; ?>" /></div>
                         </div>
                       </div>
                     </div>
