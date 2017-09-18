@@ -83,14 +83,14 @@
           </a>
         </li>
         <?php if (isset($_SESSION['username']) && $_SESSION['username']=="superadmin" ) { ?>
-        <li class="treeview manage_doc_times">
+        <!-- <li class="treeview manage_doc_times">
           <a href="?page=manage_doc_times">
             <i class="fa fa-clock-o"></i> <span>Orari Doktorit</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-        </li>
+        </li> -->
         
         <li class="treeview manage_cmimi_filter">
           <a href="?page=manage_cmimi_filter">
@@ -103,7 +103,7 @@
 
         <li class="treeview manage_store_times">
           <a href="?page=manage_store_times">
-            <i class="fa fa-edit"></i> <span>Oraret e Dyqaneve</span>
+            <i class="fa fa-clock-o"></i> <span>Oraret e Dyqaneve</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
