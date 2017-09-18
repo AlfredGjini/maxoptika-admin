@@ -733,7 +733,7 @@
                   </div>
 
               		<div class="box-footer" >
-                  <div><img class="gifloader pull-left" style="padding-top: 30px;width: 30px;display: none;" src="assets/img/loader.gif"></div>
+                  <div><img class="gifloader pull-right" style="margin-left: 30px;width: 30px;display: none;" src="assets/img/loader.gif"></div>
 	                	<button type="submit" class="btn btn-info pull-right">Vendos</button>
 	              </div>
 				</div>
