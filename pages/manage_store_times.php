@@ -100,7 +100,7 @@
                     $durresshtune=$tableRows->shtune;
                     $durresdiele=$tableRows->diele;
                   }else if ($tableRows->dyqani=='pogradec') {
-                    $shkoderhene=$tableRows->hene;
+                    $pogradechene=$tableRows->hene;
                     $pogradecmarte=$tableRows->marte;
                     $pogradecmerkure=$tableRows->merkure;
                     $pogradecenjte=$tableRows->enjte;
@@ -733,6 +733,7 @@
                   </div>
 
               		<div class="box-footer" >
+                  <div><img class="gifloader pull-left" style="padding-top: 30px;width: 30px;display: none;" src="assets/img/loader.gif"></div>
 	                	<button type="submit" class="btn btn-info pull-right">Vendos</button>
 	              </div>
 				</div>
@@ -755,11 +756,13 @@
   </div>
 
   <script type="text/javascript">
+  $(".gifloader").hide();
 
 
 
 
     $("#update_store_times").submit(function(event) {
+      $(".gifloader").show();
 
 
       /* Stop form from submitting normally */
@@ -771,6 +774,7 @@
               type: "post",
               data: values ,
               success: function (response) {
+                $(".gifloader").hide();
                  // you will get response from your php page (what you echo or print) 
                  //console.log(typeof(response));
                  //console.log(response);
