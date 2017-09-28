@@ -211,8 +211,8 @@
     //console.log(encPass);
 
     var encrypted = CryptoJS.SHA256(encPass).toString(CryptoJS.enc.Hex);
-    console.log('pasi eshte');
-    console.log(encrypted);
+    //console.log('pasi eshte');
+    //console.log(encrypted);
 
   // Get dashboard data
   $.ajax({
