@@ -154,7 +154,7 @@
 
   <script type="text/javascript">
 
-
+remove_duplicates
     function remove_duplicates(a, b) {
       var count1=0;
       var count2=0;
@@ -163,6 +163,33 @@
             for (var j = 0, len2 = b.length; j < len2; j++) { 
                 if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
                     //b.splice(j, 1);
+                    count2++;
+                    arrayre.push(b[j]);
+                    // len2=b.length;
+                }else{
+                  count1++;
+                }
+            }
+        }
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(count1);
+        // console.log(count2);
+        // console.log(arrayre);
+        return arrayre;
+
+    }
+
+  function add_remove_duplicates(a, b) {
+      var count1=0;
+      var count2=0;
+      var arrayre=[];
+     for (var i = 0, len = a.length; i < len; i++) { 
+            for (var j = 0, len2 = b.length; j < len2; j++) { 
+                if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
+                    //b.splice(j, 1);
+                    b[j].gjendje=b[j].gjendje+a[i].gjendje;
                     count2++;
                     arrayre.push(b[j]);
                     // len2=b.length;
@@ -447,7 +474,7 @@ var dataToSend = JSON.stringify({
                           //alert('Shit');
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-                          //var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          var newArrMagGjendje=add_remove_duplicates(newArr1,newArrMagGjendje);
                           var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
@@ -462,23 +489,23 @@ var dataToSend = JSON.stringify({
                           newArr2=JSON.stringify(newArr2);
                           newArr3=JSON.stringify(newArr3);
 
-                          $.ajax({
-                              url: "worker.php",
-                              type: "post",
-                              data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
-                              success: function (response) {
+                          // $.ajax({
+                          //     url: "worker.php",
+                          //     type: "post",
+                          //     data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
+                          //     success: function (response) {
 
-                                 // you will get response from your php page (what you echo or print) 
-                                 //console.log(typeof(response));
-                                 console.log(response);              
+                          //        // you will get response from your php page (what you echo or print) 
+                          //        //console.log(typeof(response));
+                          //        console.log(response);              
 
-                              },
-                              error: function(jqXHR, textStatus, errorThrown) {
-                                 console.log(textStatus, errorThrown);
-                              }
+                          //     },
+                          //     error: function(jqXHR, textStatus, errorThrown) {
+                          //        console.log(textStatus, errorThrown);
+                          //     }
 
 
-                          });
+                          // });
 
 
 
