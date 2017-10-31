@@ -447,7 +447,7 @@ var dataToSend = JSON.stringify({
                           //alert('Shit');
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          //var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
                           var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
