@@ -190,7 +190,7 @@ remove_duplicates
                 if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
                     //b.splice(j, 1);
                     // TODO:Convert it to integer
-                    b[j].gjendje=b[j].gjendje+a[i].gjendje;
+                    Number(b[j].gjendje)=Number(b[j].gjendje)+Number(a[i].gjendje);
                     count2++;
                     arrayre.push(b[j]);
                     // len2=b.length;
@@ -210,7 +210,7 @@ remove_duplicates
     }
 
 
-
+    // Remove duplicates of it's own, ex: only keeps one unique object based on KODARTIKULL
     function removeDuplicates(originalArray, prop) {
          var newArray = [];
          var lookupObject  = {};
@@ -224,6 +224,20 @@ remove_duplicates
          }
           return newArray;
      }
+     function add_removeDuplicates(originalArray, prop) {
+         var newArray = [];
+         var lookupObject  = {};
+
+         for(var i in originalArray) {
+            lookupObject[originalArray[i][prop]] = originalArray[i];
+         }
+
+         for(i in lookupObject) {
+             newArray.push(lookupObject[i]);
+         }
+          return newArray;
+     }
+
 
 
 
@@ -475,8 +489,8 @@ var dataToSend = JSON.stringify({
                           //alert('Shit');
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
-                          //var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          var newArrMagGjendje=add_remove_duplicates(newArr1,newArrMagGjendje);
+                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
                           console.log(newArrMagGjendje);
                           //newArr3=JSON.stringify(newArr3);
                           $('.progress-bar').css("width", "100%");
