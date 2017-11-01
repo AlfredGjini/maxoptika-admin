@@ -527,11 +527,12 @@ var dataToSend = JSON.stringify({
                               // Check if our x values are a match
                               if (newArrMagGjendje[i].KODARTIKULLI == newArrMagGjendje[j].KODARTIKULLI) {
                                 newArrMagGjendje[i].gjendje=newArrMagGjendje[i].gjendje+newArrMagGjendje[j].gjendje;
-                                //newArrayM.push( newArrMagGjendje[i]);
+                                
                               } 
                             }
+                            newArrayM.push( newArrMagGjendje[i]);
                           }
-                          console.log(newArrMagGjendje);
+                          console.log(newArrayM);
                           console.log('Testi ghjkl');
 
 
