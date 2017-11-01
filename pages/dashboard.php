@@ -238,6 +238,26 @@ remove_duplicates
           return newArray;
      }
 
+     function removeDuplicatesNew2(arr) {
+    console.log("original length: "+arr.length);
+    for (var i=0; i<arr.length; i++) {
+        var listI = arr[i];
+        loopJ: for (var j=0; j<arr.length; j++) {
+            var listJ = arr[j];
+            if (listI === listJ) continue; //Ignore itself
+            if (JSON.stringify(listJ.KODI) !== JSON.stringify(listI.KODI)) {
+                continue loopJ;
+            }
+            if (JSON.stringify(listJ.KODARTIKULLI) !== JSON.stringify(listI.KODARTIKULLI)) {
+                continue loopJ;
+            }      
+            arr.splice(j--, 1);
+        }
+    }
+    console.log("length without duplicates: "+arr.length);
+    return arr;
+}
+
 
 
 
@@ -491,6 +511,9 @@ var dataToSend = JSON.stringify({
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
                           var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+
+                          var ghj =removeDuplicatesNew2(newArrMagGjendje);
+                          console.log(ghj);
 
 
                           // Loop through all objects in the array
