@@ -487,9 +487,31 @@ var dataToSend = JSON.stringify({
                         },
                         success: function (res) {
                           //alert('Shit');
+                          var newArrayM = [];
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
                           var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+
+
+                          // Loop through all objects in the array
+                          for (var i = 0; i < newArrMagGjendje.length; i++) {
+
+                            // Loop through all of the objects beyond i
+                            // Don't increment automatically; we will do this later
+                            for (var j = i+1; j < newArrMagGjendje.length;j++ ) {
+
+                              // Check if our x values are a match
+                              if (newArrMagGjendje[i].KODARTIKULLI == newArrMagGjendje[j].KODARTIKULLI) {
+                                newArrMagGjendje[i].gjendje=newArrMagGjendje[i].gjendje+newArrMagGjendje[j].gjendje;
+                                newArrayM.push( newArrMagGjendje[i]);
+                              } 
+                            }
+                          }
+                          console.log(newArrayM);
+
+
+
+
                           var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
@@ -504,23 +526,23 @@ var dataToSend = JSON.stringify({
                           newArr2=JSON.stringify(newArr2);
                           newArr3=JSON.stringify(newArr3);
 
-                          $.ajax({
-                              url: "worker.php",
-                              type: "post",
-                              data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
-                              success: function (response) {
+                          // $.ajax({
+                          //     url: "worker.php",
+                          //     type: "post",
+                          //     data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
+                          //     success: function (response) {
 
-                                 // you will get response from your php page (what you echo or print) 
-                                 //console.log(typeof(response));
-                                 console.log(response);              
+                          //        // you will get response from your php page (what you echo or print) 
+                          //        //console.log(typeof(response));
+                          //        console.log(response);              
 
-                              },
-                              error: function(jqXHR, textStatus, errorThrown) {
-                                 console.log(textStatus, errorThrown);
-                              }
+                          //     },
+                          //     error: function(jqXHR, textStatus, errorThrown) {
+                          //        console.log(textStatus, errorThrown);
+                          //     }
 
 
-                          });
+                          // });
 
 
 
