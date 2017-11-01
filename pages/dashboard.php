@@ -511,50 +511,44 @@ var dataToSend = JSON.stringify({
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
                           var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
-                          // console.log(newArrMagGjendje);
+                          console.log(newArrMagGjendje);
 
                           // var ghj =removeDuplicatesNew2(newArrMagGjendje);
                           // console.log(ghj);
 
 
-                          var output = newArrMagGjendje.reduce(function(res, el) {
-                              if(res[el.KODARTIKULLI]) {
-                                res[el.KODARTIKULLI].gjendje += el.gjendje;
-                              } else {
-                                res[el.KODARTIKULLI] = el;
-                              }
-                              return res;
-                            }, {});
+                          // var output = newArrMagGjendje.reduce(function(res, el) {
+                          //     if(res[el.KODARTIKULLI]) {
+                          //       res[el.KODARTIKULLI].gjendje += el.gjendje;
+                          //     } else {
+                          //       res[el.KODARTIKULLI] = el;
+                          //     }
+                          //     return res;
+                          //   }, {});
 
-                            console.log(output);
-                            console.log('hopefully');
+                            // console.log(output);
+                            // console.log('hopefully');
 
-
-                          // Loop through all objects in the array
-                          for (var i = 0; i < newArrMagGjendje.length; i++) {
-
-                            // Loop through all of the objects beyond i
-                            // Don't increment automatically; we will do this later
-                            for (var j = i+1; j < newArrMagGjendje.length;j++ ) {
-
-                              // Check if our x values are a match
-                              if (newArrMagGjendje[i].KODARTIKULLI == newArrMagGjendje[j].KODARTIKULLI) {
-                                newArrMagGjendje[i].gjendje=newArrMagGjendje[i].gjendje+newArrMagGjendje[j].gjendje;
-                                
-                              } 
+                            var mapObj = {};
+                             for(var a of newArrMagGjendje){
+                                if(mapObj[a["KODARTIKULLI"]]== undefined)
+                                  mapObj[a["KODARTIKULLI"]] = 0;
+                                mapObj[a["KODARTIKULLI"]] += a["gjendje"]
+                             }
+                            var data2 = [];
+                            for(var a of newArrMagGjendje){
+                              if(mapObj[a["KODARTIKULLI"]] == undefined)
+                                 continue;
+                              a["gjendje"] = mapObj[a["KODARTIKULLI"]];
+                              data2.push(a)
+                              delete mapObj[a["KODARTIKULLI"]];
                             }
-                            newArrayM.push( newArrMagGjendje[i]);
-                          }
-                          console.log(newArrayM);
-                          console.log('Testi ghjkl');
+                            console.log('hopefully');
+                            console.log(data2);
+                            
 
 
-
-
-                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODI");
-                          console.log(newArr3);
-                          console.log('Testi 2');
-                          var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
+                          //var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
                           $('.progress-bar').css("width", "100%");
