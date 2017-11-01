@@ -513,7 +513,9 @@ var dataToSend = JSON.stringify({
 
 
 
-                          //var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODI");
+                          console.log(newArr3);
+                          console.log('Testi 2');
                           var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
