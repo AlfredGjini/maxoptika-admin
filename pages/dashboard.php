@@ -511,10 +511,23 @@ var dataToSend = JSON.stringify({
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
                           var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
-                          console.log(newArrMagGjendje);
+                          // console.log(newArrMagGjendje);
 
-                          var ghj =removeDuplicatesNew2(newArrMagGjendje);
-                          console.log(ghj);
+                          // var ghj =removeDuplicatesNew2(newArrMagGjendje);
+                          // console.log(ghj);
+
+
+                          var output = newArrMagGjendje.reduce(function(res, el) {
+                              if(res[el.KODARTIKULLI]) {
+                                res[el.KODARTIKULLI].gjendje += el.gjendje;
+                              } else {
+                                res[el.KODARTIKULLI] = el;
+                              }
+                              return res;
+                            }, {});
+
+                            console.log(output);
+                            console.log('hopefully');
 
 
                           // Loop through all objects in the array
