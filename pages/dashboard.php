@@ -532,8 +532,8 @@ var dataToSend = JSON.stringify({
                             var mapObj = {};
                              for(var a of newArrMagGjendje){
                                 if(mapObj[a["KODARTIKULLI"]]== undefined)
-                                  mapObj[a["KODARTIKULLI"]] = 0;
-                                mapObj[a["KODARTIKULLI"]] += a["gjendje"]
+                                  {mapObj[a["KODARTIKULLI"]] = 0;
+                                }else{mapObj[a["KODARTIKULLI"]] += a["gjendje"]}
                              }
                              console.log('testgb');
                              console.log(mapObj);
