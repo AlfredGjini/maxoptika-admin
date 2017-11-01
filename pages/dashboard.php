@@ -189,6 +189,7 @@ remove_duplicates
             for (var j = 0, len2 = b.length; j < len2; j++) { 
                 if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
                     //b.splice(j, 1);
+                    // TODO:Convert it to integer
                     b[j].gjendje=b[j].gjendje+a[i].gjendje;
                     count2++;
                     arrayre.push(b[j]);
@@ -474,9 +475,9 @@ var dataToSend = JSON.stringify({
                           //alert('Shit');
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-                          var newArrMagGjendje=add_remove_duplicates(newArr1,newArrMagGjendje);
-                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
-                          console.log(newArr3);
+                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          //var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          console.log(newArrMagGjendje);
                           //newArr3=JSON.stringify(newArr3);
                           $('.progress-bar').css("width", "100%");
                           $('.progress-bar').text("100%");
