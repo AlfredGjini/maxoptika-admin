@@ -508,6 +508,7 @@ var dataToSend = JSON.stringify({
                             }
                           }
                           console.log(newArrayM);
+                          console.log('Testi ghjkl');
 
 
 
