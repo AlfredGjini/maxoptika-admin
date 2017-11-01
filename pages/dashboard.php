@@ -535,6 +535,9 @@ var dataToSend = JSON.stringify({
                                   mapObj[a["KODARTIKULLI"]] = 0;
                                 mapObj[a["KODARTIKULLI"]] += a["gjendje"]
                              }
+                             console.log('testgb');
+                             console.log(mapObj);
+
                             var data2 = [];
                             for(var a of newArrMagGjendje){
                               if(mapObj[a["KODARTIKULLI"]] == undefined)
@@ -549,7 +552,7 @@ var dataToSend = JSON.stringify({
 
 
                           //var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
-                          console.log(newArr3);
+                          //console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
                           $('.progress-bar').css("width", "100%");
                           $('.progress-bar').text("100%");
