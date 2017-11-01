@@ -512,7 +512,8 @@ var dataToSend = JSON.stringify({
 
 
 
-                          var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          //var newArr3 = removeDuplicates(newArrMagGjendje, "KODARTIKULLI");
+                          var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
                           console.log(newArr3);
                           //newArr3=JSON.stringify(newArr3);
                           $('.progress-bar').css("width", "100%");
