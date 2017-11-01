@@ -190,7 +190,7 @@ remove_duplicates
                 if (a[i].KODARTIKULLI === b[j].KODARTIKULLI) {
                     //b.splice(j, 1);
                     // TODO:Convert it to integer
-                    Number(b[j].gjendje)=Number(b[j].gjendje)+Number(a[i].gjendje);
+                    b[j].gjendje=Number(b[j].gjendje)+Number(a[i].gjendje);
                     count2++;
                     arrayre.push(b[j]);
                     // len2=b.length;
