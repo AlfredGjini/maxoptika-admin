@@ -517,37 +517,59 @@ var dataToSend = JSON.stringify({
                           // console.log(ghj);
 
 
-                          var output = newArrMagGjendje.reduce(function(res, el) {
-                              if(res[el.KODARTIKULLI]) {
-                                res[el.KODARTIKULLI].gjendje += el.gjendje;
-                              } else {
-                                res[el.KODARTIKULLI] = el;
-                              }
-                              return res;
-                            }, {});
+                          const dedupe = (group, current) => {
+                          const index = group.findIndex(val => (val.KODI == current.KODI && val.KODARTIKULLI == current.KODARTIKULLI));
+                          if (index === -1) {
+                            group.push(current);
+                          }
+                          return group;
+                        };
+                        const totals = (group, current) => {
+                          const index = group.findIndex(val => val.KODARTIKULLI == current.KODARTIKULLI);
+                          if (index === -1) {
+                            return [ ...group, current];
+                          }
 
-                            console.log(output);
-                            console.log('hopefully 1');
+                          group[index].gjendje += current.gjendje;
+                          return group;
+                        };
 
-                            var mapObj = {};
-                             for(var a of newArrMagGjendje){
-                                if(mapObj[a["KODARTIKULLI"]]== undefined)
-                                  {mapObj[a["KODARTIKULLI"]] = 0;
-                                }else{mapObj[a["KODARTIKULLI"]] += a["gjendje"]}
-                             }
-                             console.log('testgb');
-                             console.log(mapObj);
+                        const result = data.reduce(dedupe, []).reduce(totals, []);
+                        console.log(result);
+                        console.log('hopefully 1');
 
-                            var data2 = [];
-                            for(var a of newArrMagGjendje){
-                              if(mapObj[a["KODARTIKULLI"]] == undefined)
-                                 continue;
-                              a["gjendje"] = mapObj[a["KODARTIKULLI"]];
-                              data2.push(a)
-                              delete mapObj[a["KODARTIKULLI"]];
-                            }
-                            console.log('hopefully 2');
-                            console.log(data2);
+
+                          // var output = newArrMagGjendje.reduce(function(res, el) {
+                          //     if(res[el.KODARTIKULLI]) {
+                          //       res[el.KODARTIKULLI].gjendje += el.gjendje;
+                          //     } else {
+                          //       res[el.KODARTIKULLI] = el;
+                          //     }
+                          //     return res;
+                          //   }, {});
+
+                          //   console.log(output);
+                          //   console.log('hopefully 1');
+
+                          //   var mapObj = {};
+                          //    for(var a of newArrMagGjendje){
+                          //       if(mapObj[a["KODARTIKULLI"]]== undefined)
+                          //         {mapObj[a["KODARTIKULLI"]] = 0;
+                          //       }else{mapObj[a["KODARTIKULLI"]] += a["gjendje"]}
+                          //    }
+                          //    console.log('testgb');
+                          //    console.log(mapObj);
+
+                          //   var data2 = [];
+                          //   for(var a of newArrMagGjendje){
+                          //     if(mapObj[a["KODARTIKULLI"]] == undefined)
+                          //        continue;
+                          //     a["gjendje"] = mapObj[a["KODARTIKULLI"]];
+                          //     data2.push(a)
+                          //     delete mapObj[a["KODARTIKULLI"]];
+                          //   }
+                          //   console.log('hopefully 2');
+                          //   console.log(data2);
                             
 
 
