@@ -238,8 +238,8 @@ remove_duplicates
           return newArray;
      }
 
-     function removeDuplicatesNew2(arr) {
-    console.log("original length: "+arr.length);
+  function removeDuplicatesNew2(arr) {
+    //console.log("original length: "+arr.length);
     for (var i=0; i<arr.length; i++) {
         var listI = arr[i];
         loopJ: for (var j=0; j<arr.length; j++) {
@@ -254,7 +254,7 @@ remove_duplicates
             arr.splice(j--, 1);
         }
     }
-    console.log("length without duplicates: "+arr.length);
+    //console.log("length without duplicates: "+arr.length);
     return arr;
 }
 
@@ -511,6 +511,7 @@ var dataToSend = JSON.stringify({
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
                           var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          console.log(newArrMagGjendje);
 
                           var ghj =removeDuplicatesNew2(newArrMagGjendje);
                           console.log(ghj);
