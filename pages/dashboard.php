@@ -534,7 +534,7 @@ var dataToSend = JSON.stringify({
                           return group;
                         };
 
-                        const result = data.reduce(dedupe, []).reduce(totals, []);
+                        const result = newArrMagGjendje.reduce(dedupe, []).reduce(totals, []);
                         console.log(result);
                         console.log('hopefully 1');
 
