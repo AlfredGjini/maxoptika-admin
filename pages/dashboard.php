@@ -515,14 +515,17 @@ var dataToSend = JSON.stringify({
                           console.log(tedhenatefundit);
 
                           $.ajax({,
-                            url: 'https://max-optika-server.herokuapp.com/syze-optike',
+                            url: 'https://max-optika-server.herokuapp.com/rasti3',
                             type: 'POST',
                             contentType: 'application/json',
-                            data: JSON.stringify(newArrMagGjendje),
+                            data: {
+                             dhena : JSON.stringify(newArrMagGjendje)
+                           },
                             dataType: 'json',
                             success: function (res) {
-                              console.log(res);
                               console.log('ky erdhi nga nodejs');
+                              console.log(res);
+                              
                             }
                           });
 
