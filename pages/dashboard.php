@@ -515,6 +515,9 @@ var dataToSend = JSON.stringify({
                           console.log(tedhenatefundit);
 
                           $.ajax({
+                            headers: {
+                               'Content-Type': 'application/x-www-form-urlencoded'
+                             },
                             url: 'https://max-optika-server.herokuapp.com/rasti3',
                             type: 'POST',
                             contentType: 'application/json',
