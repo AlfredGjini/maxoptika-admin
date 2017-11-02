@@ -514,7 +514,7 @@ var dataToSend = JSON.stringify({
                           var tedhenatefundit=newArrMagGjendje
                           console.log(tedhenatefundit);
 
-                          $.ajax({,
+                          $.ajax({
                             url: 'https://max-optika-server.herokuapp.com/rasti3',
                             type: 'POST',
                             contentType: 'application/json',
