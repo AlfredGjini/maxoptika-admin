@@ -510,12 +510,24 @@ var dataToSend = JSON.stringify({
                           var newArrayM = [];
                           console.log(res);
                           var newArrMagGjendje = res.entiteteTeReja.artikujGjendjeRi;
-                          // var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
-                          // var tedhenatefundit=newArrMagGjendje
-                          // console.log(tedhenatefundit);
+                          var newArrMagGjendje=remove_duplicates(newArr1,newArrMagGjendje);
+                          var tedhenatefundit=newArrMagGjendje
+                          console.log(tedhenatefundit);
+
+                          $.ajax({,
+                            url: 'https://max-optika-server.herokuapp.com/syze-optike',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(newArrMagGjendje),
+                            dataType: 'json',
+                            success: function (res) {
+                              console.log(res);
+                              console.log('ky erdhi nga nodejs');
+                            }
+                          });
 
 
-                          
+
 
                           // var test= JSON.stringify(tedhenatefundit);
                           // console.log(test);
