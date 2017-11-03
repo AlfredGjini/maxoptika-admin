@@ -515,22 +515,45 @@ var dataToSend = JSON.stringify({
                           console.log(tedhenatefundit);
 
                           $.ajax({
-                            headers: {
-                               'Content-Type': 'application/x-www-form-urlencoded'
-                             },
-                            url: 'https://max-optika-server.herokuapp.com/rasti3',
                             type: 'POST',
-                            contentType: 'application/json',
                             data: {
                              dhena : JSON.stringify(newArrMagGjendje)
                            },
-                            dataType: 'json',
-                            success: function (res) {
-                              console.log('ky erdhi nga nodejs');
-                              console.log(res);
+                           /* data: {
+                                blob: {wob:"1",job:"2", ar:[1,2,{a:'b'}]}
+                            },*/
+                            contentType: "application/json",
+                            //contentType: "application/x-www-form-urlencoded",
+                            dataType:'json',
+                            url: 'https://max-optika-server.herokuapp.com/rasti3',                      
+                            success: function(data) {
+                                console.log('success');
+                                console.log(data);                               
+                            },
+                            error: function(error) {
+                                console.log("some error in fetching the notifications");
+                             }
+
+                        });
+
+
+                          // $.ajax({
+                          //   headers: {
+                          //      'Content-Type': 'application/x-www-form-urlencoded'
+                          //    },
+                          //   url: 'https://max-optika-server.herokuapp.com/rasti3',
+                          //   type: 'POST',
+                          //   contentType: 'application/json',
+                          //   data: {
+                          //    dhena : JSON.stringify(newArrMagGjendje)
+                          //  },
+                          //   dataType: 'json',
+                          //   success: function (res) {
+                          //     console.log('ky erdhi nga nodejs');
+                          //     console.log(res);
                               
-                            }
-                          });
+                          //   }
+                          // });
 
 
 
