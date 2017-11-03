@@ -514,30 +514,59 @@ var dataToSend = JSON.stringify({
                           var tedhenatefundit=newArrMagGjendje
                           console.log(tedhenatefundit);
 
-                          $.ajax({
-                            type: 'POST',
-                            headers: {
-                               'Content-Type': 'application/x-www-form-urlencoded'
-                             },
-                            data: {
-                             dhena : JSON.stringify(newArrMagGjendje)
-                           },
-                           /* data: {
-                                blob: {wob:"1",job:"2", ar:[1,2,{a:'b'}]}
-                            },*/
-                            contentType: "application/json",
-                            //contentType: "application/x-www-form-urlencoded",
-                            dataType:'json',
-                            url: 'https://max-optika-server.herokuapp.com/rasti3',                      
-                            success: function(data) {
-                                console.log('success');
-                                console.log(data);                               
-                            },
-                            error: function(error) {
-                                console.log("some error in fetching the notifications");
-                             }
 
-                        });
+                          function compare(a,b) {
+                            if (a.KODARTIKULLI < b.KODARTIKULLI)
+                              return -1;
+                            if (a.KODARTIKULLI > b.KODARTIKULLI)
+                              return 1;
+                            return 0;
+                          }
+
+                        tedhenatefundit.sort(compare);
+
+
+                            let output = tedhenatefundit.reduce(function(res, el) {
+                            if(res[el.KODARTIKULLI]) {
+                              res[el.KODARTIKULLI].gjendje += el.gjendje;
+                            } else {
+                              res[el.KODARTIKULLI] = el;
+                            }
+                            return res;
+                          }, {});
+
+                          // objKeysMap = Object.keys(obj).map((k) => obj[k]);
+                          let outputArr = Object.values(output);
+                          //let outputArr = Object.keys(output).map((k) => output[k]);
+                          //res.send(outputArr);
+                          console.log(outputArr);
+                          console.log('tred');
+
+
+                        //   $.ajax({
+                        //     type: 'POST',
+                        //     headers: {
+                        //        'Content-Type': 'application/x-www-form-urlencoded'
+                        //      },
+                        //     data: {
+                        //      dhena : JSON.stringify(newArrMagGjendje)
+                        //    },
+                        //    /* data: {
+                        //         blob: {wob:"1",job:"2", ar:[1,2,{a:'b'}]}
+                        //     },*/
+                        //     contentType: "application/json",
+                        //     //contentType: "application/x-www-form-urlencoded",
+                        //     dataType:'json',
+                        //     url: 'https://max-optika-server.herokuapp.com/rasti3',                      
+                        //     success: function(data) {
+                        //         console.log('success');
+                        //         console.log(data);                               
+                        //     },
+                        //     error: function(error) {
+                        //         console.log("some error in fetching the notifications");
+                        //      }
+
+                        // });
 
 
                           // $.ajax({
@@ -615,25 +644,25 @@ var dataToSend = JSON.stringify({
                           //   console.log(output);
                           //   console.log('hopefully 1');
 
-                          //   var mapObj = {};
-                          //    for(var a of newArrMagGjendje){
-                          //       if(mapObj[a["KODARTIKULLI"]]== undefined)
-                          //         {mapObj[a["KODARTIKULLI"]] = 0;
-                          //       }else{mapObj[a["KODARTIKULLI"]] += a["gjendje"]}
-                          //    }
-                          //    console.log('testgb');
-                          //    console.log(mapObj);
+                            // var mapObj = {};
+                            //  for(var a of newArrMagGjendje){
+                            //     if(mapObj[a["KODARTIKULLI"]]== undefined)
+                            //       {mapObj[a["KODARTIKULLI"]] = 0;
+                            //     }else{mapObj[a["KODARTIKULLI"]] += a["gjendje"]}
+                            //  }
+                            //  console.log('testgb');
+                            //  console.log(mapObj);
 
-                          //   var data2 = [];
-                          //   for(var a of newArrMagGjendje){
-                          //     if(mapObj[a["KODARTIKULLI"]] == undefined)
-                          //        continue;
-                          //     a["gjendje"] = mapObj[a["KODARTIKULLI"]];
-                          //     data2.push(a)
-                          //     delete mapObj[a["KODARTIKULLI"]];
-                          //   }
-                          //   console.log('hopefully 2');
-                          //   console.log(data2);
+                            // var data2 = [];
+                            // for(var a of newArrMagGjendje){
+                            //   if(mapObj[a["KODARTIKULLI"]] == undefined)
+                            //      continue;
+                            //   a["gjendje"] = mapObj[a["KODARTIKULLI"]];
+                            //   data2.push(a)
+                            //   delete mapObj[a["KODARTIKULLI"]];
+                            // }
+                            // console.log('hopefully 2');
+                            // console.log(data2);
                             
 
 
