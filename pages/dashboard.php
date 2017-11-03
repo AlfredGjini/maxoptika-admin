@@ -611,25 +611,25 @@ var dataToSend = JSON.stringify({
                           // console.log(ghj);
 
 
-                          const dedupe = (group, current) => {
-                          const index = group.findIndex(val => (val.KODI == current.KODI && val.KODARTIKULLI == current.KODARTIKULLI));
-                          if (index === -1) {
-                            group.push(current);
-                          }
-                          return group;
-                        };
-                        const totals = (group, current) => {
-                          const index = group.findIndex(val => val.KODARTIKULLI == current.KODARTIKULLI);
-                          if (index === -1) {
-                            return [ ...group, current];
-                          }
+                        //   const dedupe = (group, current) => {
+                        //   const index = group.findIndex(val => (val.KODI == current.KODI && val.KODARTIKULLI == current.KODARTIKULLI));
+                        //   if (index === -1) {
+                        //     group.push(current);
+                        //   }
+                        //   return group;
+                        // };
+                        // const totals = (group, current) => {
+                        //   const index = group.findIndex(val => val.KODARTIKULLI == current.KODARTIKULLI);
+                        //   if (index === -1) {
+                        //     return [ ...group, current];
+                        //   }
 
-                          group[index].gjendje += current.gjendje;
-                          return group;
-                        };
-                        const result = newArrMagGjendje.reduce(dedupe, []).reduce(totals, []);
-                        console.log(result);
-                        console.log('hopefully 1');
+                        //   group[index].gjendje += current.gjendje;
+                        //   return group;
+                        // };
+                        // const result = newArrMagGjendje.reduce(dedupe, []).reduce(totals, []);
+                        // console.log(result);
+                        // console.log('hopefully 1');
 
 
                           // var output = newArrMagGjendje.reduce(function(res, el) {
@@ -668,7 +668,7 @@ var dataToSend = JSON.stringify({
 
                           //var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
                           //console.log(newArr3);
-                          //newArr3=JSON.stringify(newArr3);
+                          newArr3=JSON.stringify(outputArr);
                           $('.progress-bar').css("width", "100%");
                           $('.progress-bar').text("100%");
                           $('.progress').hide();
@@ -680,23 +680,23 @@ var dataToSend = JSON.stringify({
                           newArr2=JSON.stringify(newArr2);
                           newArr3=JSON.stringify(newArr3);
 
-                          // $.ajax({
-                          //     url: "worker.php",
-                          //     type: "post",
-                          //     data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
-                          //     success: function (response) {
+                          $.ajax({
+                              url: "worker.php",
+                              type: "post",
+                              data: {dhena1:newArr1 ,dhena2:newArr2, dhena3:newArr3 },
+                              success: function (response) {
 
-                          //        // you will get response from your php page (what you echo or print) 
-                          //        //console.log(typeof(response));
-                          //        console.log(response);              
+                                 // you will get response from your php page (what you echo or print) 
+                                 //console.log(typeof(response));
+                                 console.log(response);              
 
-                          //     },
-                          //     error: function(jqXHR, textStatus, errorThrown) {
-                          //        console.log(textStatus, errorThrown);
-                          //     }
+                              },
+                              error: function(jqXHR, textStatus, errorThrown) {
+                                 console.log(textStatus, errorThrown);
+                              }
 
 
-                          // });
+                          });
 
 
 
