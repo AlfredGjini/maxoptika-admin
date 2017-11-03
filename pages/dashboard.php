@@ -611,25 +611,25 @@ var dataToSend = JSON.stringify({
                           // console.log(ghj);
 
 
-                        //   const dedupe = (group, current) => {
-                        //   const index = group.findIndex(val => (val.KODI == current.KODI && val.KODARTIKULLI == current.KODARTIKULLI));
-                        //   if (index === -1) {
-                        //     group.push(current);
-                        //   }
-                        //   return group;
-                        // };
-                        // const totals = (group, current) => {
-                        //   const index = group.findIndex(val => val.KODARTIKULLI == current.KODARTIKULLI);
-                        //   if (index === -1) {
-                        //     return [ ...group, current];
-                        //   }
+                          const dedupe = (group, current) => {
+                          const index = group.findIndex(val => (val.KODI == current.KODI && val.KODARTIKULLI == current.KODARTIKULLI));
+                          if (index === -1) {
+                            group.push(current);
+                          }
+                          return group;
+                        };
+                        const totals = (group, current) => {
+                          const index = group.findIndex(val => val.KODARTIKULLI == current.KODARTIKULLI);
+                          if (index === -1) {
+                            return [ ...group, current];
+                          }
 
-                        //   group[index].gjendje += current.gjendje;
-                        //   return group;
-                        // };
-                        // const result = newArrMagGjendje.reduce(dedupe, []).reduce(totals, []);
-                        // console.log(result);
-                        // console.log('hopefully 1');
+                          group[index].gjendje += current.gjendje;
+                          return group;
+                        };
+                        const result = newArrMagGjendje.reduce(dedupe, []).reduce(totals, []);
+                        console.log(result);
+                        console.log('hopefully 1');
 
 
                           // var output = newArrMagGjendje.reduce(function(res, el) {
