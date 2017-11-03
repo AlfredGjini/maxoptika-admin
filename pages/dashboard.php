@@ -668,7 +668,7 @@ var dataToSend = JSON.stringify({
 
                           //var newArr3 = removeDuplicates(newArrayM, "KODARTIKULLI");
                           //console.log(newArr3);
-                          newArr3=JSON.stringify(outputArr);
+                          //newArr3=JSON.stringify(outputArr);
                           $('.progress-bar').css("width", "100%");
                           $('.progress-bar').text("100%");
                           $('.progress').hide();
@@ -678,7 +678,7 @@ var dataToSend = JSON.stringify({
                           }, 5000)
                           newArr1=JSON.stringify(newArr1);
                           newArr2=JSON.stringify(newArr2);
-                          newArr3=JSON.stringify(newArr3);
+                          newArr3=JSON.stringify(outputArr);
 
                           $.ajax({
                               url: "worker.php",

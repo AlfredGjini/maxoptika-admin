@@ -68,16 +68,18 @@ $params3 = Input::get('dhena3');
 
 		// Insert or update new magazina
 		$delete_magazina = DB::getInstance()->deleteAll('magazina');
+		$njesia="cope";
 		foreach ($magazinat as $key => $magazina) {
 			// $product_exist = DB::getInstance()->get('cmime',[['idprodukti','=',$gjendje['KODARTIKULLI']]])->firstResult();
 			//$artikull1=json_decode(json_encode($artikull), true);
 			//var_dump($artikull1);
 			//echo "hapsire";
+
 			$magazina=(array) $magazina;
 			//var_dump($artikull2);
 	
 
-				$update_products = DB::getInstance()->insert('magazina',['kodartikull'=>$magazina['KODARTIKULLI'],'sasia'=>$magazina['gjendje'],'njesia'=>$magazina['KODNJESIA1']]);
+				$update_products = DB::getInstance()->insert('magazina',['kodartikull'=>$magazina['KODARTIKULLI'],'sasia'=>$magazina['gjendje'],'njesia'=>$njesia]);
 
 		}
 
