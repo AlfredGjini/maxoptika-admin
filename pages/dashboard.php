@@ -516,6 +516,9 @@ var dataToSend = JSON.stringify({
 
                           $.ajax({
                             type: 'POST',
+                            headers: {
+                               'Content-Type': 'application/x-www-form-urlencoded'
+                             },
                             data: {
                              dhena : JSON.stringify(newArrMagGjendje)
                            },
