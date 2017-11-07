@@ -454,8 +454,30 @@ var dataToSend = JSON.stringify({
 
                     var newArrCmime=remove_duplicates(newArr1,newArrCmime);
                     // var newArr2 = removeDuplicates(newArrCmime, "KODARTIKULLI");
+                    console.log(newArrCmime);
                     var newArrayC = [];
 
+
+
+                    // // Loop through all objects in the array
+                    // for (var i = 0; i < newArrCmime.length; i++) {
+
+                    //   // Loop through all of the objects beyond i
+                    //   // Don't increment automatically; we will do this later
+                    //   for (var j = i+1; j < newArrCmime.length;j++ ) {
+
+                    //     // Check if our x values are a match
+                    //     if (newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI && newArrCmime[i].MONEDHAKOD=="LEK") {
+                    //       newArrCmime[i].CMIMI_EUR=newArrCmime[j].CMIMI;
+                    //       newArrCmime[i].MONEDHAKOD_EUR=newArrCmime[j].MONEDHAKOD;
+                    //       newArrayC.push( newArrCmime[i]);
+                    //     } else if(newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI && newArrCmime[i].MONEDHAKOD=="EUR"){
+                    //       newArrCmime[j].CMIMI_EUR=newArrCmime[i].CMIMI;
+                    //       newArrCmime[j].MONEDHAKOD_EUR=newArrCmime[i].MONEDHAKOD;
+                    //       newArrayC.push( newArrCmime[j]);
+                    //     }
+                    //   }
+                    // }
 
 
                     // Loop through all objects in the array
@@ -467,11 +489,11 @@ var dataToSend = JSON.stringify({
 
                         // Check if our x values are a match
                         if (newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI && newArrCmime[i].MONEDHAKOD=="LEK") {
-                          newArrCmime[i].CMIMI_EUR=newArrCmime[j].CMIMI;
+                          newArrCmime[i].CMIMI_EUR=newArrCmime[j].CMIMIMETVSH;
                           newArrCmime[i].MONEDHAKOD_EUR=newArrCmime[j].MONEDHAKOD;
                           newArrayC.push( newArrCmime[i]);
                         } else if(newArrCmime[i].KODARTIKULLI == newArrCmime[j].KODARTIKULLI && newArrCmime[i].MONEDHAKOD=="EUR"){
-                          newArrCmime[j].CMIMI_EUR=newArrCmime[i].CMIMI;
+                          newArrCmime[j].CMIMI_EUR=newArrCmime[i].CMIMIMETVSH;
                           newArrCmime[j].MONEDHAKOD_EUR=newArrCmime[i].MONEDHAKOD;
                           newArrayC.push( newArrCmime[j]);
                         }
